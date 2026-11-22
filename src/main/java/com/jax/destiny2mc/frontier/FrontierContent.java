@@ -34,7 +34,7 @@ public final class FrontierContent {
   e.register(Registries.ITEM,h->{
    for(String name:List.of("cabal_plating","taken_residue","dark_ether","resonant_shard","conquest_token"))ITEMS.put(name,new Item(new Item.Properties().rarity(name.equals("conquest_token")?Rarity.RARE:Rarity.COMMON)));
    for(var u:FrontierCatalog.UNITS){
-    int shell=switch(u.faction()){case "cabal"->0x8e302e;case "scorn"->0x9b793e;case "taken"->0x131827;case "hive"->0x585c38;case "fallen"->0x814c3c;case "vex"->0x9c8655;default->0x49394c;};
+    int shell=switch(u.faction()){case "cabal"->0x8e302e;case "scorn"->0x9b793e;case "taken"->0x131827;case "hive"->0x585c38;case "fallen"->0x814c3c;case "vex"->0x9c8655;case "corpus"->0x2b6273;default->0x49394c;};
     ITEMS.put(u.id()+"_spawn_egg",new DeferredSpawnEggItem(()->ENTITIES.get(u.id()),shell,u.boss()?0xf2c36b:0xb8d5df,new Item.Properties()));
     if(u.boss()&&!u.move().startsWith("dungeon_"))ITEMS.put("summon_"+u.id(),new BossSigilItem(u.id(),u.name(),u.raid()));
    }
