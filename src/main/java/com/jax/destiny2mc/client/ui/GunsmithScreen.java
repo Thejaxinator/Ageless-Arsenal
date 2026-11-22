@@ -116,7 +116,7 @@ public class GunsmithScreen extends Screen {
         boolean tenno = franchise == WARFRAME;
         double localX = mx(x), localY = my(y);
         GunsmithLayout.State state = tenno ? null : snapshot();
-        g.fill(0, 0, width, height, tenno ? 0xff151f1c : 0xff111b22);
+        g.fill(0, 0, width, height, tenno ? 0xff151f1c : 0xff0c1016);
         float factor = scale();
         g.pose().pushPose();
         g.pose().translate((width - 800 * factor) / 2, (height - 450 * factor) / 2, 0);
