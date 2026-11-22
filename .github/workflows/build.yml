@@ -4,19 +4,21 @@ on:
   push:
     branches:
       - main
+      - 'Update*'
       - 'update*'
       - 'feat/**'
   pull_request:
     branches:
       - main
+      - 'Update*'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-    group: ${{ github.workflow }}-${{ github.ref }}
-    cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   build:
