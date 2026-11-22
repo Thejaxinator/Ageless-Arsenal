@@ -1,7 +1,6 @@
 package com.jax.destiny2mc.binder.client;
 
 import com.jax.destiny2mc.binder.*;
-import com.jax.destiny2mc.binder.difficulty.DifficultyScreen;
 import java.util.*;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
@@ -17,7 +16,7 @@ public final class EnergyBinderScreen extends Screen {
     private int tab,scroll,slot;
     private String selected="",focus="",lastMessage="";
     private Object signature;
-    private boolean visitingDifficulty, pending, inspectFocus;
+    private boolean pending, inspectFocus;
     private int pendingTicks;
     private BinderSnapshot beforeRequest;
     private final List<Control> controls=new ArrayList<>();
@@ -28,10 +27,10 @@ public final class EnergyBinderScreen extends Screen {
     @Override protected void init(){
         scale=Math.min(width/(float)W,height/(float)H);
         ox=Math.round((width-W*scale)/2);oy=Math.round((height-H*scale)/2);
-        signature=null;visitingDifficulty=false;
+        signature=null;
         BinderClientState.refresh();sync();
     }
-    @Override public void removed(){if(!visitingDifficulty && minecraft!=null && minecraft.getConnection()!=null)BinderClientState.close();}
+    @Override public void removed(){if(minecraft!=null && minecraft.getConnection()!=null)BinderClientState.close();}
     @Override public void tick(){
         if(pending && (BinderClientState.snapshot()!=beforeRequest||--pendingTicks<=0))pending=false;
         sync();
@@ -63,7 +62,6 @@ public final class EnergyBinderScreen extends Screen {
         if(getFocused() instanceof Control c)focus=c.id;
         clearWidgets();controls.clear();
         for(int i=0;i<TABS.length;i++){int t=i;add("tab"+i,TABS[i]+" abilities",14+i*87,50,84,19,true,()->tab(t));}
-        add("difficulty","Encounter difficulty",449,50,97,19,true,()->{visitingDifficulty=true;minecraft.setScreen(new DifficultyScreen(this));});
         for(int i=0;i<ROWS&&scroll+i<list.size();i++){
             BinderAbility a=list.get(scroll+i);
             add("entry"+a.id(),a.name()+", "+a.element()+", "+(state.unlocked().contains(a.id())?"owned":"locked"),14,79+i*24,204,22,true,()->{selected=a.id();}).ability=a;
@@ -127,7 +125,6 @@ public final class EnergyBinderScreen extends Screen {
         text(g,font,"MOTES OF LIGHT",363,12,DIM);text(g,font,Integer.toString(s.motes()),363,27,GOLD);
         text(g,font,"XP LEVELS",475,12,DIM);text(g,font,Integer.toString(s.levels()),475,27,LIGHT);
         for(int i=0;i<TABS.length;i++)button(g,"tab"+i,TABS[i],14+i*87,50,84,19,tab==i,true,mx,my);
-        button(g,"difficulty","Difficulty",449,50,97,19,false,true,mx,my);
         for(int i=0;i<ROWS&&scroll+i<list.size();i++){
             var row=list.get(scroll+i);int y=79+i*24;boolean chosen=row.id().equals(selected),owned=s.unlocked().contains(row.id());
             g.fill(14,y,218,y+22,chosen?0xff33434b:PANEL);
