@@ -1,0 +1,17 @@
+{
+  "name": "destiny2mc:factions/decor/hive_ritual_altar",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "destiny2mc:factions/decor/hive_ritual_altar",
+        "processors": {
+          "processors": []
+        },
+        "projection": "rigid"
+      }
+    }
+  ]
+}

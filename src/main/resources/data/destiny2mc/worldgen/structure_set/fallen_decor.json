@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:fallen_ether_cache",
+      "weight": 3
+    },
+    {
+      "structure": "destiny2mc:fallen_pike_wreck",
+      "weight": 2
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 10,
+    "separation": 4,
+    "salt": 714290811
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:hive_citadel",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 20,
+    "separation": 9,
+    "salt": 520193847
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:cabal_firebase",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 22,
+    "separation": 10,
+    "salt": 740182936
+  }
+}

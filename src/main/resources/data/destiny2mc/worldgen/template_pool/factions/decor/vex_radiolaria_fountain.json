@@ -1,0 +1,17 @@
+{
+  "name": "destiny2mc:factions/decor/vex_radiolaria_fountain",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "destiny2mc:factions/decor/vex_radiolaria_fountain",
+        "processors": {
+          "processors": []
+        },
+        "projection": "rigid"
+      }
+    }
+  ]
+}

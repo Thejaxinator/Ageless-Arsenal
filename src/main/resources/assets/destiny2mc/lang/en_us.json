@@ -369,5 +369,11 @@
   "tooltip.destiny2mc.mod_pack.duplicate": "Unlocks one missing card at rank 0.",
   "message.destiny2mc.mod_pack.unlocked": "Unlocked %s  •  Rank 0",
   "message.destiny2mc.mod_pack.complete": "%s complete. All cards in this pack are already unlocked.",
-  "itemGroup.destiny2mc.warframe": "Warframe"
+  "itemGroup.destiny2mc.warframe": "Warframe",
+  "block.destiny2mc.fake_radiolaria": "Radiolaria",
+  "death.attack.radiolaria": "%1$s was dissolved by Vex Radiolaria",
+  "biome.destiny2mc.fallen_timberland": "Fallen Timberland",
+  "biome.destiny2mc.hive_crags": "Hive Crags",
+  "biome.destiny2mc.vex_expanse": "Radiolarian Expanse",
+  "biome.destiny2mc.cabal_barrens": "Cabal Barrens"
 }

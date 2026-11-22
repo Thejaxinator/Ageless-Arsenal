@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:cabal_drop_pod",
+      "weight": 3
+    },
+    {
+      "structure": "destiny2mc:cabal_barricade",
+      "weight": 2
+    },
+    {
+      "structure": "destiny2mc:cabal_comm_beacon",
+      "weight": 2
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 10,
+    "separation": 4,
+    "salt": 714290844
+  }
+}

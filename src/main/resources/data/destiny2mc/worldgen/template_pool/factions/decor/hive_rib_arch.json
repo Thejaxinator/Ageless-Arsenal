@@ -1,0 +1,17 @@
+{
+  "name": "destiny2mc:factions/decor/hive_rib_arch",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "destiny2mc:factions/decor/hive_rib_arch",
+        "processors": {
+          "processors": []
+        },
+        "projection": "rigid"
+      }
+    }
+  ]
+}

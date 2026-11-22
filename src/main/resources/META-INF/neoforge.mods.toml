@@ -38,3 +38,6 @@ config="destiny2mc.ageless_fx.mixins.json"
 
 [[mixins]]
 config="ageless.career.mixins.json"
+
+[[mixins]]
+config="ageless.world.mixins.json"
