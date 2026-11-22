@@ -25,15 +25,17 @@ jobs:
       - name: Install Pillow
         run: python -m pip install --upgrade pillow
       - name: Bake Corpus rigs, Blockbench models, and binary PNG textures
-        run: python3 tools/corpus-art/bake.py
+        run: |
+          python3 tools/corpus-art/bake.py
+          python3 tools/corpus-art/sync_resources.py
       - name: Verify native rig bytecode compilation
         run: python3 tools/bake_rigs.py /tmp/rig_check
       - name: Commit generated Corpus assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add models/rigs/corpus_*.json blockbench/corpus_*.bbmodel src/main/resources/assets/destiny2mc/textures/entity/corpus_*.png
+          git add models/rigs/corpus_*.json blockbench/corpus_*.bbmodel src/main/resources/assets/destiny2mc/textures/entity/corpus_*.png src/main/resources/assets/destiny2mc/atlas/bestiary.json src/main/resources/assets/destiny2mc/lang/en_us.json
           if ! git diff --cached --quiet; then
-            git commit -m "chore(corpus): bake voxel rigs, blockbench models, and entity PNG textures"
+            git commit -m "chore(corpus): bake voxel rigs, blockbench models, PNG textures, and bestiary/lang entries"
             git push
           fi
