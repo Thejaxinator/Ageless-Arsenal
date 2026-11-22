@@ -1,0 +1,47 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "minecraft:plains",
+    "minecraft:sunflower_plains",
+    "minecraft:meadow",
+    "minecraft:taiga",
+    "minecraft:snowy_taiga",
+    "minecraft:snowy_plains",
+    "minecraft:windswept_hills",
+    "minecraft:stony_shore",
+    "minecraft:forest",
+    "minecraft:birch_forest"
+  ],
+  "spawners": [
+    {
+      "type": "destiny2mc:fallen_captain_rifle",
+      "weight": 4,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "destiny2mc:fallen_captain_scorch",
+      "weight": 3,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "destiny2mc:fallen_bruiser",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "destiny2mc:devils_servitor",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "destiny2mc:heavy_shank",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
+}
