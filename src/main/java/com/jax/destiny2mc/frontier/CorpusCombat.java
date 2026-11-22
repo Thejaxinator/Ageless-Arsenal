@@ -2,6 +2,7 @@ package com.jax.destiny2mc.frontier;
 
 import com.jax.destiny2mc.tenno.mods.ModStat;
 import com.jax.destiny2mc.tenno.mods.WeaponMods;
+import java.util.Map;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
@@ -23,7 +24,12 @@ import net.minecraft.world.phys.Vec3;
 
 /**
  * Unique Warframe Corpus combat mechanics & Tenno WeaponMod elemental interactions:
- * - Regenerating Proto-Shields on all 10 Corpus units (Cold/Arc bonus shred, Toxin bypasses straight to HP)
+ * - Regenerating Proto-Shields on all 10 Corpus units:
+ *     - Magnetic (Cold+Electricity) shreds Proto-Shields (+125%) & Nullifier domes, and jams shield regen to 7s
+ *     - Cold shreds Proto-Shields (+75%) & Nullifier domes (+50%)
+ *     - Uncombined Toxin (or Toxin Tenno weapons / Poison) bypasses Proto-Shields & Bursa frontal shields straight to HP
+ *     - Electricity deals +50% bonus damage to Corpus robotics (MOAs, Ospreys, Bursas, Hyenas, Raknoids)
+ *     - Viral (+65%) and Heat (+35%) amplify damage to exposed Corpus health once shields are stripped
  * - Nullifier Crewman (149): destructible shrinking energy dome with per-hit damage cap, dorsal drone instant collapse, & buff suppression
  * - Isolator Bursa (150): 80% frontal riot-shield deflection + 2.0x rear console weakpoint crit
  * - Shockwave MOA (148): telegraphed ground-level jumpable Arc shockwave ring
@@ -41,6 +47,13 @@ public final class CorpusCombat {
 
     public static boolean isCorpus(FrontierMob mob) {
         return mob != null && mob.unit != null && "corpus".equals(mob.unit.faction());
+    }
+
+    public static boolean isRobotic(FrontierCatalog.Unit unit) {
+        return switch (unit.kind()) {
+            case 144, 145, 148, 150, 151, 152 -> true; // MOA, Osprey, Shockwave MOA, Bursa, Hyena, Raknoid
+            default -> false;
+        };
     }
 
     public static float maxShield(FrontierCatalog.Unit unit) {
@@ -125,6 +138,7 @@ public final class CorpusCombat {
                             1, 0, 0, 0, 0);
                     }
                 }
+                // Suppress player buffs & absorption inside the Nullifier field
                 if (mob.tickCount % 10 == 0) {
                     for (Player p : level.getEntitiesOfClass(Player.class, mob.getBoundingBox().inflate(radius),
                         e -> !e.isSpectator() && !e.isCreative() && e.distanceTo(mob) <= radius)) {
@@ -139,25 +153,43 @@ public final class CorpusCombat {
         }
     }
 
+    /**
+     * Filter incoming damage through Corpus unique mechanics & Tenno WeaponMod elemental synergies.
+     * Returns adjusted HP damage (0f if fully absorbed by Nullifier dome or Proto-Shields).
+     */
     public static float filterDamage(FrontierMob mob, DamageSource src, float damage) {
         if (!isCorpus(mob) || damage <= 0f || !(mob.level() instanceof ServerLevel level)) return damage;
         ensureInit(mob);
         CompoundTag data = mob.getPersistentData();
         Entity attacker = src.getEntity();
 
+        // Check Warframe Tenno WeaponMod elemental bonuses (base + combined) on the attacker's held weapon
         double coldBonus = 0.0;
         double heatBonus = 0.0;
+        double elecBonus = 0.0;
+        double toxinBonus = 0.0;
+        double magneticBonus = 0.0;
+        double viralBonus = 0.0;
         boolean toxinBypass = mob.hasEffect(MobEffects.POISON);
         if (attacker instanceof Player player) {
             ItemStack held = player.getMainHandItem();
-            coldBonus = WeaponMods.bonus(player, held, ModStat.COLD);
-            heatBonus = WeaponMods.bonus(player, held, ModStat.HEAT);
+            Map<ModStat, Double> mods = WeaponMods.bonuses(player, held);
+            coldBonus = mods.getOrDefault(ModStat.COLD, 0.0);
+            heatBonus = mods.getOrDefault(ModStat.HEAT, 0.0);
+            elecBonus = mods.getOrDefault(ModStat.ELECTRICITY, 0.0);
+            toxinBonus = mods.getOrDefault(ModStat.TOXIN, 0.0);
+            magneticBonus = mods.getOrDefault(ModStat.MAGNETIC, 0.0);
+            viralBonus = mods.getOrDefault(ModStat.VIRAL, 0.0);
+            if (toxinBonus > 0.0) {
+                toxinBypass = true;
+            }
             String itemId = BuiltInRegistries.ITEM.getKey(held.getItem()).getPath();
             if (itemId.contains("bubonico") || itemId.contains("torid") || itemId.contains("embolist")) {
                 toxinBypass = true;
             }
         }
 
+        // Compute hit position for weakpoints & directional shields
         Vec3 hitPos = mob.getBoundingBox().getCenter();
         if (attacker instanceof Player player) {
             Vec3 eye = player.getEyePosition();
@@ -172,16 +204,20 @@ public final class CorpusCombat {
                 double radius = 1.6 + 2.1 * (bubble / maxBubble(mob));
                 boolean inside = attacker.distanceTo(mob) <= radius;
                 if (!inside) {
+                    // Sniping the spinning dorsal emitter drone collapses the dome instantly!
                     if (hitFracY >= 0.86) {
                         data.putFloat(TAG_BUBBLE, 0f);
                         data.putInt(TAG_BUBBLE_CD, 220);
                         level.sendParticles(ParticleTypes.FLASH, mob.getX(), mob.getY() + mob.getBbHeight(), mob.getZ(), 1, 0, 0, 0, 0);
                         level.playSound(null, mob.blockPosition(), SoundEvents.GLASS_BREAK, SoundSource.HOSTILE, 1.1f, 1.3f);
                     } else {
-                        float shrink = Math.min(8.0f, damage * (1.0f + (float) coldBonus * 0.5f));
+                        // Per-hit cap rewards rapid-fire weapons; Magnetic lifts cap and shreds faster
+                        float perHitCap = 8.0f + (float) magneticBonus * 4.0f;
+                        float domeMult = 1.0f + (float) coldBonus * 0.5f + (float) magneticBonus * 0.85f;
+                        float shrink = Math.min(perHitCap, damage * domeMult);
                         float nextB = Math.max(0f, bubble - shrink);
                         data.putFloat(TAG_BUBBLE, nextB);
-                        data.putInt(TAG_DELAY, 80);
+                        data.putInt(TAG_DELAY, magneticBonus > 0.0 ? 140 : 80);
                         if (nextB <= 0f) {
                             data.putInt(TAG_BUBBLE_CD, 200);
                             level.playSound(null, mob.blockPosition(), SoundEvents.GLASS_BREAK, SoundSource.HOSTILE, 1.0f, 1.15f);
@@ -217,18 +253,25 @@ public final class CorpusCombat {
             level.sendParticles(ParticleTypes.SNOWFLAKE, hitPos.x, hitPos.y, hitPos.z, 10, 0.3, 0.2, 0.3, 0.04);
         }
 
-        // 4. Corpus Proto-Shield Absorption (Cold shreds faster; Toxin bypasses straight to HP)
+        // 4. Electricity bonus against Corpus robotics (MOAs, Ospreys, Bursas, Hyenas, Raknoids)
+        if (elecBonus > 0.0 && isRobotic(mob.unit)) {
+            damage *= (1.0f + (float) elecBonus * 0.50f);
+        }
+
+        // 5. Corpus Proto-Shield Absorption (Magnetic/Cold shred faster; Toxin bypasses straight to HP)
         float shield = data.getFloat(TAG_SHIELD);
-        data.putInt(TAG_DELAY, 80);
+        data.putInt(TAG_DELAY, magneticBonus > 0.0 ? 140 : 80);
         if (shield > 0f && !toxinBypass) {
-            float shieldMult = 1.0f + (float) coldBonus * 0.75f;
+            float shieldMult = 1.0f + (float) coldBonus * 0.75f + (float) magneticBonus * 1.25f;
             float shieldDmg = damage * shieldMult;
             if (shieldDmg < shield) {
                 data.putFloat(TAG_SHIELD, shield - shieldDmg);
-                level.sendParticles(ParticleTypes.ELECTRIC_SPARK, hitPos.x, hitPos.y, hitPos.z, 7, 0.2, 0.2, 0.2, 0.06);
+                level.sendParticles(ParticleTypes.ELECTRIC_SPARK, hitPos.x, hitPos.y, hitPos.z,
+                    magneticBonus > 0.0 ? 12 : 7, 0.2, 0.2, 0.2, 0.06);
                 level.playSound(null, mob.blockPosition(), SoundEvents.AMETHYST_BLOCK_CHIME, SoundSource.HOSTILE, 0.55f, 1.45f);
                 return 0f;
             } else {
+                // Shield break! Carry overflow damage to health + spark burst
                 float overflow = (shieldDmg - shield) / shieldMult;
                 data.putFloat(TAG_SHIELD, 0f);
                 level.sendParticles(ParticleTypes.ELECTRIC_SPARK, mob.getX(), mob.getY() + mob.getBbHeight() * 0.55, mob.getZ(),
@@ -236,18 +279,25 @@ public final class CorpusCombat {
                 level.playSound(null, mob.blockPosition(), SoundEvents.GLASS_BREAK, SoundSource.HOSTILE, 0.85f, 1.4f);
                 damage = overflow;
             }
-        } else if (shield <= 0f && heatBonus > 0.0) {
-            damage *= (1.0f + (float) heatBonus * 0.35f);
+        } else if (shield <= 0f || toxinBypass) {
+            // Exposed Corpus health takes bonus Viral (+65%) and Heat (+35%) damage
+            if (viralBonus > 0.0) damage *= (1.0f + (float) viralBonus * 0.65f);
+            if (heatBonus > 0.0) damage *= (1.0f + (float) heatBonus * 0.35f);
         }
 
         return damage;
     }
 
+    /**
+     * Execute Corpus-specific special attacks called from FrontierMob.specialAttack / tickMove.
+     * Returns true if handled as a Corpus signature move.
+     */
     public static boolean specialAttack(FrontierMob mob, ServerLevel level, LivingEntity target, Vec3 mark) {
         if (!isCorpus(mob)) return false;
         String move = mob.unit.move();
         switch (move) {
             case "shockwave" -> {
+                // Jumpable expanding Arc shockwave ring (only hits grounded targets!)
                 for (double r = 1.5; r <= 6.5; r += 1.6) {
                     FrontierMob.ring(level, mob.position(), r, 2);
                 }
@@ -262,6 +312,7 @@ public final class CorpusCombat {
                 return true;
             }
             case "raknoid" -> {
+                // Sticky Cryo-Web snare volley + frost hazard patch
                 FrontierHazard.spawn(level, mob, mark, 3.0f, 80, 2, 4, 0);
                 for (LivingEntity v : level.getEntitiesOfClass(LivingEntity.class, new AABB(mark, mark).inflate(3.2),
                     e -> CombatRules.canDamage(mob, e))) {
@@ -271,6 +322,7 @@ public final class CorpusCombat {
                 return true;
             }
             case "hyena" -> {
+                // Predator leap burst + brief Magnetic disruption
                 if (target != null && target.isAlive()) {
                     mob.blast(level, mob.position(), 3.2f, mob.unit.damage(), 0.75);
                     if (mob.distanceTo(target) < 4.5) {
@@ -281,11 +333,13 @@ public final class CorpusCombat {
                 return true;
             }
             case "bursa" -> {
+                // Riot-shield shockwave push + dorsal mortar hazard
                 mob.blast(level, mob.position(), 4.5f, mob.unit.damage() * 0.9f, 1.3);
                 FrontierHazard.spawn(level, mob, mark, 2.8f, 70, 3, 2, 0);
                 return true;
             }
             case "nullifier" -> {
+                // Restore Nullifier dome pulse + high-velocity Lanka shot
                 CompoundTag data = mob.getPersistentData();
                 data.putFloat(TAG_BUBBLE, maxBubble(mob));
                 if (target != null && target.isAlive()) {
@@ -301,13 +355,14 @@ public final class CorpusCombat {
         }
     }
 
+    /** Bonus Warframe Mod Pack drop chance for elite Corpus units. */
     public static void onDeath(FrontierMob mob) {
         if (!isCorpus(mob) || mob.level().isClientSide) return;
         int kind = mob.unit.kind();
         float packChance = switch (kind) {
-            case 150 -> 0.45f;
-            case 151, 152 -> 0.30f;
-            case 147, 149 -> 0.22f;
+            case 150 -> 0.45f; // Isolator Bursa
+            case 151, 152 -> 0.30f; // Hyena Proxy, Scyto Raknoid
+            case 147, 149 -> 0.22f; // Corpus Tech, Nullifier Crewman
             default -> 0.06f;
         };
         if (mob.getRandom().nextFloat() < packChance) {
