@@ -78,16 +78,23 @@ public final class MeleeCombat {
         if (!(held.getItem() instanceof TennoMeleeItem weapon) || source.getDirectEntity() != p
                 || !source.is(DamageTypes.PLAYER_ATTACK)) return;
         var target = event.getEntity();
-        double heat = MeleeModEffects.acceptsHeat(target) ? WeaponMods.bonus(p,held,ModStat.HEAT) : 0;
-        double amount = event.getAmount() * (1 + heat);
+        var mods = WeaponMods.bonuses(p, held);
+        double elemental = 0;
+        for (var entry : mods.entrySet()) {
+            ModStat stat = entry.getKey();
+            if (!stat.isElemental()) continue;
+            if (stat == ModStat.HEAT && !MeleeModEffects.acceptsHeat(target)) continue;
+            elemental += entry.getValue();
+        }
+        double amount = event.getAmount() * (1 + elemental);
         var hit = pending(p, target, source);
         if (hit == null) {
-            if (heat != 0) event.setAmount((float)amount);
+            if (elemental != 0) event.setAmount((float)amount);
             return;
         }
         var profile = weapon.profile();
         if (hit.heavy()) amount *= (1.25 + .15 * Math.min(3, hit.chain())) *
-                (1 + WeaponMods.bonus(p,held,ModStat.HEAVY_DAMAGE));
+                (1 + mods.getOrDefault(ModStat.HEAVY_DAMAGE, 0d));
         switch (profile.technique()) {
             case resonance -> { if (hit.heavy()) amount += statusBurst(target); }
             case crosscut -> { if (!hit.heavy() && hit.sameTarget() % 2 == 1) amount += 2; }
@@ -175,10 +182,59 @@ public final class MeleeCombat {
                     cue(p,target,"arc",VoxelCue.Kind.BURST,.55f);
             }
         }
-        // Apply new heat only after Harmony cashes out the statuses present before this strike.
-        double heat = WeaponMods.bonus(p,p.getMainHandItem(),ModStat.HEAT);
+        // Apply new elemental statuses only after Harmony cashes out the statuses present before this strike.
+        var mods = WeaponMods.bonuses(p, p.getMainHandItem());
+        double heat = mods.getOrDefault(ModStat.HEAT, 0d);
         if (heat > 0 && MeleeModEffects.acceptsHeat(target)) {
             target.igniteForSeconds((int)Math.ceil(heat * 5));
+        }
+        double cold = mods.getOrDefault(ModStat.COLD, 0d);
+        if (cold > 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 0), p);
+        }
+        double toxin = mods.getOrDefault(ModStat.TOXIN, 0d);
+        if (toxin > 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.POISON, 70, 0), p);
+        }
+        double elec = mods.getOrDefault(ModStat.ELECTRICITY, 0d);
+        if (elec > 0) {
+            int arcs = 0;
+            for (var mob : p.serverLevel().getEntitiesOfClass(Mob.class, target.getBoundingBox().inflate(3.5),
+                    mob -> mob != target && mob.isAlive() && !mob.isAlliedTo(p)
+                        && (mob instanceof Enemy || mob.getTarget() == p) && p.hasLineOfSight(mob))) {
+                mob.hurt(p.damageSources().indirectMagic(p, p), Math.max(1f, event.getNewDamage() * 0.25f));
+                cue(p, mob, "arc", VoxelCue.Kind.BURST, .5f);
+                if (++arcs >= 2) break;
+            }
+        }
+        if (mods.getOrDefault(ModStat.MAGNETIC, 0d) > 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 70, 0), p);
+            target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 50, 0), p);
+            cue(p, target, "arc", VoxelCue.Kind.BURST, .75f);
+        }
+        if (mods.getOrDefault(ModStat.VIRAL, 0d) > 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.WITHER, 60, 0), p);
+            cue(p, target, "strand", VoxelCue.Kind.BURST, .75f);
+        }
+        if (mods.getOrDefault(ModStat.RADIATION, 0d) > 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 80, 0), p);
+            cue(p, target, "solar", VoxelCue.Kind.BURST, .75f);
+        }
+        if (mods.getOrDefault(ModStat.GAS, 0d) > 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.POISON, 70, 0), p);
+            for (var mob : p.serverLevel().getEntitiesOfClass(Mob.class, target.getBoundingBox().inflate(2.8),
+                    mob -> mob != target && mob.isAlive() && !mob.isAlliedTo(p)
+                        && (mob instanceof Enemy || mob.getTarget() == p))) {
+                mob.addEffect(new MobEffectInstance(MobEffects.POISON, 60, 0), p);
+            }
+            cue(p, target, "strand", VoxelCue.Kind.RING, 1.3f);
+        }
+        if (mods.getOrDefault(ModStat.BLAST, 0d) > 0) {
+            target.knockback(0.7, p.getX() - target.getX(), p.getZ() - target.getZ());
+            cue(p, target, "solar", VoxelCue.Kind.BURST, 1.0f);
+        }
+        if (mods.getOrDefault(ModStat.CORROSIVE, 0d) > 0) {
+            target.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 80, 1), p);
         }
     }
     @SubscribeEvent public static void bleed(EntityTickEvent.Post event) {

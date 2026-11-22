@@ -45,4 +45,14 @@ case 139 -> ConvertedRig139.create();
 case 140 -> ConvertedRig140.create();
 case 141 -> ConvertedRig141.create();
 case 142 -> ConvertedRig142.create();
+case 143 -> ConvertedRig143.create();
+case 144 -> ConvertedRig144.create();
+case 145 -> ConvertedRig145.create();
+case 146 -> ConvertedRig146.create();
+case 147 -> ConvertedRig147.create();
+case 148 -> ConvertedRig148.create();
+case 149 -> ConvertedRig149.create();
+case 150 -> ConvertedRig150.create();
+case 151 -> ConvertedRig151.create();
+case 152 -> ConvertedRig152.create();
 default -> throw new IllegalArgumentException("Unknown rig "+k);};}}

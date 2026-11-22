@@ -2,10 +2,12 @@ package com.jax.destiny2mc.tenno.mods;
 
 import com.jax.destiny2mc.tenno.TennoGunItem;
 import com.jax.destiny2mc.tenno.melee.TennoMeleeItem;
+import java.util.ArrayList;
 import java.util.EnumMap;
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
@@ -65,21 +67,53 @@ public final class WeaponMods {
     }
 
     /** Resolve once when launching a delayed projectile or starting an authoritative attack.
+     * Distinct base elemental mods combine in socket order (Warframe rules: Cold+Elec=Magnetic, etc.).
      * The returned immutable snapshot can safely travel with a beam, shot or lingering effect. */
     public static Map<ModStat,Double> bonuses(Player wielder, ItemStack stack) {
         if (wielder == null) return Map.of();
         var cards = installed(stack);
         if (cards.isEmpty()) return Map.of();
         var active = new EnumMap<ModStat,Double>(ModStat.class);
+        var elementOrder = new ArrayList<ModStat>();
+        var rawElements = new EnumMap<ModStat,Double>(ModStat.class);
         for (var card : cards) {
             int rank = ModCollection.rank(wielder,card.id());
             if (rank < 0) continue;
-            for (var step : card.steps())
-                active.merge(step.stat(),card.value(step,rank),Double::sum);
+            for (var step : card.steps()) {
+                double val = card.value(step,rank);
+                if (step.stat().isBaseElement()) {
+                    if (!rawElements.containsKey(step.stat())) elementOrder.add(step.stat());
+                    rawElements.merge(step.stat(), val, Double::sum);
+                } else {
+                    active.merge(step.stat(), val, Double::sum);
+                }
+            }
+        }
+        // Pair base elements in socket order into Warframe combined elements
+        for (int i = 0; i < elementOrder.size(); i += 2) {
+            ModStat first = elementOrder.get(i);
+            if (i + 1 < elementOrder.size()) {
+                ModStat second = elementOrder.get(i + 1);
+                ModStat combined = ModStat.combine(first, second);
+                active.merge(combined, rawElements.get(first) + rawElements.get(second), Double::sum);
+            } else {
+                active.merge(first, rawElements.get(first), Double::sum);
+            }
         }
         return Map.copyOf(active);
     }
+
     public static double bonus(Player wielder, ItemStack stack, ModStat stat) {
         return bonuses(wielder,stack).getOrDefault(stat,0d);
+    }
+
+    /** Compact active elemental summary for UI display (e.g., "Magnetic +96%"). */
+    public static String elementalSummary(Player wielder, ItemStack stack) {
+        var active = bonuses(wielder, stack);
+        if (active.isEmpty()) return "";
+        return active.entrySet().stream()
+            .filter(e -> e.getKey().isElemental() && e.getValue() > 0)
+            .map(e -> e.getKey().label() + " +" + Math.round(e.getValue() * 100) + "%")
+            .collect(Collectors.joining("  ·  "));
     }
 }

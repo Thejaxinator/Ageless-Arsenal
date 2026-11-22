@@ -48,10 +48,10 @@ public class FrontierMob extends Monster {
  public void animate(int state,int ticks){begin(state,ticks);}
  public void previewAnimation(int state,int age){entityData.set(MOVE,state);entityData.set(START,level().getGameTime()-age);}
  public void encounterTitle(String text){bar.setName(Component.literal(unit.name()+" | "+text));}
- private boolean meleeUnit(){return Set.of("pounce","blink","censer","explode","blades","torment","geist","darkblade","crota","rhulk","nezarec").contains(unit.move());}
+ private boolean meleeUnit(){return Set.of("pounce","blink","censer","explode","blades","prod","torment","geist","darkblade","crota","rhulk","nezarec").contains(unit.move());}
  @Override public void aiStep(){
   super.aiStep();if(!(level() instanceof ServerLevel l)||!isAlive())return;
-  if(home==null)home=position();if(cooldown>0)cooldown--;if(special>0)special--;if(shieldTicks>0)shieldTicks--;
+  if(home==null)home=position();if(cooldown>0)cooldown--;if(special>0)special--;if(shieldTicks>0)shieldTicks--;CorpusCombat.tick(this,l);
   bar.setProgress(Mth.clamp(getHealth()/getMaxHealth(),0,1));
   if(com.jax.destiny2mc.atlas.DungeonEncounters.isDungeon(this)){com.jax.destiny2mc.atlas.DungeonEncounters.tick(this,l);return;}
   LivingEntity target=getTarget();
@@ -73,10 +73,10 @@ public class FrontierMob extends Monster {
   if(special<=0){
    special=unit.boss()?130-phase*15:170;cycle++;
    int state=switch(unit.move()){
-    case "shield","tether","totem","repulse"->SHIELD;
+    case "shield","tether","totem","repulse","bursa"->SHIELD;
     case "blink","mist","taniks"->BLINK;
-    case "pounce","jetpack","torment","nezarec"->LEAP;
-    case "darkblade","crota","golgoroth"->SLAM;
+    case "pounce","jetpack","torment","nezarec","hyena"->LEAP;
+    case "darkblade","crota","golgoroth","shockwave"->SLAM;
     case "rhulk"->CHARGE;
     default->CAST;
    };
@@ -100,7 +100,7 @@ public class FrontierMob extends Monster {
    case FIRE->{if(live&&hasLineOfSight(target)&&(a==12||a==18||a==24)){if(unit.move().equals("flame"))flame(l,target);else shoot(l,target,0,unit.element(),unit.damage(),1.0f);} }
    case MELEE->{stopMotion();if((a==14||a==22&&unit.move().equals("blades"))&&live&&distanceTo(target)<(unit.boss()?5:3)&&hasLineOfSight(target)){target.hurt(damageSources().mobAttack(this),unit.damage());target.knockback(.45,getX()-target.getX(),getZ()-target.getZ());if(unit.move().equals("censer"))FrontierHazard.spawn(l,this,target.position(),2,60,2,1,0);if(unit.move().equals("geist")){blast(l,position(),2.5f,6,.3);discard();}}}
    case BLINK->{stopMotion();if(a%3==0)particles(l,unit.faction().equals("scorn")?3:unit.element(),8);if(a==12&&live)blink(l,target);if(unit.move().equals("taniks")&&a==22&&live)for(int i=0;i<3;i++)shoot(l,target,5,1,6,1);}
-   case SHIELD->{stopMotion();if(a==40&&unit.move().equals("repulse"))blast(l,position(),6,4,1.4);if(a%4==0)ring(l,position(),1.5,unit.element());
+   case SHIELD->{stopMotion();if(a==40&&unit.move().equals("repulse"))blast(l,position(),6,4,1.4);if(a==40&&unit.move().equals("bursa"))CorpusCombat.specialAttack(this,l,target,mark);if(a%4==0)ring(l,position(),1.5,unit.element());
     if(unit.move().equals("tether")||unit.move().equals("totem")){if(a%10==0){for(FrontierMob ally:l.getEntitiesOfClass(FrontierMob.class,getBoundingBox().inflate(7),e->e!=this&&e.unit.faction().equals(unit.faction()))){ally.shieldTicks=15;ally.heal(1);line(l,getEyePosition(),ally.getEyePosition(),unit.element());}}}
    }
    case LEAP->{getNavigation().stop();fallDistance=0;
@@ -108,9 +108,9 @@ public class FrontierMob extends Monster {
     if(a==15){Vec3 v=mark.subtract(position()).multiply(1,0,1).normalize().scale(unit.move().equals("jetpack")?.12:.4);setDeltaMovement(v.x,.85,v.z);}
     if(unit.move().equals("jetpack")){if(a>=18&&a%7==0&&live)shoot(l,target,0,1,unit.damage(),1.1f);}
     else if(a==26){Vec3 v=mark.subtract(position()).normalize().scale(.85);setDeltaMovement(v.x,Math.min(-.35,v.y),v.z);}
-    if(a>=27&&(onGround()||horizontalCollision||a==40)){blast(l,position(),unit.boss()?4.5f:3,unit.damage(),.8);if(unit.move().equals("nezarec"))FrontierHazard.spawn(l,this,position(),5,70,4,3,1);finish(35);return;}
+    if(a>=27&&(onGround()||horizontalCollision||a==40)){blast(l,position(),unit.boss()?4.5f:3,unit.damage(),.8);if(unit.move().equals("nezarec"))FrontierHazard.spawn(l,this,position(),5,70,4,3,1);if(unit.move().equals("hyena"))CorpusCombat.specialAttack(this,l,target,mark);finish(35);return;}
    }
-   case SLAM->{stopMotion();if(a<32&&a%4==0)ring(l,mark,unit.boss()?5:3,unit.element());if(a==32){blast(l,mark,5,unit.damage(),.9);if(unit.move().equals("crota")){shieldTicks=0;begin(STAGGER,80);summonOrbs(l,1);return;}if(unit.move().equals("golgoroth"))FrontierHazard.spawn(l,this,mark,4,100,3,3,1);if(unit.move().equals("darkblade")&&live)blink(l,target);}}
+   case SLAM->{stopMotion();if(a<32&&a%4==0)ring(l,mark,unit.boss()?5:3,unit.element());if(a==32){if(unit.move().equals("shockwave")){CorpusCombat.specialAttack(this,l,target,mark);return;}blast(l,mark,5,unit.damage(),.9);if(unit.move().equals("crota")){shieldTicks=0;begin(STAGGER,80);summonOrbs(l,1);return;}if(unit.move().equals("golgoroth"))FrontierHazard.spawn(l,this,mark,4,100,3,3,1);if(unit.move().equals("darkblade")&&live)blink(l,target);}}
    case CHARGE->{getNavigation().stop();if(a<24){stopMotion();if(a%4==0)line(l,position().add(0,.1,0),mark.add(0,.1,0),1);}else if(a<36){Vec3 v=mark.subtract(position()).multiply(1,0,1).normalize().scale(.62);if(l.noCollision(this,getBoundingBox().move(v)))setDeltaMovement(v.x,getDeltaMovement().y,v.z);if(a%4==0)blast(l,position().add(v),2.5f,6,.5);}else stopMotion();if(a==38){Vec3 d=mark.subtract(position()).normalize();Vec3 side=new Vec3(-d.z,0,d.x);for(int i=-1;i<=1;i++){Vec3 end=mark.add(side.scale(i*3));line(l,getEyePosition(),end.add(0,1,0),1);FrontierHazard.spawn(l,this,end,1.3f,45,4,1,0);}}}
    case CAST->{stopMotion();if(a<28&&a%4==0)ring(l,mark,unit.boss()?4:2.5,unit.element());if(a==28)specialAttack(l,target);if(a==40&&unit.move().equals("eye")&&live)shoot(l,target,0,3,5,1);}
    case STAGGER->{stopMotion();if(a%8==0)particles(l,2,8);if(unit.move().equals("crota")&&a==70&&orbsAlive()){blast(l,position(),15,10,.4);for(UUID id:anchors){Entity orb=l.getEntity(id);if(orb!=null)orb.discard();}anchors.clear();}}
@@ -118,6 +118,7 @@ public class FrontierMob extends Monster {
   if(a>=duration)finish(unit.boss()?20:30);
  }
  private void specialAttack(ServerLevel l,LivingEntity target){
+  if(CorpusCombat.specialAttack(this,l,target,mark))return;
   boolean live=target!=null&&target.isAlive();
   switch(unit.move()){
    case "missiles","valus"->{if(live)for(int i=0;i<(unit.boss()?5:3);i++){Vec3 start=getEyePosition().add((i-2)*.18,.5,0);FrontierProjectile p=FrontierProjectile.launch(l,this,start,target.getEyePosition().subtract(start).normalize(),.65f,unit.damage()*.7f,1,5,2);p.target(target);}}
@@ -174,13 +175,14 @@ public class FrontierMob extends Monster {
   if(move()==SHIELD&&(unit.move().equals("shield")||unit.move().equals("repulse"))&&attacker!=null){Vec3 facing=getLookAngle().multiply(1,0,1).normalize(),to=attacker.position().subtract(position()).multiply(1,0,1).normalize();if(facing.dot(to)>.25)damage*=.15f;}
   if(unit.move().equals("crota")&&move()!=STAGGER)damage*=.4f;
   if(unit.move().equals("golgoroth")&&attacker!=null){Vec3 to=attacker.position().subtract(position()).normalize();if(getLookAngle().dot(to)<-.3){damage*=1.5f;setTarget(attacker instanceof LivingEntity v?v:null);begin(STAGGER,55);}}
+  damage=CorpusCombat.filterDamage(this,src,damage);if(damage<=0f)return true;
   return super.hurt(src,damage);
  }
  @Override public void die(DamageSource s){
   if(!level().isClientSide){
    com.jax.destiny2mc.atlas.DungeonEncounters.complete(this);
    if(unit.move().equals("blades")&&!chestKill){FrontierMob geist=FrontierContent.ENTITIES.get("dread_geist").create(level());if(geist!=null){geist.moveTo(getX(),getY()+1,getZ());geist.setTarget(getTarget());level().addFreshEntity(geist);}}
-   spawnAtLocation(new net.minecraft.world.item.ItemStack(FrontierContent.materialItem(unit.faction()),unit.boss()?8:1+random.nextInt(2)));
+   spawnAtLocation(new net.minecraft.world.item.ItemStack(FrontierContent.materialItem(unit.faction()),unit.boss()?8:1+random.nextInt(2)));CorpusCombat.onDeath(this);
    if(unit.boss()){spawnAtLocation(new net.minecraft.world.item.ItemStack(FrontierContent.item("conquest_token"),unit.raid()?4:com.jax.destiny2mc.atlas.DungeonEncounters.isDungeon(this)?3:2));spawnAtLocation((net.minecraft.world.item.Item)ModRegistries.EXOTIC_ENGRAM.get());}
    if(level() instanceof ServerLevel l)for(UUID id:anchors){Entity e=l.getEntity(id);if(e!=null)e.discard();}
   }

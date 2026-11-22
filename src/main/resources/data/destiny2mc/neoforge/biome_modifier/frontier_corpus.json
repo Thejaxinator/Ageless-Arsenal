@@ -1,0 +1,72 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "minecraft:snowy_plains",
+    "minecraft:ice_spikes",
+    "minecraft:snowy_slopes",
+    "minecraft:frozen_peaks",
+    "minecraft:stony_shore"
+  ],
+  "spawners": [
+    {
+      "type": "destiny2mc:corpus_crewman",
+      "weight": 6,
+      "minCount": 1,
+      "maxCount": 3
+    },
+    {
+      "type": "destiny2mc:corpus_prod_crewman",
+      "weight": 4,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "destiny2mc:corpus_moa",
+      "weight": 5,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "destiny2mc:corpus_shockwave_moa",
+      "weight": 3,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "destiny2mc:corpus_shield_osprey",
+      "weight": 4,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "destiny2mc:corpus_tech",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "destiny2mc:corpus_nullifier",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "destiny2mc:corpus_bursa",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "destiny2mc:corpus_hyena",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "destiny2mc:corpus_raknoid",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 2
+    }
+  ]
+}

@@ -8,7 +8,7 @@ version="6.3.1"
 displayName="Ageless Arsenals"
 logoFile="ageless_arsenals.png"
 authors="Thejaxinator"
-description='''Collect and fuse weapon mods for 33 Warframe weapons. Craft mod packs, install cards at the Gunsmith and personalize 70 Destiny firearms. Includes the Energy Binder, raid armor and faction combat.'''
+description='''Collect and fuse weapon mods for 33 Warframe weapons. Craft mod packs, install cards at the Gunsmith and personalize 70 Destiny firearms. Includes the Energy Binder, raid armor, Corpus faction combat, and equippable Proto-Shields.'''
 
 [[dependencies.destiny2mc]]
 modId="neoforge"
@@ -21,6 +21,13 @@ side="BOTH"
 modId="minecraft"
 type="required"
 versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.destiny2mc]]
+modId="curios"
+type="required"
+versionRange="[9.0,)"
 ordering="NONE"
 side="BOTH"
 

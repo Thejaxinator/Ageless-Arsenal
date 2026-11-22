@@ -9,7 +9,8 @@
   "client": [
     "HeldGunMixin",
     "PlayerArmMixin",
-    "DreadPoseMixin"
+    "DreadPoseMixin",
+    "CorpusPoseMixin"
   ],
   "injectors": {
     "defaultRequire": 1

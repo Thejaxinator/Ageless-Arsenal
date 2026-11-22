@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "GNG",
+    "TST",
+    "GIG"
+  ],
+  "key": {
+    "G": { "item": "minecraft:gold_block" },
+    "N": { "item": "minecraft:nether_star" },
+    "T": { "item": "minecraft:amethyst_block" },
+    "I": { "item": "minecraft:netherite_ingot" },
+    "S": { "item": "destiny2mc:proto_shield_mk3" }
+  },
+  "result": {
+    "id": "destiny2mc:proto_shield_prime",
+    "count": 1
+  }
+}

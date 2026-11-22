@@ -23,9 +23,12 @@ public class AtlasScreen extends Screen {
  public static final int W=960,H=540;
  private static final int INK=0xff292d2b,SECONDARY=0xff2d342e,CREAM=0xfff3f0e7;
  private static final int GOLD=0xffd7c190,WHITE=0xfff0eee7,MUTED=0xffbdc2bc,CARD=0xff242a28;
- private static final String[] FACTIONS={"all","fallen","hive","vex","cabal","taken","scorn","dread"};
+ private static final String[] REALMS={"all","destiny","warframe"};
+ private static final String[] FACTIONS_ALL={"all","fallen","hive","vex","cabal","taken","scorn","dread","corpus"};
+ private static final String[] FACTIONS_DESTINY={"all","fallen","hive","vex","cabal","taken","scorn","dread"};
+ private static final String[] FACTIONS_WARFRAME={"all","corpus"};
  private int tab,listScroll,guideScroll,ticks,pose=1;
- private String site="petition_court",enemy="vorgeth",faction="all",query="";
+ private String site="petition_court",enemy="vorgeth",realm="all",faction="all",query="";
  private boolean bosses,searchFocus,paused,dragging;
  private float yaw=-24,pitch=-8,zoom=1,scale=1;
  private LivingEntity preview;
@@ -52,13 +55,14 @@ public class AtlasScreen extends Screen {
   controlSignature="";
  }
  private void resetView(){zoom=1;yaw=-24;pitch=-8;}
- private void openBestiary(){tab=1;query="";faction="all";bosses=false;searchFocus=false;resetPreview();}
+ private void openBestiary(){tab=1;query="";realm="all";faction="all";bosses=false;searchFocus=false;resetPreview();}
  private void openLocator(){tab=0;searchFocus=false;chooseSite(site);}
  private boolean ruin(){return tab==0&&DungeonSites.site(site)==null;}
  private int bx(double x){return (int)((x-ox)/scale);}
  private int by(double y){return (int)((y-oy)/scale);}
  private boolean inside(int x,int y,int l,int t,int w,int h){return x>=l&&y>=t&&x<l+w&&y<t+h;}
- private List<BestiaryCatalog.Entry> entries(){return BestiaryCatalog.filter(query,faction,bosses);}
+ private String[] activeFactions(){return switch(realm){case "destiny"->FACTIONS_DESTINY;case "warframe"->FACTIONS_WARFRAME;default->FACTIONS_ALL;};}
+ private List<BestiaryCatalog.Entry> entries(){return BestiaryCatalog.filter(query,realm,faction,bosses);}
  private List<String> sites(){List<String> out=new ArrayList<>();DungeonSites.ALL.forEach(s->out.add(s.id()));out.addAll(DungeonSites.RUINS);return out;}
  private BestiaryCatalog.Entry selected(){return BestiaryCatalog.get(enemy);}
  private static String siteName(String id){return switch(id){case "cosmodrome_remnant" -> "Fallen Ether Bunker";case "vex_conduit" -> "Vex Transit Gate";case "warmind_relay" -> "Cabal Forward Base";case "exodus_bulkhead" -> "Scorn Ether Still";case "creation_annex" -> "Dread Resonance Needle";case "petition_court" -> "Court of Petitions";case "heresy_pit" -> "Cradle of Embers";case "avarice_vault" -> "Rusted Vault";case "siren_spire" -> "Siren’s Watch";default -> "";};}
@@ -172,8 +176,8 @@ public class AtlasScreen extends Screen {
   int bg=!enabled?(dark?0xff343b36:0xffa2a89f):active?CREAM:over?(dark?0xff555e55:0xffd9dbd1):(dark?0xff3e473f:0xffbac0b5);
   int fg=active||!dark?INK:WHITE;if(!enabled)fg=dark?0xffb6beb1:SECONDARY;
   c.fill(x,y,w,h,bg);c.fill(x,y+h-1,w,1,active?GOLD:dark?0xff6c786b:0xff7c877b);
-  float size=w<55?.82f:.95f;int labelWidth=font.width(AtlasCanvas.styled(label));
-  c.strong(x+Math.max(4,(w-(int)(labelWidth*size))/2),y+(h-9)/2,label,fg,size);
+  float size=w<44?.72f:w<55?.82f:.95f;int labelWidth=font.width(AtlasCanvas.styled(label));
+  c.strong(x+Math.max(3,(w-(int)(labelWidth*size))/2),y+(h-9)/2,label,fg,size);
   if(enabled)focusMark(c,id,x,y,w,h);
  }
  private void locatorList(AtlasCanvas c,int mx,int my){
@@ -192,26 +196,29 @@ public class AtlasScreen extends Screen {
  private void enemyList(AtlasCanvas c,int mx,int my){
   c.label(34,79,"SEARCH THE ARCHIVE",INK,.73f,1);
   c.fill(34,93,204,23,CREAM);c.fill(34,115,204,1,searchFocus?INK:0xff7c877b);
-  String q=query.isEmpty()&&!searchFocus?"Name, faction or origin":query+(searchFocus?"|":"");
+  String q=query.isEmpty()&&!searchFocus?"Name, universe, faction or origin":query+(searchFocus?"|":"");
   c.text(42,100,trim(q,185),query.isEmpty()?SECONDARY:INK,1);focusMark(c,"search",34,93,204,23);
-  for(int i=0;i<8;i++)button(c,"faction:"+FACTIONS[i],34+i%4*51,125+i/4*21,48,18,FACTIONS[i].toUpperCase(Locale.ROOT),faction.equals(FACTIONS[i]),true,false,mx,my);
-  button(c,"all-types",34,172,99,20,"ALL TYPES",!bosses,true,false,mx,my);
-  button(c,"bosses",139,172,99,20,"BOSSES",bosses,true,false,mx,my);
+  for(int i=0;i<REALMS.length;i++)button(c,"realm:"+REALMS[i],34+i*69,121,66,17,REALMS[i].toUpperCase(Locale.ROOT),realm.equals(REALMS[i]),true,false,mx,my);
+  String[] facs=activeFactions();
+  int cols=facs.length==2?2:facs.length>8?5:4,fw=cols==2?99:cols==5?39:48,step=cols==2?105:cols==5?41:51;
+  for(int i=0;i<facs.length;i++)button(c,"faction:"+facs[i],34+i%cols*step,142+i/cols*21,fw,18,facs[i].toUpperCase(Locale.ROOT),faction.equals(facs[i]),true,false,mx,my);
+  button(c,"all-types",34,186,99,18,"ALL TYPES",!bosses,true,false,mx,my);
+  button(c,"bosses",139,186,99,18,"BOSSES",bosses,true,false,mx,my);
   List<BestiaryCatalog.Entry> list=entries();clampList(list);
   for(int i=0;i<9&&i+listScroll<list.size();i++){
-   var e=list.get(i+listScroll);int y=203+i*30;boolean active=e.id().equals(enemy),over=inside(mx,my,32,y,204,28);
-   if(active||over)c.fill(32,y,204,28,active?CREAM:0xffd0d3c9);
-   c.fill(32,y,active?3:1,28,active?0xff927c4e:0xff7c877b);
+   var e=list.get(i+listScroll);int y=210+i*29;boolean active=e.id().equals(enemy),over=inside(mx,my,32,y,204,27);
+   if(active||over)c.fill(32,y,204,27,active?CREAM:0xffd0d3c9);
+   c.fill(32,y,active?3:1,27,active?0xff927c4e:0xff7c877b);
    c.strong(42,y+4,trim(e.name(),184),INK,1);
-   c.text(42,y+18,e.faction().toUpperCase(Locale.ROOT)+" / "+e.role().toUpperCase(Locale.ROOT),SECONDARY,.73f);
-   focusMark(c,"enemy:"+e.id(),32,y,204,28);
+   c.text(42,y+17,e.realm().toUpperCase(Locale.ROOT)+" / "+e.faction().toUpperCase(Locale.ROOT)+" / "+e.role().toUpperCase(Locale.ROOT),SECONDARY,.68f);
+   focusMark(c,"enemy:"+e.id(),32,y,204,27);
   }
-  if(list.isEmpty()){c.strong(36,220,"No matching enemies",INK,1.05f);c.text(36,239,"Try a name or another faction.",SECONDARY,.95f);}
-  scrollbar(c,242,203,268,list.size(),9,listScroll,false);
+  if(list.isEmpty()){c.strong(36,225,"No matching enemies",INK,1.05f);c.text(36,244,"Try a name or another faction.",SECONDARY,.95f);}
+  scrollbar(c,242,210,261,list.size(),9,listScroll,false);
   c.text(34,483,list.size()+" MATCHES  /  "+BestiaryCatalog.ALL.size()+" TOTAL",SECONDARY,.9f);
  }
  private void centerPanel(AtlasCanvas c,GuiGraphics g,float partial,int mx,int my){
-  var e=selected();c.label(275,92,ruin()?"FACTION LANDMARK":e==null?"ENEMY MODEL":e.faction().toUpperCase(Locale.ROOT),INK,1,1.5f);
+  var e=selected();c.label(275,92,ruin()?"FACTION LANDMARK":e==null?"ENEMY MODEL":e.realm().toUpperCase(Locale.ROOT)+" / "+e.faction().toUpperCase(Locale.ROOT),INK,1,1.5f);
   c.text(275,111,ruin()?"Overworld exploration":e==null?"":e.role(),SECONDARY,1);
   if(ruin()){
    c.title(285,226,siteName(site),INK,1.6f);
@@ -238,6 +245,7 @@ public class AtlasScreen extends Screen {
   if(enemy.equals("dread_grim")||enemy.equals("nezarec"))extent=Math.max(extent,5.6f);
   if(enemy.equals("oryx_boss"))extent=Math.max(extent,7.8f);
   if(enemy.equals("vex_sphinx"))extent=Math.max(extent,4.6f);
+  if(enemy.equals("corpus_shield_osprey"))extent=Math.max(extent,2.2f);
   float pixels=Math.min(64,246/Math.max(1,extent))*zoom;
   // Leave room for the full overhead weapon arc in the Special preview.
   if(pose==3){
@@ -325,7 +333,7 @@ public class AtlasScreen extends Screen {
  private void clampList(List<BestiaryCatalog.Entry> list){listScroll=Math.clamp(listScroll,0,Math.max(0,list.size()-9));}
  private void syncControls(){
   List<BestiaryCatalog.Entry> list=entries();clampList(list);
-  String sig=tab+"/"+site+"/"+enemy+"/"+query+"/"+faction+"/"+bosses+"/"+listScroll+"/"+paused+"/"+scanning()+"/"+AtlasClient.CONFIRMED.containsKey(site)+"/"+(AtlasClient.waypoint!=null);
+  String sig=tab+"/"+site+"/"+enemy+"/"+query+"/"+realm+"/"+faction+"/"+bosses+"/"+listScroll+"/"+paused+"/"+scanning()+"/"+AtlasClient.CONFIRMED.containsKey(site)+"/"+(AtlasClient.waypoint!=null);
   if(sig.equals(controlSignature))return;
   String focus=getFocused() instanceof AtlasControl a?a.id:"";
   clearWidgets();controls.clear();controlSignature=sig;
@@ -333,11 +341,14 @@ public class AtlasScreen extends Screen {
   control("bestiary","Bestiary page",764,19,172,29,true,this::openBestiary);
   if(tab==0){int row=0;for(String id:sites()){control("site:"+id,siteName(id),32,140+row++*36,208,32,true,()->chooseSite(id));}}
   else{
-   control("search","Search enemies. Type a name, faction or origin",34,93,204,23,true,()->searchFocus=true);
-   for(int i=0;i<8;i++){String f=FACTIONS[i];control("faction:"+f,"Filter: "+f,34+i%4*51,125+i/4*21,48,18,true,()->{faction=f;listScroll=0;});}
-   control("all-types","Show all enemy types",34,172,99,20,true,()->{bosses=false;listScroll=0;});
-   control("bosses","Show bosses",139,172,99,20,true,()->{bosses=true;listScroll=0;});
-   for(int i=0;i<9&&i+listScroll<list.size();i++){var e=list.get(i+listScroll);control("enemy:"+e.id(),e.name()+", "+e.faction()+", "+e.role(),32,203+i*30,204,28,true,()->chooseEnemy(e.id()));}
+   control("search","Search enemies. Type a name, universe, faction or origin",34,93,204,23,true,()->searchFocus=true);
+   for(int i=0;i<REALMS.length;i++){String r=REALMS[i];control("realm:"+r,"Universe: "+r,34+i*69,121,66,17,true,()->{realm=r;faction="all";listScroll=0;});}
+   String[] facs=activeFactions();
+   int cols=facs.length==2?2:facs.length>8?5:4,fw=cols==2?99:cols==5?39:48,step=cols==2?105:cols==5?41:51;
+   for(int i=0;i<facs.length;i++){String f=facs[i];control("faction:"+f,"Filter: "+f,34+i%cols*step,142+i/cols*21,fw,18,true,()->{faction=f;listScroll=0;});}
+   control("all-types","Show all enemy types",34,186,99,18,true,()->{bosses=false;listScroll=0;});
+   control("bosses","Show bosses",139,186,99,18,true,()->{bosses=true;listScroll=0;});
+   for(int i=0;i<9&&i+listScroll<list.size();i++){var e=list.get(i+listScroll);control("enemy:"+e.id(),e.name()+", "+e.realm()+", "+e.faction()+", "+e.role(),32,210+i*29,204,27,true,()->chooseEnemy(e.id()));}
   }
   if(!ruin()){
    control("model","Model preview. Arrow keys rotate; plus and minus zoom",264,132,318,277,true,()->{});

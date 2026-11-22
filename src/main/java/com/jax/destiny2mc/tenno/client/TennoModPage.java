@@ -302,6 +302,17 @@ public final class TennoModPage {
             c.text(196, 180, font.plainSubstrByWidth(weapon(p, slot).getHoverName().getString().toUpperCase(Locale.ROOT), 265),
                     VitruvianUi.MUTED, .76f);
         }
+        if(installed.size()>SLOTS_PAGE){
+            pageControls(c,socketOffset,installed.size(),SLOTS_PAGE,196,177);
+            if(slot>=0){
+                String elem=WeaponMods.elementalSummary(p,weapon(p,slot));
+                if(!elem.isEmpty())c.text(308,181,font.plainSubstrByWidth(elem,220),JADE,.74f);
+            }
+        }else if(slot>=0){
+            String elem=WeaponMods.elementalSummary(p,weapon(p,slot));
+            if(!elem.isEmpty())c.text(196,178,font.plainSubstrByWidth(elem,330),JADE,.8f);
+            else c.text(196,178,font.plainSubstrByWidth(weapon(p,slot).getHoverName().getString(),265),MUTED,.8f);
+        }
     }
 
     private static void pageControls(UiCanvas c, int off, int count, int size, int x, int y) {

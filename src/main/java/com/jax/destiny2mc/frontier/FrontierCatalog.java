@@ -1,7 +1,7 @@
 package com.jax.destiny2mc.frontier;
 import java.util.*;
 public final class FrontierCatalog {
- public record Unit(int kind,String id,String name,String faction,String body,float health,float speed,float width,float height,float damage,int element,String move,boolean boss,boolean raid,boolean flying){}
+ public record Unit(int kind,String id,String name,String faction,String body,float health,float speed,float width,float height,float damage,int element,String move,boolean boss,boolean raid,boolean flying){public String realm(){return faction.equals("corpus")?"warframe":"destiny";}}
  public static final Unit[] UNITS={
   new Unit(100,"cabal_legionary","Legionary","cabal","cabal",42,0.25f,0.85f,2.3f,4,1,"burst",false,false,false),
   new Unit(101,"cabal_phalanx","Phalanx","cabal","phalanx",58,0.22f,0.95f,2.4f,5,1,"shield",false,false,false),
@@ -45,7 +45,17 @@ public final class FrontierCatalog {
   new Unit(139,"vorgeth","Vorgeth, the Boundless Hunger","taken","vorgeth",720,0.18f,2.1f,4.3f,9,3,"dungeon_vorgeth",true,false,false),
   new Unit(140,"zulmak","Zulmak, Instrument of Torment","hive","zulmak",800,0.24f,1.6f,4.5f,12,1,"dungeon_zulmak",true,false,false),
   new Unit(141,"phryzhia","Phry'zhia, the Insatiable","hive","phryzhia",760,0.19f,2.2f,4.4f,10,1,"dungeon_phryzhia",true,false,false),
-  new Unit(142,"akelous","Akelous, the Siren's Current","vex","akelous",740,0.18f,2.2f,3.6f,9,2,"dungeon_akelous",true,false,true)
+  new Unit(142,"akelous","Akelous, the Siren's Current","vex","akelous",740,0.18f,2.2f,3.6f,9,2,"dungeon_akelous",true,false,true),
+  new Unit(143,"corpus_crewman","Corpus Crewman","corpus","crewman",38,0.26f,0.72f,2.25f,5,2,"burst",false,false,false),
+  new Unit(144,"corpus_moa","Corpus MOA","corpus","moa",54,0.31f,0.88f,2.15f,6,2,"arcbolt",false,false,false),
+  new Unit(145,"corpus_shield_osprey","Shield Osprey","corpus","osprey",30,0.29f,1.1f,1.25f,4,2,"tether",false,false,true),
+  new Unit(146,"corpus_prod_crewman","Prod Crewman","corpus","crewman",34,0.32f,0.72f,2.20f,6,2,"prod",false,false,false),
+  new Unit(147,"corpus_tech","Corpus Tech","corpus","crewman",92,0.22f,0.86f,2.65f,7,2,"burst",false,false,false),
+  new Unit(148,"corpus_shockwave_moa","Shockwave MOA","corpus","moa",68,0.29f,0.92f,2.25f,8,2,"shockwave",false,false,false),
+  new Unit(149,"corpus_nullifier","Nullifier Crewman","corpus","crewman",64,0.25f,0.76f,2.45f,9,2,"nullifier",false,false,false),
+  new Unit(150,"corpus_bursa","Isolator Bursa","corpus","bursa",165,0.21f,1.45f,2.10f,10,2,"bursa",false,false,false),
+  new Unit(151,"corpus_hyena","Hyena Proxy","corpus","hyena",120,0.36f,1.25f,1.45f,9,2,"hyena",false,false,false),
+  new Unit(152,"corpus_raknoid","Scyto Raknoid","corpus","raknoid",110,0.28f,1.65f,1.85f,8,2,"raknoid",false,false,false)
  };
  public static Unit get(String id){for(Unit u:UNITS)if(u.id().equals(id))return u;throw new IllegalArgumentException(id);}
  public static Unit kind(int k){return UNITS[Math.max(0,Math.min(UNITS.length-1,k-100))];}
