@@ -1,0 +1,40 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="Non-Commercial Fan Mod (All Rights Reserved)"
+
+[[mods]]
+modId="destiny2mc"
+version="6.3.1"
+displayName="Ageless Arsenals"
+logoFile="ageless_arsenals.png"
+authors="Thejaxinator"
+description='''Collect and fuse weapon mods for 33 Warframe weapons. Craft mod packs, install cards at the Gunsmith and personalize 70 Destiny firearms. Includes the Energy Binder, raid armor and faction combat.'''
+
+[[dependencies.destiny2mc]]
+modId="neoforge"
+type="required"
+versionRange="[21.1,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.destiny2mc]]
+modId="minecraft"
+type="required"
+versionRange="[1.21.1,1.21.2)"
+ordering="NONE"
+side="BOTH"
+
+[[mixins]]
+config="ageless.scorn.mixins.json"
+
+[[mixins]]
+config="ageless_arsenals.mixins.json"
+
+[[mixins]]
+config="destiny2mc.ageless.gunsmith.mixins.json"
+
+[[mixins]]
+config="destiny2mc.ageless_fx.mixins.json"
+
+[[mixins]]
+config="ageless.career.mixins.json"

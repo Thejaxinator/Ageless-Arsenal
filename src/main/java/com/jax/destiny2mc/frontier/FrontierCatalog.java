@@ -1,0 +1,52 @@
+package com.jax.destiny2mc.frontier;
+import java.util.*;
+public final class FrontierCatalog {
+ public record Unit(int kind,String id,String name,String faction,String body,float health,float speed,float width,float height,float damage,int element,String move,boolean boss,boolean raid,boolean flying){}
+ public static final Unit[] UNITS={
+  new Unit(100,"cabal_legionary","Legionary","cabal","cabal",42,0.25f,0.85f,2.3f,4,1,"burst",false,false,false),
+  new Unit(101,"cabal_phalanx","Phalanx","cabal","phalanx",58,0.22f,0.95f,2.4f,5,1,"shield",false,false,false),
+  new Unit(102,"cabal_psion","Psion","cabal","psion",25,0.31f,0.65f,1.9f,4,3,"psion",false,false,false),
+  new Unit(103,"cabal_centurion","Centurion","cabal","centurion",76,0.25f,1,2.65f,6,1,"jetpack",false,false,false),
+  new Unit(104,"cabal_colossus","Colossus","cabal","colossus",120,0.18f,1.25f,3.0f,7,1,"missiles",false,false,false),
+  new Unit(105,"cabal_warbeast","Warbeast","cabal","beast",30,0.36f,0.85f,1.1f,5,0,"pounce",false,false,false),
+  new Unit(106,"cabal_incendior","Incendior","cabal","incendior",68,0.22f,1,2.5f,5,1,"flame",false,false,false),
+  new Unit(107,"taken_thrall","Taken Thrall","taken","thrall",24,0.32f,0.65f,1.8f,4,3,"blink",false,false,false),
+  new Unit(108,"taken_acolyte","Taken Acolyte","taken","acolyte",34,0.25f,0.7f,1.95f,4,3,"eye",false,false,false),
+  new Unit(109,"taken_goblin","Taken Goblin","taken","goblin",38,0.22f,0.75f,2.0f,4,3,"tether",false,false,false),
+  new Unit(110,"taken_captain","Taken Captain","taken","captain",90,0.28f,1.1f,2.7f,6,3,"darkness",false,false,false),
+  new Unit(111,"taken_knight","Taken Knight","taken","knight",92,0.23f,1.1f,2.8f,6,1,"blightfire",false,false,false),
+  new Unit(112,"taken_phalanx","Taken Phalanx","taken","taken_phalanx",74,0.2f,1.0f,2.5f,6,3,"repulse",false,false,false),
+  new Unit(113,"scorn_stalker","Stalker","scorn","stalker",32,0.27f,0.7f,1.9f,4,3,"burst",false,false,false),
+  new Unit(114,"scorn_raider","Raider","scorn","raider",38,0.29f,0.72f,2.0f,5,3,"mist",false,false,false),
+  new Unit(115,"scorn_lurker","Lurker","scorn","lurker",50,0.24f,0.8f,2.0f,5,3,"shield",false,false,false),
+  new Unit(116,"scorn_ravager","Ravager","scorn","ravager",40,0.32f,0.8f,2.05f,6,1,"censer",false,false,false),
+  new Unit(117,"scorn_chieftain","Chieftain","scorn","chieftain",100,0.24f,1,2.55f,6,2,"totem",false,false,false),
+  new Unit(118,"scorn_screeb","Screeb","scorn","screeb",18,0.37f,0.9f,0.85f,10,2,"explode",false,false,false),
+  new Unit(119,"scorn_abomination","Abomination","scorn","abomination",130,0.18f,1.35f,3.2f,8,2,"arcbolt",false,false,false),
+  new Unit(120,"dread_grim","Grim","dread","grim",34,0.28f,0.85f,2.0f,4,1,"screech",false,false,true),
+  new Unit(121,"dread_husk","Husk","dread","husk",58,0.33f,0.9f,2.5f,6,1,"blades",false,false,false),
+  new Unit(122,"dread_attendant","Attendant","dread","attendant",38,0.26f,0.7f,2.0f,4,4,"stasis",false,false,false),
+  new Unit(123,"dread_weaver","Weaver","dread","weaver",38,0.26f,0.7f,2.0f,4,5,"pull",false,false,false),
+  new Unit(124,"dread_omen","Omen","dread","omen",140,0.24f,0.95f,3.15f,8,4,"frostfan",false,false,false),
+  new Unit(125,"dread_harbinger","Harbinger","dread","harbinger",140,0.25f,0.95f,3.15f,8,5,"suspend",false,false,false),
+  new Unit(126,"dread_tormentor","Tormentor","dread","tormentor",220,0.24f,1.4f,3.5f,10,3,"torment",false,false,false),
+  new Unit(127,"dread_geist","Geist","dread","geist",8,0.4f,0.4f,0.4f,5,1,"geist",false,false,true),
+  new Unit(128,"valus_ta_aurc","Valus Ta’aurc","cabal","valus",520,0.19f,1.55f,3.8f,10,1,"valus",true,false,false),
+  new Unit(129,"taniks","Taniks, the Scarred","fallen","taniks",440,0.28f,1.3f,3.1f,8,1,"taniks",true,false,false),
+  new Unit(130,"bracus_zahn","Bracus Zahn","cabal","zahn",480,0.24f,1.3f,3.2f,9,1,"zahn",true,false,false),
+  new Unit(131,"alak_hul","Alak-Hul, the Darkblade","hive","darkblade",600,0.25f,1.6f,4.0f,13,3,"darkblade",true,false,false),
+  new Unit(132,"hashladun","Hashladûn","hive","hashladun",430,0.24f,1.1f,3.4f,8,1,"hashladun",true,false,true),
+  new Unit(133,"fikrul","Fikrul, the Fanatic","scorn","fikrul",580,0.23f,1.3f,3.6f,9,2,"fikrul",true,false,false),
+  new Unit(134,"crota","Crota, Son of Oryx","hive","crota",950,0.22f,1.8f,4.8f,15,5,"crota",true,true,false),
+  new Unit(135,"templar","The Templar","vex","templar",950,0.16f,2.5f,3.6f,10,3,"templar",true,true,true),
+  new Unit(136,"golgoroth","Golgoroth","hive","golgoroth",1000,0.17f,2.2f,4.8f,13,3,"golgoroth",true,true,false),
+  new Unit(137,"rhulk","Rhulk, Disciple of the Witness","dread","rhulk",960,0.3f,1.4f,4.6f,14,1,"rhulk",true,true,false),
+  new Unit(138,"nezarec","Nezarec, Final God of Pain","dread","nezarec",1000,0.26f,1.9f,4.1f,14,3,"nezarec",true,true,false),
+  new Unit(139,"vorgeth","Vorgeth, the Boundless Hunger","taken","vorgeth",720,0.18f,2.1f,4.3f,9,3,"dungeon_vorgeth",true,false,false),
+  new Unit(140,"zulmak","Zulmak, Instrument of Torment","hive","zulmak",800,0.24f,1.6f,4.5f,12,1,"dungeon_zulmak",true,false,false),
+  new Unit(141,"phryzhia","Phry'zhia, the Insatiable","hive","phryzhia",760,0.19f,2.2f,4.4f,10,1,"dungeon_phryzhia",true,false,false),
+  new Unit(142,"akelous","Akelous, the Siren's Current","vex","akelous",740,0.18f,2.2f,3.6f,9,2,"dungeon_akelous",true,false,true)
+ };
+ public static Unit get(String id){for(Unit u:UNITS)if(u.id().equals(id))return u;throw new IllegalArgumentException(id);}
+ public static Unit kind(int k){return UNITS[Math.max(0,Math.min(UNITS.length-1,k-100))];}
+}

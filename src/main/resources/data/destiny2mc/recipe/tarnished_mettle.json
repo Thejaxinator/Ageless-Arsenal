@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","category":"equipment","pattern":["CCC","PSR","I  "],"key":{"C":{"item":"minecraft:copper_ingot"},"P":{"item":"destiny2mc:plundered_ether_alloy"},"S":{"item":"destiny2mc:scorch_ether_core"},"R":{"item":"minecraft:redstone"},"I":{"item":"minecraft:iron_ingot"}},"result":{"id":"destiny2mc:tarnished_mettle","count":1}}

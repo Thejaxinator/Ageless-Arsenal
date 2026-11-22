@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "trigger": "press",
+  "delivery": "ray",
+  "fx": "kinetic",
+  "cooldown": 8,
+  "on_hit": "refund"
+}

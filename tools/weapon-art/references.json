@@ -1,0 +1,552 @@
+{
+  "wire_rifle": {
+    "name": "Wire Rifle",
+    "page": "https://www.destinypedia.com/Wire_Rifle",
+    "files": [
+      {
+        "file": "/File:Taken_Wire_Rifle.png",
+        "source": "https://www.destinypedia.com/File:Taken_Wire_Rifle.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/6/6b/Taken_Wire_Rifle.png/300px-Taken_Wire_Rifle.png"
+      },
+      {
+        "file": "/File:Destiny-QueenbreakersBow-FusionRifle-Ingame.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny-QueenbreakersBow-FusionRifle-Ingame.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/e/ee/Destiny-QueenbreakersBow-FusionRifle-Ingame.jpg/200px-Destiny-QueenbreakersBow-FusionRifle-Ingame.jpg"
+      },
+      {
+        "file": "/File:Soriks_Cut_Overlook.png",
+        "source": "https://www.destinypedia.com/File:Soriks_Cut_Overlook.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/4/4f/Soriks_Cut_Overlook.png/200px-Soriks_Cut_Overlook.png",
+        "original": "https://www.destinypedia.com/images/4/4f/Soriks_Cut_Overlook.png?295ac"
+      },
+      {
+        "file": "/File:TakenLine.jpg",
+        "source": "https://www.destinypedia.com/File:TakenLine.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/e/e7/TakenLine.jpg/200px-TakenLine.jpg"
+      },
+      {
+        "file": "/File:Wire_Rifle.jpg",
+        "source": "https://www.destinypedia.com/File:Wire_Rifle.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/2/21/Wire_Rifle.jpg/200px-Wire_Rifle.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Soriks_Cut_Overlook.png",
+      "source": "https://www.destinypedia.com/File:Soriks_Cut_Overlook.png",
+      "image": "https://destiny.wiki.gallery/images/thumb/4/4f/Soriks_Cut_Overlook.png/200px-Soriks_Cut_Overlook.png",
+      "original": "https://www.destinypedia.com/images/4/4f/Soriks_Cut_Overlook.png?295ac"
+    }
+  },
+  "vex_slap_rifle": {
+    "name": "Slap Rifle",
+    "page": "https://www.destinypedia.com/Slap_Rifle",
+    "files": [
+      {
+        "file": "/File:Taken_Slap_Rifle_Infobox.png",
+        "source": "https://www.destinypedia.com/File:Taken_Slap_Rifle_Infobox.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/70/Taken_Slap_Rifle_Infobox.png/300px-Taken_Slap_Rifle_Infobox.png"
+      },
+      {
+        "file": "/File:TakenSlap.jpg",
+        "source": "https://www.destinypedia.com/File:TakenSlap.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/78/TakenSlap.jpg/200px-TakenSlap.jpg"
+      },
+      {
+        "file": "/File:Slap_Rifle_(Precursor).jpg",
+        "source": "https://www.destinypedia.com/File:Slap_Rifle_(Precursor).jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/5/52/Slap_Rifle_%28Precursor%29.jpg/200px-Slap_Rifle_%28Precursor%29.jpg",
+        "original": "https://www.destinypedia.com/images/5/52/Slap_Rifle_%28Precursor%29.jpg?bd773"
+      }
+    ],
+    "selected": {
+      "file": "/File:Slap_Rifle_(Precursor).jpg",
+      "source": "https://www.destinypedia.com/File:Slap_Rifle_(Precursor).jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/5/52/Slap_Rifle_%28Precursor%29.jpg/200px-Slap_Rifle_%28Precursor%29.jpg",
+      "original": "https://www.destinypedia.com/images/5/52/Slap_Rifle_%28Precursor%29.jpg?bd773"
+    }
+  },
+  "hive_boomer": {
+    "name": "Boomer",
+    "page": "https://www.destinypedia.com/Boomer",
+    "files": [
+      {
+        "file": "/File:Boomer.jpg",
+        "source": "https://www.destinypedia.com/File:Boomer.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/d/de/Boomer.jpg/300px-Boomer.jpg",
+        "original": "https://www.destinypedia.com/images/d/de/Boomer.jpg?6edf9"
+      },
+      {
+        "file": "/File:Taken_Boomer_Infobox.png",
+        "source": "https://www.destinypedia.com/File:Taken_Boomer_Infobox.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/9/90/Taken_Boomer_Infobox.png/300px-Taken_Boomer_Infobox.png"
+      },
+      {
+        "file": "/File:Taken_Boomer.jpg",
+        "source": "https://www.destinypedia.com/File:Taken_Boomer.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/1/16/Taken_Boomer.jpg/188px-Taken_Boomer.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Boomer.jpg",
+      "source": "https://www.destinypedia.com/File:Boomer.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/d/de/Boomer.jpg/300px-Boomer.jpg",
+      "original": "https://www.destinypedia.com/images/d/de/Boomer.jpg?6edf9"
+    }
+  },
+  "cabal_slug_rifle": {
+    "name": "Slug Rifle",
+    "page": "https://www.destinypedia.com/Slug_Rifle",
+    "files": [
+      {
+        "file": "/File:Taken_Slug_Rifle_Infobox.png",
+        "source": "https://www.destinypedia.com/File:Taken_Slug_Rifle_Infobox.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/ba/Taken_Slug_Rifle_Infobox.png/300px-Taken_Slug_Rifle_Infobox.png"
+      },
+      {
+        "file": "/File:SlugRifle.jpg",
+        "source": "https://www.destinypedia.com/File:SlugRifle.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/6/63/SlugRifle.jpg/200px-SlugRifle.jpg",
+        "original": "https://www.destinypedia.com/images/6/63/SlugRifle.jpg?b2174"
+      },
+      {
+        "file": "/File:Destiny-Mars-Cabal.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny-Mars-Cabal.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/a/ad/Destiny-Mars-Cabal.jpg/200px-Destiny-Mars-Cabal.jpg"
+      },
+      {
+        "file": "/File:GDC_Cabal.png",
+        "source": "https://www.destinypedia.com/File:GDC_Cabal.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/77/GDC_Cabal.png/200px-GDC_Cabal.png"
+      },
+      {
+        "file": "/File:Valus_Thuun.jpg",
+        "source": "https://www.destinypedia.com/File:Valus_Thuun.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/bb/Valus_Thuun.jpg/200px-Valus_Thuun.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:SlugRifle.jpg",
+      "source": "https://www.destinypedia.com/File:SlugRifle.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/6/63/SlugRifle.jpg/200px-SlugRifle.jpg",
+      "original": "https://www.destinypedia.com/images/6/63/SlugRifle.jpg?b2174"
+    }
+  },
+  "taken_shrapnel_launcher": {
+    "name": "Taken Shrapnel Launcher",
+    "page": "https://www.destinypedia.com/Shrapnel_Launcher",
+    "files": [
+      {
+        "source": "https://www.destinypedia.com/File:Taken_Shrapnel_Launcher_Infobox.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/f/f4/Taken_Shrapnel_Launcher_Infobox.png/300px-Taken_Shrapnel_Launcher_Infobox.png",
+        "original": "https://www.destinypedia.com/images/f/f4/Taken_Shrapnel_Launcher_Infobox.png?cced5"
+      }
+    ],
+    "selected": {
+      "source": "https://www.destinypedia.com/File:Taken_Shrapnel_Launcher_Infobox.png",
+      "image": "https://destiny.wiki.gallery/images/thumb/f/f4/Taken_Shrapnel_Launcher_Infobox.png/300px-Taken_Shrapnel_Launcher_Infobox.png",
+      "original": "https://www.destinypedia.com/images/f/f4/Taken_Shrapnel_Launcher_Infobox.png?cced5"
+    }
+  },
+  "scorn_crossbow": {
+    "name": "Scorn Crossbow",
+    "page": "https://www.destinypedia.com/Scorn_Crossbow",
+    "files": [
+      {
+        "file": "/File:Crossbow.jpg",
+        "source": "https://www.destinypedia.com/File:Crossbow.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/78/Crossbow.jpg/300px-Crossbow.jpg",
+        "original": "https://www.destinypedia.com/images/7/78/Crossbow.jpg?7af30"
+      },
+      {
+        "file": "/File:Eugene-kim-ek-screenshot-13.jpg",
+        "source": "https://www.destinypedia.com/File:Eugene-kim-ek-screenshot-13.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/e/ef/Eugene-kim-ek-screenshot-13.jpg/200px-Eugene-kim-ek-screenshot-13.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Crossbow.jpg",
+      "source": "https://www.destinypedia.com/File:Crossbow.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/7/78/Crossbow.jpg/300px-Crossbow.jpg",
+      "original": "https://www.destinypedia.com/images/7/78/Crossbow.jpg?7af30"
+    }
+  },
+  "subjugator_glaive": {
+    "name": "Subjugator",
+    "page": "https://www.destinypedia.com/Subjugator_Glaive",
+    "files": [
+      {
+        "source": "https://www.destinypedia.com/File:SubjugatorGlaiveHarbinger.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/1/13/SubjugatorGlaiveHarbinger.jpg/200px-SubjugatorGlaiveHarbinger.jpg",
+        "original": "https://www.destinypedia.com/images/1/13/SubjugatorGlaiveHarbinger.jpg?2304b"
+      }
+    ],
+    "selected": {
+      "source": "https://www.destinypedia.com/File:SubjugatorGlaiveHarbinger.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/1/13/SubjugatorGlaiveHarbinger.jpg/200px-SubjugatorGlaiveHarbinger.jpg",
+      "original": "https://www.destinypedia.com/images/1/13/SubjugatorGlaiveHarbinger.jpg?2304b"
+    }
+  },
+  "outbreak_perfected": {
+    "name": "Outbreak Perfected",
+    "page": "https://www.destinypedia.com/Outbreak_Perfected",
+    "files": [
+      {
+        "file": "/File:Destiny-ROI-OutbreakPrime.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny-ROI-OutbreakPrime.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/0/0e/Destiny-ROI-OutbreakPrime.jpg/200px-Destiny-ROI-OutbreakPrime.jpg"
+      },
+      {
+        "file": "/File:Destiny-ROI-OutbreakPrime-PulseRifle-Concept.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny-ROI-OutbreakPrime-PulseRifle-Concept.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/4/41/Destiny-ROI-OutbreakPrime-PulseRifle-Concept.jpg/189px-Destiny-ROI-OutbreakPrime-PulseRifle-Concept.jpg"
+      },
+      {
+        "file": "/File:Destiny-ROI-OutbreakPrimeOverlay.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny-ROI-OutbreakPrimeOverlay.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/d/d5/Destiny-ROI-OutbreakPrimeOverlay.jpg/200px-Destiny-ROI-OutbreakPrimeOverlay.jpg"
+      },
+      {
+        "file": "/File:Outbreak_Prime_Perfected_4K.jpg",
+        "source": "https://www.destinypedia.com/File:Outbreak_Prime_Perfected_4K.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/b5/Outbreak_Prime_Perfected_4K.jpg/200px-Outbreak_Prime_Perfected_4K.jpg"
+      },
+      {
+        "file": "/File:Outbreak_Perfected.jpg",
+        "source": "https://www.destinypedia.com/File:Outbreak_Perfected.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/f/fd/Outbreak_Perfected.jpg/200px-Outbreak_Perfected.jpg",
+        "original": "https://www.destinypedia.com/images/f/fd/Outbreak_Perfected.jpg?ec900"
+      }
+    ],
+    "selected": {
+      "file": "/File:Outbreak_Perfected.jpg",
+      "source": "https://www.destinypedia.com/File:Outbreak_Perfected.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/f/fd/Outbreak_Perfected.jpg/200px-Outbreak_Perfected.jpg",
+      "original": "https://www.destinypedia.com/images/f/fd/Outbreak_Perfected.jpg?ec900"
+    }
+  },
+  "graviton_lance": {
+    "name": "Graviton Lance",
+    "page": "https://www.destinypedia.com/Graviton_Lance",
+    "files": [
+      {
+        "file": "/File:Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/b2/Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg/300px-Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg",
+        "original": "https://www.destinypedia.com/images/b/b2/Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg?f5ece"
+      },
+      {
+        "file": "/File:Destiny2-GravitonLance-PulseRifle-HUD-Screen.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny2-GravitonLance-PulseRifle-HUD-Screen.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/0/0c/Destiny2-GravitonLance-PulseRifle-HUD-Screen.jpg/200px-Destiny2-GravitonLance-PulseRifle-HUD-Screen.jpg"
+      },
+      {
+        "file": "/File:Destiny2-GravitonLance-LoreTab.png",
+        "source": "https://www.destinypedia.com/File:Destiny2-GravitonLance-LoreTab.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/1/1e/Destiny2-GravitonLance-LoreTab.png/200px-Destiny2-GravitonLance-LoreTab.png"
+      },
+      {
+        "file": "/File:Destiny2-GravitonLance-PulseRifle-Overlay.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny2-GravitonLance-PulseRifle-Overlay.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/6/60/Destiny2-GravitonLance-PulseRifle-Overlay.jpg/200px-Destiny2-GravitonLance-PulseRifle-Overlay.jpg"
+      },
+      {
+        "file": "/File:Gravition_Lance_General_Relativity.jpg",
+        "source": "https://www.destinypedia.com/File:Gravition_Lance_General_Relativity.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/e/e8/Gravition_Lance_General_Relativity.jpg/200px-Gravition_Lance_General_Relativity.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg",
+      "source": "https://www.destinypedia.com/File:Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/b/b2/Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg/300px-Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg",
+      "original": "https://www.destinypedia.com/images/b/b2/Destiny2-GravitonLance-PulseRifle-NoOverlay.jpg?f5ece"
+    }
+  },
+  "riskrunner": {
+    "name": "Riskrunner",
+    "page": "https://www.destinypedia.com/Riskrunner",
+    "files": [
+      {
+        "file": "/File:Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/3/34/Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg/300px-Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg",
+        "original": "https://www.destinypedia.com/images/3/34/Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg?a877f"
+      },
+      {
+        "file": "/File:Destiny2-Riskrunner-ExoticSMG-Overlay.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny2-Riskrunner-ExoticSMG-Overlay.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/7c/Destiny2-Riskrunner-ExoticSMG-Overlay.jpg/200px-Destiny2-Riskrunner-ExoticSMG-Overlay.jpg"
+      },
+      {
+        "file": "/File:Electric_Violet_Riskrunner.png",
+        "source": "https://www.destinypedia.com/File:Electric_Violet_Riskrunner.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/8/8e/Electric_Violet_Riskrunner.png/200px-Electric_Violet_Riskrunner.png"
+      },
+      {
+        "file": "/File:Third_Rail_Riskrunner.png",
+        "source": "https://www.destinypedia.com/File:Third_Rail_Riskrunner.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/70/Third_Rail_Riskrunner.png/200px-Third_Rail_Riskrunner.png"
+      }
+    ],
+    "selected": {
+      "file": "/File:Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg",
+      "source": "https://www.destinypedia.com/File:Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/3/34/Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg/300px-Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg",
+      "original": "https://www.destinypedia.com/images/3/34/Destiny2-Riskrunner-ExoticSMG-NoOverlay.jpg?a877f"
+    }
+  },
+  "dead_mans_tale": {
+    "name": "Dead Man's Tale",
+    "page": "https://www.destinypedia.com/Dead_Man%27s_Tale",
+    "files": [
+      {
+        "file": "/File:ScoutDMT.jpg",
+        "source": "https://www.destinypedia.com/File:ScoutDMT.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/6/65/ScoutDMT.jpg/350px-ScoutDMT.jpg",
+        "original": "https://www.destinypedia.com/images/6/65/ScoutDMT.jpg?22585"
+      },
+      {
+        "file": "/File:Burial_Wrap.jpg",
+        "source": "https://www.destinypedia.com/File:Burial_Wrap.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/b8/Burial_Wrap.jpg/200px-Burial_Wrap.jpg"
+      },
+      {
+        "file": "/File:Rememberance.jpg",
+        "source": "https://www.destinypedia.com/File:Rememberance.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/8/88/Rememberance.jpg/200px-Rememberance.jpg"
+      },
+      {
+        "file": "/File:Noble_Burden.jpg",
+        "source": "https://www.destinypedia.com/File:Noble_Burden.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/d/d5/Noble_Burden.jpg/200px-Noble_Burden.jpg"
+      },
+      {
+        "file": "/File:Dead_Man%27s_Revenge.jpg",
+        "source": "https://www.destinypedia.com/File:Dead_Man%27s_Revenge.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/0/0c/Dead_Man%27s_Revenge.jpg/200px-Dead_Man%27s_Revenge.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:ScoutDMT.jpg",
+      "source": "https://www.destinypedia.com/File:ScoutDMT.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/6/65/ScoutDMT.jpg/350px-ScoutDMT.jpg",
+      "original": "https://www.destinypedia.com/images/6/65/ScoutDMT.jpg?22585"
+    }
+  },
+  "forerunner": {
+    "name": "Forerunner",
+    "page": "https://www.destinypedia.com/Forerunner",
+    "files": [
+      {
+        "file": "/File:Destiny_2_Forerunner.jpg",
+        "source": "https://www.destinypedia.com/File:Destiny_2_Forerunner.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/0/06/Destiny_2_Forerunner.jpg/350px-Destiny_2_Forerunner.jpg",
+        "original": "https://www.destinypedia.com/images/0/06/Destiny_2_Forerunner.jpg?716f4"
+      },
+      {
+        "file": "/File:BRAYTECH_M6.jpg",
+        "source": "https://www.destinypedia.com/File:BRAYTECH_M6.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/3/3a/BRAYTECH_M6.jpg/200px-BRAYTECH_M6.jpg"
+      },
+      {
+        "file": "/File:Gilded_Honors.jpg",
+        "source": "https://www.destinypedia.com/File:Gilded_Honors.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/4/4c/Gilded_Honors.jpg/200px-Gilded_Honors.jpg"
+      },
+      {
+        "file": "/File:CALEFACTOR.jpg",
+        "source": "https://www.destinypedia.com/File:CALEFACTOR.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/4/46/CALEFACTOR.jpg/200px-CALEFACTOR.jpg"
+      },
+      {
+        "file": "/File:Early_Warning.jpg",
+        "source": "https://www.destinypedia.com/File:Early_Warning.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/b7/Early_Warning.jpg/200px-Early_Warning.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Destiny_2_Forerunner.jpg",
+      "source": "https://www.destinypedia.com/File:Destiny_2_Forerunner.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/0/06/Destiny_2_Forerunner.jpg/350px-Destiny_2_Forerunner.jpg",
+      "original": "https://www.destinypedia.com/images/0/06/Destiny_2_Forerunner.jpg?716f4"
+    }
+  },
+  "arbalest": {
+    "name": "Arbalest",
+    "page": "https://www.destinypedia.com/Arbalest",
+    "files": [
+      {
+        "file": "/File:Arbalest.jpg",
+        "source": "https://www.destinypedia.com/File:Arbalest.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/f/f6/Arbalest.jpg/350px-Arbalest.jpg",
+        "original": "https://www.destinypedia.com/images/f/f6/Arbalest.jpg?6ec03"
+      },
+      {
+        "file": "/File:Barren_Wastes_Arbalest.png",
+        "source": "https://www.destinypedia.com/File:Barren_Wastes_Arbalest.png",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/71/Barren_Wastes_Arbalest.png/200px-Barren_Wastes_Arbalest.png"
+      },
+      {
+        "file": "/File:Violent_Exorcism.jpeg",
+        "source": "https://www.destinypedia.com/File:Violent_Exorcism.jpeg",
+        "image": "https://destiny.wiki.gallery/images/thumb/5/5e/Violent_Exorcism.jpeg/200px-Violent_Exorcism.jpeg"
+      },
+      {
+        "file": "/File:Electromagnetic_Execution.jpg",
+        "source": "https://www.destinypedia.com/File:Electromagnetic_Execution.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/9/98/Electromagnetic_Execution.jpg/200px-Electromagnetic_Execution.jpg"
+      },
+      {
+        "file": "/File:Outrunner.jpg",
+        "source": "https://www.destinypedia.com/File:Outrunner.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/d/da/Outrunner.jpg/200px-Outrunner.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Arbalest.jpg",
+      "source": "https://www.destinypedia.com/File:Arbalest.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/f/f6/Arbalest.jpg/350px-Arbalest.jpg",
+      "original": "https://www.destinypedia.com/images/f/f6/Arbalest.jpg?6ec03"
+    }
+  },
+  "hammerhead": {
+    "name": "Hammerhead",
+    "page": "https://www.destinypedia.com/Hammerhead",
+    "files": [
+      {
+        "file": "/File:Hammer.jpg",
+        "source": "https://www.destinypedia.com/File:Hammer.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/f/fa/Hammer.jpg/300px-Hammer.jpg",
+        "original": "https://www.destinypedia.com/images/f/fa/Hammer.jpg?4cddc"
+      },
+      {
+        "file": "/File:BRAVE_Hammerhead.jpg",
+        "source": "https://www.destinypedia.com/File:BRAVE_Hammerhead.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/70/BRAVE_Hammerhead.jpg/300px-BRAVE_Hammerhead.jpg"
+      },
+      {
+        "file": "/File:Hammerhead_Great_White.jpg",
+        "source": "https://www.destinypedia.com/File:Hammerhead_Great_White.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/5/51/Hammerhead_Great_White.jpg/200px-Hammerhead_Great_White.jpg"
+      },
+      {
+        "file": "/File:Hammerhead_Holofoil.jpg",
+        "source": "https://www.destinypedia.com/File:Hammerhead_Holofoil.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/e/e5/Hammerhead_Holofoil.jpg/200px-Hammerhead_Holofoil.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Hammer.jpg",
+      "source": "https://www.destinypedia.com/File:Hammer.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/f/fa/Hammer.jpg/300px-Hammer.jpg",
+      "original": "https://www.destinypedia.com/images/f/fa/Hammer.jpg?4cddc"
+    }
+  },
+  "midnight_coup": {
+    "name": "Midnight Coup",
+    "page": "https://www.destinypedia.com/Midnight_Coup",
+    "files": [
+      {
+        "file": "/File:MidnightCoupHandCannon.jpg",
+        "source": "https://www.destinypedia.com/File:MidnightCoupHandCannon.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/bd/MidnightCoupHandCannon.jpg/300px-MidnightCoupHandCannon.jpg",
+        "original": "https://www.destinypedia.com/images/b/bd/MidnightCoupHandCannon.jpg?8587b"
+      },
+      {
+        "file": "/File:BRAVE_Midnight_Coup.jpg",
+        "source": "https://www.destinypedia.com/File:BRAVE_Midnight_Coup.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/f/f9/BRAVE_Midnight_Coup.jpg/300px-BRAVE_Midnight_Coup.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:MidnightCoupHandCannon.jpg",
+      "source": "https://www.destinypedia.com/File:MidnightCoupHandCannon.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/b/bd/MidnightCoupHandCannon.jpg/300px-MidnightCoupHandCannon.jpg",
+      "original": "https://www.destinypedia.com/images/b/bd/MidnightCoupHandCannon.jpg?8587b"
+    }
+  },
+  "the_recluse": {
+    "name": "The Recluse",
+    "page": "https://www.destinypedia.com/The_Recluse",
+    "files": [
+      {
+        "file": "/File:Recluse.jpg",
+        "source": "https://www.destinypedia.com/File:Recluse.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/9/95/Recluse.jpg/300px-Recluse.jpg",
+        "original": "https://www.destinypedia.com/images/9/95/Recluse.jpg?046e0"
+      },
+      {
+        "file": "/File:BRAVE_Recluse.jpg",
+        "source": "https://www.destinypedia.com/File:BRAVE_Recluse.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/be/BRAVE_Recluse.jpg/300px-BRAVE_Recluse.jpg"
+      },
+      {
+        "file": "/File:Recluse_Itsy-Bitsy_Spider.jpg",
+        "source": "https://www.destinypedia.com/File:Recluse_Itsy-Bitsy_Spider.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/c/c5/Recluse_Itsy-Bitsy_Spider.jpg/200px-Recluse_Itsy-Bitsy_Spider.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Recluse.jpg",
+      "source": "https://www.destinypedia.com/File:Recluse.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/9/95/Recluse.jpg/300px-Recluse.jpg",
+      "original": "https://www.destinypedia.com/images/9/95/Recluse.jpg?046e0"
+    }
+  },
+  "hung_jury_sr4": {
+    "name": "Hung Jury SR4",
+    "page": "https://www.destinypedia.com/Hung_Jury_SR4",
+    "files": [
+      {
+        "file": "/File:HungJuryD1.jpg",
+        "source": "https://www.destinypedia.com/File:HungJuryD1.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/8/80/HungJuryD1.jpg/300px-HungJuryD1.jpg"
+      },
+      {
+        "file": "/File:Hung_Jury_SR4_D2.jpg",
+        "source": "https://www.destinypedia.com/File:Hung_Jury_SR4_D2.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/b/b5/Hung_Jury_SR4_D2.jpg/300px-Hung_Jury_SR4_D2.jpg",
+        "original": "https://www.destinypedia.com/images/b/b5/Hung_Jury_SR4_D2.jpg?fcf77"
+      },
+      {
+        "file": "/File:BRAVE_Hung_Jury_SR4.jpg",
+        "source": "https://www.destinypedia.com/File:BRAVE_Hung_Jury_SR4.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/d/db/BRAVE_Hung_Jury_SR4.jpg/300px-BRAVE_Hung_Jury_SR4.jpg"
+      },
+      {
+        "file": "/File:Adept_Hung_Jury_SR4_(S14-S20).jpg",
+        "source": "https://www.destinypedia.com/File:Adept_Hung_Jury_SR4_(S14-S20).jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/7e/Adept_Hung_Jury_SR4_%28S14-S20%29.jpg/200px-Adept_Hung_Jury_SR4_%28S14-S20%29.jpg"
+      },
+      {
+        "file": "/File:Adept_Hung_Jury_SR4_(S19).jpg",
+        "source": "https://www.destinypedia.com/File:Adept_Hung_Jury_SR4_(S19).jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/0/0e/Adept_Hung_Jury_SR4_%28S19%29.jpg/200px-Adept_Hung_Jury_SR4_%28S19%29.jpg"
+      }
+    ],
+    "selected": {
+      "file": "/File:Hung_Jury_SR4_D2.jpg",
+      "source": "https://www.destinypedia.com/File:Hung_Jury_SR4_D2.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/b/b5/Hung_Jury_SR4_D2.jpg/300px-Hung_Jury_SR4_D2.jpg",
+      "original": "https://www.destinypedia.com/images/b/b5/Hung_Jury_SR4_D2.jpg?fcf77"
+    }
+  },
+  "bxr_55_battler": {
+    "name": "BxR-55 Battler",
+    "page": "https://www.destinypedia.com/BxR-55_Battler",
+    "files": [
+      {
+        "file": "/File:BxR-55_Battler.jpg",
+        "source": "https://www.destinypedia.com/File:BxR-55_Battler.jpg",
+        "image": "https://destiny.wiki.gallery/images/thumb/7/7c/BxR-55_Battler.jpg/300px-BxR-55_Battler.jpg",
+        "original": "https://www.destinypedia.com/images/7/7c/BxR-55_Battler.jpg?06e38"
+      }
+    ],
+    "selected": {
+      "file": "/File:BxR-55_Battler.jpg",
+      "source": "https://www.destinypedia.com/File:BxR-55_Battler.jpg",
+      "image": "https://destiny.wiki.gallery/images/thumb/7/7c/BxR-55_Battler.jpg/300px-BxR-55_Battler.jpg",
+      "original": "https://www.destinypedia.com/images/7/7c/BxR-55_Battler.jpg?06e38"
+    }
+  }
+}

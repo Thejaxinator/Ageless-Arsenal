@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "salvage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "destiny2mc:conduit_lens"
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "destiny2mc:light_of_the_great_prism"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "salvage",
+      "recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "destiny2mc:light_of_the_great_prism"
+    ]
+  }
+}

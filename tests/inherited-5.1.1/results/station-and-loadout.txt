@@ -1,0 +1,9 @@
+SHA256 688a258e90f158d10cee23411a69df1c026ae39790630cddc0dff3036fc1f4b3
+BINDER UI paid and bound marksmans_dodge slot 0
+BINDER UI paid and bound healing_rift slot 1
+BINDER UI paid and bound towering_barricade slot 2
+BINDER UI paid and bound solar_grenade slot 3
+BINDER UI paid and bound triple_jump slot 4
+BINDER UI paid and bound ember_of_solace slot 5
+BINDER UI rebound K key cast equipped Healing Rift
+BINDER UI COMPLETE [marksmans_dodge, healing_rift, towering_barricade, solar_grenade] [triple_jump, ember_of_solace] career=Info[level=2, xp=8, needed=52, healthBonus=1.0526316, armorBonus=0.0, veteranChance=0]

@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "trigger": "press",
+  "delivery": "ray",
+  "fx": "kinetic",
+  "cooldown": 6,
+  "on_hit": "unarmored_precision"
+}

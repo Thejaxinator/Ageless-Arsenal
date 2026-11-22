@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "trigger": "automatic",
+  "delivery": "ray",
+  "fx": "kinetic",
+  "cooldown": 9,
+  "burst": 3,
+  "interval": 2,
+  "on_hit": "swarm"
+}

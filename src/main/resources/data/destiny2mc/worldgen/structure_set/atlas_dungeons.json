@@ -1,0 +1,30 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:petition_court",
+      "weight": 1
+    },
+    {
+      "structure": "destiny2mc:heresy_pit",
+      "weight": 1
+    },
+    {
+      "structure": "destiny2mc:avarice_vault",
+      "weight": 1
+    },
+    {
+      "structure": "destiny2mc:siren_spire",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 40,
+    "separation": 14,
+    "salt": 194718339,
+    "exclusion_zone": {
+      "other_set": "minecraft:villages",
+      "chunk_count": 3
+    }
+  }
+}

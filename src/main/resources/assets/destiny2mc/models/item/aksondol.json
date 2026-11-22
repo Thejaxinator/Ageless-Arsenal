@@ -1,0 +1,1 @@
+{"loader":"neoforge:separate_transforms","textures":{"particle":"destiny2mc:item/tenno_aksondol"},"base":{"parent":"destiny2mc:item/tenno_pairs/aksondol_main"},"perspectives":{"gui":{"parent":"destiny2mc:item/tenno_pairs/aksondol_pair"},"ground":{"parent":"destiny2mc:item/tenno_pairs/aksondol_pair"},"fixed":{"parent":"destiny2mc:item/tenno_pairs/aksondol_pair"}}}

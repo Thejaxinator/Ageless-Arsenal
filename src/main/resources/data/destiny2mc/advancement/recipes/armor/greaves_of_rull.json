@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "salvage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "destiny2mc:breech_seal"
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "destiny2mc:greaves_of_rull"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "salvage",
+      "recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "destiny2mc:greaves_of_rull"
+    ]
+  }
+}

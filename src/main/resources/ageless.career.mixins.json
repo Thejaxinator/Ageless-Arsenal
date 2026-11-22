@@ -1,0 +1,4 @@
+{
+  "required": true, "minVersion": "0.8", "package": "com.jax.destiny2mc.binder.progression.mixin",
+  "compatibilityLevel": "JAVA_21", "mixins": ["CareerHealthLoad"], "injectors": {"defaultRequire": 1}
+}

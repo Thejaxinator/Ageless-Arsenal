@@ -1,0 +1,4 @@
+Ageless-Arsenals-5.2.0-Raid-Armor-neoforge-1.21.1.jar
+SHA256 40ad2b9ed0bd8868611055ebe918e2b8e3d50a6dbbe0461dac6252cd5300505c
+SURVIVAL ARMOR in HP, first Dreg shock bolt on Normal/Patrol: unarmored 1.7100; Kabr boots 1.6282; Kabr helmet + boots 1.2128; full Kabr 0.5923.
+SURVIVAL ARMOR PASS

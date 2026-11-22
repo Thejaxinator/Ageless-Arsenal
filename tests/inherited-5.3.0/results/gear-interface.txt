@@ -1,0 +1,20 @@
+SHA256 bf34514cdb6c103c02bb374b39b048285d8eba410f5d3c71f1f06e070ffcbecc
+GEAR UI weapon is carrying the nondefault reload masterwork and Major spec
+GEAR UI captured live Destiny ability row with gun
+GEAR UI captured live Compact ability row with gun
+GEAR UI captured live Minimal ability row with gun
+GEAR UI captured live BL2 ability row with gun
+GEAR UI captured live BL4 ability row with gun
+GEAR UI captured live Tenno ability row with gun
+GEAR UI closed notch is a small attached left-edge control
+GEAR UI notch opens the drawer on the same InventoryScreen
+GEAR UI real item-tooltip pipeline observed ace_of_spades
+GEAR UI Destiny card intercept respects item ownership for ace_of_spades
+GEAR UI Shift reveals complete original items/perks
+GEAR UI real item-tooltip pipeline observed battlecage_of_kabr
+GEAR UI Destiny card intercept respects item ownership for battlecage_of_kabr
+GEAR UI real item-tooltip pipeline observed mask_of_bakris
+GEAR UI Destiny card intercept respects item ownership for mask_of_bakris
+GEAR UI real item-tooltip pipeline observed bread
+GEAR UI Destiny card intercept respects item ownership for bread
+GEAR UI COMPLETE progression=true

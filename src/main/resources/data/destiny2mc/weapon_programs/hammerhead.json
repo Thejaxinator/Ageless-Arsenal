@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "trigger": "automatic",
+  "delivery": "ray",
+  "fx": "void",
+  "cooldown": 3
+}

@@ -1,0 +1,22 @@
+SHA256 40ad2b9ed0bd8868611055ebe918e2b8e3d50a6dbbe0461dac6252cd5300505c
+NOTCH CHECK Rail handle occupies 12 by 22 GUI px
+NOTCH CHECK Closed handle joins the left inventory rail
+NOTCH CHECK Handle lives alongside the native panel
+NOTCH CHECK Native focused Enter opens the drawer
+NOTCH CHECK Open handle travels with the drawer and stays on screen
+NOTCH CHECK Native hotbar click picked up four logs
+NOTCH CHECK Drawer paper kept the outside cursor stack
+NOTCH CHECK Right-click placed exactly one log into vanilla crafting
+NOTCH CHECK Vanilla crafting result updated with live drawer
+NOTCH CHECK Native output slot crafted four oak planks
+NOTCH CHECK Crafted output moved into an inventory slot
+NOTCH CHECK Remainder stayed in hotbar
+NOTCH CHECK True outside click reached the vanilla menu
+NOTCH CHECK Vanilla outside drop removed exactly one log
+NOTCH CHECK Compact notch remains accessible
+NOTCH CHECK Native recipe book opens at compact width
+NOTCH CHECK Drawer tucks while recipe controls occupy the left margin at width 320
+NOTCH CHECK Notch receives pointer input above the narrow recipe screen
+NOTCH CHECK Notch returns from recipe view to the equipped loadout
+NOTCH CHECK Creative inventory restores drawer and original creative screen
+NOTCH CHECK COMPLETE

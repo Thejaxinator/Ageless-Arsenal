@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "trigger": "automatic",
+  "delivery": "ray",
+  "fx": "void",
+  "cooldown": 8,
+  "burst": 2,
+  "interval": 2,
+  "last_mult": 1.85,
+  "on_hit": "collapse"
+}

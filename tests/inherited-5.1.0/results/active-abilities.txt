@@ -1,0 +1,82 @@
+Ageless-Arsenals-5.1.0-Progression-neoforge-1.21.1.jar
+SHA-256 f67a0e1d15b79b8be5ceb630b9ecfc33c5ba03862aa5e7022d76d4f850bc1c9a
+Minecraft 1.21.1 / NeoForge 21.1.266 dedicated server
+
+FIELD CHECK 30 unique active keys
+FIELD CHECK solar grenade pair
+FIELD CHECK solar melee pair
+FIELD CHECK arc grenade pair
+FIELD CHECK arc melee pair
+FIELD CHECK void grenade pair
+FIELD CHECK void melee pair
+FIELD CHECK stasis grenade pair
+FIELD CHECK stasis melee pair
+FIELD CHECK strand grenade pair
+FIELD CHECK strand melee pair
+FIELD CHECK prismatic grenade pair
+FIELD CHECK prismatic melee pair
+FIELD CHECK six class abilities
+FIELD CHECK caster tracked in server level
+FIELD CHECK unknown ability rejected
+FIELD CHECK solar_grenade accepted
+FIELD CHECK solar_grenade gameplay response
+FIELD CHECK healing_grenade accepted
+FIELD CHECK healing_grenade gameplay response
+FIELD CHECK pulse_grenade accepted
+FIELD CHECK pulse_grenade gameplay response
+FIELD CHECK flashbang accepted
+FIELD CHECK flashbang gameplay response
+FIELD CHECK vortex_grenade accepted
+FIELD CHECK vortex_grenade gameplay response
+FIELD CHECK suppressor_grenade accepted
+FIELD CHECK suppressor_grenade gameplay response
+FIELD CHECK duskfield_grenade accepted
+FIELD CHECK duskfield_grenade gameplay response
+FIELD CHECK coldsnap_grenade accepted
+FIELD CHECK coldsnap_grenade gameplay response
+FIELD CHECK shackle_grenade accepted
+FIELD CHECK shackle_grenade gameplay response
+FIELD CHECK threadling_grenade accepted
+FIELD CHECK threadling_grenade gameplay response
+FIELD CHECK freezing_singularity accepted
+FIELD CHECK freezing_singularity gameplay response
+FIELD CHECK hailfire_spike accepted
+FIELD CHECK hailfire_spike gameplay response
+FIELD CHECK incinerator_snap accepted
+FIELD CHECK incinerator_snap gameplay response
+FIELD CHECK throwing_hammer accepted
+FIELD CHECK throwing_hammer gameplay response
+FIELD CHECK chain_lightning accepted
+FIELD CHECK chain_lightning gameplay response
+FIELD CHECK thunderclap accepted
+FIELD CHECK thunderclap gameplay response
+FIELD CHECK shield_throw accepted
+FIELD CHECK shield_throw gameplay response
+FIELD CHECK pocket_singularity accepted
+FIELD CHECK pocket_singularity gameplay response
+FIELD CHECK shiver_strike accepted
+FIELD CHECK shiver_strike gameplay response
+FIELD CHECK penumbral_blast accepted
+FIELD CHECK penumbral_blast gameplay response
+FIELD CHECK threaded_spike accepted
+FIELD CHECK threaded_spike gameplay response
+FIELD CHECK arcane_needle accepted
+FIELD CHECK arcane_needle gameplay response
+FIELD CHECK prism_cleave accepted
+FIELD CHECK prism_cleave gameplay response
+FIELD CHECK storm_snare accepted
+FIELD CHECK storm_snare gameplay response
+FIELD CHECK marksmans_dodge accepted
+FIELD CHECK marksmans_dodge gameplay response
+FIELD CHECK equipped melee cooling before dodge
+FIELD CHECK gamblers_dodge accepted
+FIELD CHECK gamblers_dodge gameplay response
+FIELD CHECK healing_rift accepted
+FIELD CHECK healing_rift gameplay response
+FIELD CHECK empowering_rift accepted
+FIELD CHECK empowering_rift gameplay response
+FIELD CHECK towering_barricade accepted
+FIELD CHECK towering_barricade gameplay response
+FIELD CHECK rally_barricade accepted
+FIELD CHECK rally_barricade gameplay response
+FIELD COMPLETE

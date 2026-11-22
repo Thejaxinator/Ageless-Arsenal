@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Warframe arsenal · Ageless Arsenals</title>
+<style>
+:root{color-scheme:dark;--paper:#10191c;--tile:#192932;--ink:#f2eddf;--muted:#b8c9c4;--metal:#d9bc85;--rule:#38494b}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.45 'Source Sans 3',system-ui,sans-serif}
+main{max-width:1460px;margin:auto;padding:clamp(16px,4vw,64px)}header{padding-bottom:20px;border-bottom:1px solid var(--metal);display:flex;align-items:end;justify-content:space-between;gap:18px}
+header p{margin:0;color:var(--muted);max-width:450px}h1,h2{font-family:'Barlow Semi Condensed','Segoe UI',system-ui,sans-serif;letter-spacing:-.035em;line-height:1;margin:0}
+h1{font-size:clamp(35px,6.5vw,76px);font-weight:550}header small{display:block;letter-spacing:.14em;color:var(--metal);margin-bottom:8px}
+nav{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:18px 0 24px}button,input{font:inherit;color:var(--ink);background:#162327;border:1px solid #4c5b59;border-radius:4px;padding:7px 13px}button{cursor:pointer}button[aria-pressed=true]{background:var(--metal);border-color:var(--metal);color:#192124}button:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid #8ef1d8;outline-offset:3px}input{margin-left:auto;min-width:170px}
+#results{color:var(--muted);font-size:.84rem}section{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr));gap:16px;align-items:stretch}
+article{border:1px solid var(--rule);background:#162225;display:flex;flex-direction:column}article[hidden]{display:none}
+.art{height:165px;background:var(--tile);display:grid;place-items:center;overflow:hidden}.art img{max-width:92%;max-height:142px;object-fit:contain;display:block}
+.body{padding:16px 18px;display:flex;flex-direction:column;flex:1}.body small,h3{font:600 .67rem/1.3 'IBM Plex Mono',monospace;letter-spacing:.12em;color:var(--metal)}
+h2{font-size:1.7rem;margin:.25em 0 .1em}.kind{color:var(--muted);font-size:.9rem}.body p{font-size:.92rem;margin:.75em 0}
+dl{border-top:1px solid var(--rule);padding:.5em 0;margin:.2em 0 auto}dl div{display:flex;justify-content:space-between;gap:10px;font-size:.86rem}dt{color:var(--muted)}dd{margin:0;text-align:right}
+h3{text-transform:uppercase;margin:1em 0 0}.body .cost{margin:.3em 0 .7em}.links{display:flex;justify-content:space-between;gap:6px;border-top:1px solid var(--rule);padding-top:.65em}
+.links a{color:#a6e1d4;font-size:.82rem;text-underline-offset:3px}#empty{padding:32px 0}
+@media(max-width:650px){header{align-items:start;flex-direction:column}nav input{margin-left:0;flex:1}.body{padding:15px}.art{height:152px}}
+</style></head>
+<body><main><header><div><small>AGELESS ARSENALS</small><h1>Warframe arsenal</h1></div><p>Build these 33 weapons at either Gunsmith under Warframe → Blueprints. Each entry shows its Minecraft model, combat stats, Foundry ingredients, and Warframe reference.</p></header>
+<nav aria-label="Browse weapons"><button aria-pressed="true" data-filter="all">All</button><button aria-pressed="false" data-filter="primary">Primary</button><button aria-pressed="false" data-filter="secondary">Secondary</button><button aria-pressed="false" data-filter="melee">Melee</button><input type="search" aria-label="Find weapon" placeholder="Find a weapon"><span id="results" aria-live="polite">33 weapons</span></nav>
+<section id="roster" aria-label="Weapons"><!--CARDS--></section><p id="empty" hidden>No matching weapons.</p></main>
+<script>
+const buttons=Array.from(document.querySelectorAll('[data-filter]')), input=document.querySelector('input');
+let slot='all';
+function filter(){
+ const query=input.value.toLocaleLowerCase().trim();let count=0;
+ for(const card of document.querySelectorAll('article')){
+  card.hidden=!(slot==='all'||card.dataset.slot===slot)||!card.dataset.name.includes(query);
+  if(!card.hidden)count++;
+ }
+ document.querySelector('#results').textContent=count+' weapon'+(count===1?'':'s');
+ document.querySelector('#empty').hidden=count!==0;
+}
+for(const b of buttons)b.addEventListener('click',()=>{slot=b.dataset.filter;for(const other of buttons)other.setAttribute('aria-pressed',String(other===b));filter()});
+input.addEventListener('input',filter);
+</script></body></html>

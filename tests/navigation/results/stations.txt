@@ -1,0 +1,9 @@
+Release: Ageless-Arsenals-6.3.1-Progression-neoforge-1.21.1.jar
+SHA-256: 09af184ecc4c5659947885c15a112421594d386d1ffb7ef970cc36df50f11cad
+TENNO FOUNDRY PASS: 33 exact survival crafts, 27 ranged, 6 melee, both Grakatas consumed; family tags, insufficient funds, protected stacks and repeat safe.
+SOCKET CHECK 33 physical weapons x 22 mod definitions: 190 type-compatible installs, other pairs rejected, duplicate exclusion, ordering and Minecraft serialization.
+SOCKET CHECK owner and borrower ranks, whole-collection updates, defensive NBT filtering, unknown-data preservation, multi-stat launch snapshots and independent removal.
+SOCKET CHECK PASS
+STATION CHECK gunsmith_fui_workbench opened by physical right-click; both crafts, paid perk and mod worked; unopened, distance, removed block, spectator and packet replay guards passed.
+STATION CHECK gunsmith_mc_workbench opened by physical right-click; both crafts, paid perk and mod worked; unopened, distance, removed block, spectator and packet replay guards passed.
+STATION REGRESSION PASS

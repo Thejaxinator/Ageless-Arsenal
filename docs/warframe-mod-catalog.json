@@ -1,0 +1,598 @@
+[
+  {
+    "id": "serration",
+    "title": "Serration",
+    "category": "Rifle",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Increases the base damage of rifle attacks.",
+    "baseEffect": "+10% damage",
+    "maxEffect": "+60% damage",
+    "effects": [
+      "+10% damage",
+      "+20% damage",
+      "+30% damage",
+      "+40% damage",
+      "+50% damage",
+      "+60% damage"
+    ],
+    "stats": [
+      {
+        "stat": "DAMAGE",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/serration.png",
+    "reference": "https://wiki.warframe.com/w/Serration"
+  },
+  {
+    "id": "speed_trigger",
+    "title": "Speed Trigger",
+    "category": "Rifle",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Shortens the interval between rifle attacks.",
+    "baseEffect": "+8% fire rate",
+    "maxEffect": "+48% fire rate",
+    "effects": [
+      "+8% fire rate",
+      "+16% fire rate",
+      "+24% fire rate",
+      "+32% fire rate",
+      "+40% fire rate",
+      "+48% fire rate"
+    ],
+    "stats": [
+      {
+        "stat": "FIRE_RATE",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/speed_trigger.png",
+    "reference": "https://wiki.warframe.com/w/Speed_Trigger"
+  },
+  {
+    "id": "fast_hands",
+    "title": "Fast Hands",
+    "category": "Rifle",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Common",
+    "description": "Refills the rifle magazine faster.",
+    "baseEffect": "+10% reload speed",
+    "maxEffect": "+60% reload speed",
+    "effects": [
+      "+10% reload speed",
+      "+20% reload speed",
+      "+30% reload speed",
+      "+40% reload speed",
+      "+50% reload speed",
+      "+60% reload speed"
+    ],
+    "stats": [
+      {
+        "stat": "RELOAD_SPEED",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/fast_hands.png",
+    "reference": "https://wiki.warframe.com/w/Fast_Hands"
+  },
+  {
+    "id": "magazine_warp",
+    "title": "Magazine Warp",
+    "category": "Rifle",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Common",
+    "description": "Expands the rifle magazine.",
+    "baseEffect": "+8% magazine",
+    "maxEffect": "+48% magazine",
+    "effects": [
+      "+8% magazine",
+      "+16% magazine",
+      "+24% magazine",
+      "+32% magazine",
+      "+40% magazine",
+      "+48% magazine"
+    ],
+    "stats": [
+      {
+        "stat": "MAGAZINE",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/magazine_warp.png",
+    "reference": "https://wiki.warframe.com/w/Magazine_Warp"
+  },
+  {
+    "id": "hellfire",
+    "title": "Hellfire",
+    "category": "Rifle",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Adds Heat damage and a chance to ignite for three seconds.",
+    "baseEffect": "+8% Heat",
+    "maxEffect": "+48% Heat",
+    "effects": [
+      "+8% Heat",
+      "+16% Heat",
+      "+24% Heat",
+      "+32% Heat",
+      "+40% Heat",
+      "+48% Heat"
+    ],
+    "stats": [
+      {
+        "stat": "HEAT",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/hellfire.png",
+    "reference": "https://wiki.warframe.com/w/Hellfire"
+  },
+  {
+    "id": "point_blank",
+    "title": "Point Blank",
+    "category": "Shotgun",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Increases the base damage of primary shotgun attacks.",
+    "baseEffect": "+10% damage",
+    "maxEffect": "+60% damage",
+    "effects": [
+      "+10% damage",
+      "+20% damage",
+      "+30% damage",
+      "+40% damage",
+      "+50% damage",
+      "+60% damage"
+    ],
+    "stats": [
+      {
+        "stat": "DAMAGE",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/point_blank.png",
+    "reference": "https://wiki.warframe.com/w/Point_Blank"
+  },
+  {
+    "id": "shotgun_barrage",
+    "title": "Shotgun Barrage",
+    "category": "Shotgun",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Shortens the interval between primary shotgun attacks.",
+    "baseEffect": "+8% fire rate",
+    "maxEffect": "+48% fire rate",
+    "effects": [
+      "+8% fire rate",
+      "+16% fire rate",
+      "+24% fire rate",
+      "+32% fire rate",
+      "+40% fire rate",
+      "+48% fire rate"
+    ],
+    "stats": [
+      {
+        "stat": "FIRE_RATE",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/shotgun_barrage.png",
+    "reference": "https://wiki.warframe.com/w/Shotgun_Barrage"
+  },
+  {
+    "id": "tactical_pump",
+    "title": "Tactical Pump",
+    "category": "Shotgun",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Speeds reloading and the Bubonico battery's recovery.",
+    "baseEffect": "+10% reload speed",
+    "maxEffect": "+60% reload speed",
+    "effects": [
+      "+10% reload speed",
+      "+20% reload speed",
+      "+30% reload speed",
+      "+40% reload speed",
+      "+50% reload speed",
+      "+60% reload speed"
+    ],
+    "stats": [
+      {
+        "stat": "RELOAD_SPEED",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/tactical_pump.png",
+    "reference": "https://wiki.warframe.com/w/Tactical_Pump"
+  },
+  {
+    "id": "ammo_stock",
+    "title": "Ammo Stock",
+    "category": "Shotgun",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Expands the shotgun magazine or arm cannon battery.",
+    "baseEffect": "+10% magazine",
+    "maxEffect": "+60% magazine",
+    "effects": [
+      "+10% magazine",
+      "+20% magazine",
+      "+30% magazine",
+      "+40% magazine",
+      "+50% magazine",
+      "+60% magazine"
+    ],
+    "stats": [
+      {
+        "stat": "MAGAZINE",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/ammo_stock.png",
+    "reference": "https://wiki.warframe.com/w/Ammo_Stock"
+  },
+  {
+    "id": "chilling_grasp",
+    "title": "Chilling Grasp",
+    "category": "Shotgun",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Adds Cold damage and a chance to slow for three seconds.",
+    "baseEffect": "+8% Cold",
+    "maxEffect": "+48% Cold",
+    "effects": [
+      "+8% Cold",
+      "+16% Cold",
+      "+24% Cold",
+      "+32% Cold",
+      "+40% Cold",
+      "+48% Cold"
+    ],
+    "stats": [
+      {
+        "stat": "COLD",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/chilling_grasp.png",
+    "reference": "https://wiki.warframe.com/w/Chilling_Grasp"
+  },
+  {
+    "id": "vigilante_armaments",
+    "title": "Vigilante Armaments",
+    "category": "Primary",
+    "pack": "primary",
+    "maxRank": 5,
+    "rarity": "Common",
+    "description": "Chance to fire additional projectiles for the same ammunition.",
+    "baseEffect": "+10% multishot",
+    "maxEffect": "+60% multishot",
+    "effects": [
+      "+10% multishot",
+      "+20% multishot",
+      "+30% multishot",
+      "+40% multishot",
+      "+50% multishot",
+      "+60% multishot"
+    ],
+    "stats": [
+      {
+        "stat": "MULTISHOT",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/vigilante_armaments.png",
+    "reference": "https://wiki.warframe.com/w/Vigilante_Armaments"
+  },
+  {
+    "id": "hornet_strike",
+    "title": "Hornet Strike",
+    "category": "Pistol",
+    "pack": "secondary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Increases the base damage of secondary attacks.",
+    "baseEffect": "+10% damage",
+    "maxEffect": "+60% damage",
+    "effects": [
+      "+10% damage",
+      "+20% damage",
+      "+30% damage",
+      "+40% damage",
+      "+50% damage",
+      "+60% damage"
+    ],
+    "stats": [
+      {
+        "stat": "DAMAGE",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/hornet_strike.png",
+    "reference": "https://wiki.warframe.com/w/Hornet_Strike"
+  },
+  {
+    "id": "lethal_torrent",
+    "title": "Lethal Torrent",
+    "category": "Pistol",
+    "pack": "secondary",
+    "maxRank": 5,
+    "rarity": "Rare",
+    "description": "Speeds the action and adds a chance for extra projectiles.",
+    "baseEffect": "+6% fire rate  /  +8% multishot",
+    "maxEffect": "+36% fire rate  /  +48% multishot",
+    "effects": [
+      "+6% fire rate  /  +8% multishot",
+      "+12% fire rate  /  +16% multishot",
+      "+18% fire rate  /  +24% multishot",
+      "+24% fire rate  /  +32% multishot",
+      "+30% fire rate  /  +40% multishot",
+      "+36% fire rate  /  +48% multishot"
+    ],
+    "stats": [
+      {
+        "stat": "FIRE_RATE",
+        "increment": 0.06
+      },
+      {
+        "stat": "MULTISHOT",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/lethal_torrent.png",
+    "reference": "https://wiki.warframe.com/w/Lethal_Torrent"
+  },
+  {
+    "id": "quickdraw",
+    "title": "Quickdraw",
+    "category": "Pistol",
+    "pack": "secondary",
+    "maxRank": 5,
+    "rarity": "Common",
+    "description": "Shortens the secondary's reload.",
+    "baseEffect": "+10% reload speed",
+    "maxEffect": "+60% reload speed",
+    "effects": [
+      "+10% reload speed",
+      "+20% reload speed",
+      "+30% reload speed",
+      "+40% reload speed",
+      "+50% reload speed",
+      "+60% reload speed"
+    ],
+    "stats": [
+      {
+        "stat": "RELOAD_SPEED",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/quickdraw.png",
+    "reference": "https://wiki.warframe.com/w/Quickdraw"
+  },
+  {
+    "id": "slip_magazine",
+    "title": "Slip Magazine",
+    "category": "Pistol",
+    "pack": "secondary",
+    "maxRank": 5,
+    "rarity": "Common",
+    "description": "Expands the secondary magazine, including thrown blades.",
+    "baseEffect": "+10% magazine",
+    "maxEffect": "+60% magazine",
+    "effects": [
+      "+10% magazine",
+      "+20% magazine",
+      "+30% magazine",
+      "+40% magazine",
+      "+50% magazine",
+      "+60% magazine"
+    ],
+    "stats": [
+      {
+        "stat": "MAGAZINE",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/slip_magazine.png",
+    "reference": "https://wiki.warframe.com/w/Slip_Magazine"
+  },
+  {
+    "id": "heated_charge",
+    "title": "Heated Charge",
+    "category": "Pistol",
+    "pack": "secondary",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Adds Heat damage and a chance to ignite for three seconds.",
+    "baseEffect": "+8% Heat",
+    "maxEffect": "+48% Heat",
+    "effects": [
+      "+8% Heat",
+      "+16% Heat",
+      "+24% Heat",
+      "+32% Heat",
+      "+40% Heat",
+      "+48% Heat"
+    ],
+    "stats": [
+      {
+        "stat": "HEAT",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/heated_charge.png",
+    "reference": "https://wiki.warframe.com/w/Heated_Charge"
+  },
+  {
+    "id": "pressure_point",
+    "title": "Pressure Point",
+    "category": "Melee",
+    "pack": "melee",
+    "maxRank": 5,
+    "rarity": "Common",
+    "description": "Increases the weapon's base melee damage.",
+    "baseEffect": "+10% damage",
+    "maxEffect": "+60% damage",
+    "effects": [
+      "+10% damage",
+      "+20% damage",
+      "+30% damage",
+      "+40% damage",
+      "+50% damage",
+      "+60% damage"
+    ],
+    "stats": [
+      {
+        "stat": "DAMAGE",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/pressure_point.png",
+    "reference": "https://wiki.warframe.com/w/Pressure_Point"
+  },
+  {
+    "id": "fury",
+    "title": "Fury",
+    "category": "Melee",
+    "pack": "melee",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Speeds the recovery between fully charged melee attacks.",
+    "baseEffect": "+6% attack speed",
+    "maxEffect": "+36% attack speed",
+    "effects": [
+      "+6% attack speed",
+      "+12% attack speed",
+      "+18% attack speed",
+      "+24% attack speed",
+      "+30% attack speed",
+      "+36% attack speed"
+    ],
+    "stats": [
+      {
+        "stat": "MELEE_SPEED",
+        "increment": 0.06
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/fury.png",
+    "reference": "https://wiki.warframe.com/w/Fury"
+  },
+  {
+    "id": "reach",
+    "title": "Reach",
+    "category": "Melee",
+    "pack": "melee",
+    "maxRank": 3,
+    "rarity": "Common",
+    "description": "Extends the distance at which this weapon can strike.",
+    "baseEffect": "+0.2 blocks reach",
+    "maxEffect": "+0.8 blocks reach",
+    "effects": [
+      "+0.2 blocks reach",
+      "+0.4 blocks reach",
+      "+0.6 blocks reach",
+      "+0.8 blocks reach"
+    ],
+    "stats": [
+      {
+        "stat": "REACH",
+        "increment": 0.2
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/reach.png",
+    "reference": "https://wiki.warframe.com/w/Reach"
+  },
+  {
+    "id": "killing_blow",
+    "title": "Killing Blow",
+    "category": "Melee",
+    "pack": "melee",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Multiplies damage from a charged crouching heavy strike.",
+    "baseEffect": "+12% heavy damage",
+    "maxEffect": "+72% heavy damage",
+    "effects": [
+      "+12% heavy damage",
+      "+24% heavy damage",
+      "+36% heavy damage",
+      "+48% heavy damage",
+      "+60% heavy damage",
+      "+72% heavy damage"
+    ],
+    "stats": [
+      {
+        "stat": "HEAVY_DAMAGE",
+        "increment": 0.12
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/killing_blow.png",
+    "reference": "https://wiki.warframe.com/w/Killing_Blow"
+  },
+  {
+    "id": "molten_impact",
+    "title": "Molten Impact",
+    "category": "Melee",
+    "pack": "melee",
+    "maxRank": 5,
+    "rarity": "Uncommon",
+    "description": "Adds Heat against fire-susceptible foes and ignites on a charged hit.",
+    "baseEffect": "+8% Heat",
+    "maxEffect": "+48% Heat",
+    "effects": [
+      "+8% Heat",
+      "+16% Heat",
+      "+24% Heat",
+      "+32% Heat",
+      "+40% Heat",
+      "+48% Heat"
+    ],
+    "stats": [
+      {
+        "stat": "HEAT",
+        "increment": 0.08
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/molten_impact.png",
+    "reference": "https://wiki.warframe.com/w/Molten_Impact"
+  },
+  {
+    "id": "parry",
+    "title": "Parry",
+    "category": "Melee",
+    "pack": "melee",
+    "maxRank": 5,
+    "rarity": "Common",
+    "description": "A successful frontal melee guard can slow the attacker for two seconds.",
+    "baseEffect": "+10% counter chance",
+    "maxEffect": "+60% counter chance",
+    "effects": [
+      "+10% counter chance",
+      "+20% counter chance",
+      "+30% counter chance",
+      "+40% counter chance",
+      "+50% counter chance",
+      "+60% counter chance"
+    ],
+    "stats": [
+      {
+        "stat": "PARRY",
+        "increment": 0.1
+      }
+    ],
+    "icon": "destiny2mc:textures/gui/warframe/mods/parry.png",
+    "reference": "https://wiki.warframe.com/w/Parry"
+  }
+]

@@ -1,0 +1,9 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.jax.destiny2mc.ageless.fx.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": ["TracerMixin","WeaponVisualsMixin","BoltMixin","CombatCuesMixin","FrontierCuesMixin","CloudCueMixin","HazardCuesMixin"],
+  "client": ["BoltRendererMixin"],
+  "injectors": {"defaultRequire": 1}
+}

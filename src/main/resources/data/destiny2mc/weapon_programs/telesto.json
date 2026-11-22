@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "trigger": "charge",
+  "charge_ticks": 18,
+  "cooldown": 8,
+  "delivery": "projectile",
+  "flight": "sticky",
+  "speed": 1.6,
+  "radius": 1.5,
+  "count": 7,
+  "pattern": "ring",
+  "angle": 4.7,
+  "fx": "void"
+}

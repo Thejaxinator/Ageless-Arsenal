@@ -1,0 +1,22 @@
+SHA-256 5c5015374d5db36b040f2d2269dcd3542e8bf83c82e8a2d4c9035e08c7716e4e Ageless-Arsenals-5.0.0-Energy-Binder-neoforge-1.21.1.jar
+PASSIVE CHECK eight bought from the actual block
+PASSIVE CHECK equipped triple_jump and strafe_lift
+PASSIVE CHECK ground tap spends no charge
+PASSIVE CHECK first airborne tap uses Hunter impulse
+PASSIVE CHECK repeat press suppressed
+PASSIVE CHECK second style follows slot order
+PASSIVE CHECK lift held
+PASSIVE CHECK Hunter second extra jump
+PASSIVE CHECK airborne budget exhausted
+PASSIVE CHECK equipped burst_glide and spark_of_haste
+PASSIVE CHECK Warlock forward impulse
+PASSIVE CHECK glide descent
+PASSIVE CHECK releasing Jump ends glide
+PASSIVE CHECK Arc sprint buff
+PASSIVE CHECK equipped ember_of_solace and echo_of_reprisal
+PASSIVE CHECK Solar kill restores three health
+PASSIVE CHECK Void kill clears target and cloaks
+PASSIVE CHECK equipped whisper_of_chains and thread_of_warding
+PASSIVE CHECK Stasis detects slowed hostile
+PASSIVE CHECK Strand XP orb grants two shield hearts
+PASSIVE CHECK COMPLETE

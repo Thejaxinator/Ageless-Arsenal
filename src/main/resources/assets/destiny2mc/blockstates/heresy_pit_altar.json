@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "destiny2mc:block/heresy_pit_altar",
+      "y": 180
+    },
+    "facing=east": {
+      "model": "destiny2mc:block/heresy_pit_altar",
+      "y": 270
+    },
+    "facing=south": {
+      "model": "destiny2mc:block/heresy_pit_altar",
+      "y": 0
+    },
+    "facing=west": {
+      "model": "destiny2mc:block/heresy_pit_altar",
+      "y": 90
+    }
+  }
+}

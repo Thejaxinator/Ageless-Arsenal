@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "trigger": "automatic",
+  "delivery": "projectile",
+  "fx": "solar",
+  "cooldown": 4,
+  "flight": "bolt",
+  "speed": 2.4
+}

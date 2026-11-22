@@ -1,0 +1,36 @@
+Native dedicated server, release 6.0.0.
+Both releases share identical melee bytecode, profiles and part assets.
+Ageless-Arsenals-6.0.0-Tenno-Arsenal-neoforge-1.21.1.jar SHA256 4172b99d8d309aa8d2251f893477adeaab480db4b3e75e07d96c70fbbb3a1620
+Ageless-Arsenals-6.1.0-Progression-neoforge-1.21.1.jar SHA256 24c7ff045468d5c07d92349c3a8785e7672a659931a0a16cddb09f067efc49a6
+MELEE CHECK amanata native maximum durability 512
+MELEE CHECK amanata equips correct native damage and reach
+MELEE CHECK amanata native guard windup and frontal block with durability loss
+MELEE CHECK amanata rear and outside-cone hits pass
+MELEE CHECK hate native maximum durability 650
+MELEE CHECK hate equips correct native damage and reach
+MELEE CHECK hate native guard windup and frontal block with durability loss
+MELEE CHECK hate rear and outside-cone hits pass
+MELEE CHECK harmony native maximum durability 625
+MELEE CHECK harmony equips correct native damage and reach
+MELEE CHECK harmony native guard windup and frontal block with durability loss
+MELEE CHECK harmony rear and outside-cone hits pass
+MELEE CHECK heat_sword native maximum durability 400
+MELEE CHECK heat_sword equips correct native damage and reach
+MELEE CHECK heat_sword native guard windup and frontal block with durability loss
+MELEE CHECK heat_sword rear and outside-cone hits pass
+MELEE CHECK dual_heat_swords native maximum durability 460
+MELEE CHECK dual_heat_swords equips correct native damage and reach
+MELEE CHECK dual_heat_swords native guard windup and frontal block with durability loss
+MELEE CHECK dual_heat_swords rear and outside-cone hits pass
+MELEE CHECK sun_and_moon native maximum durability 675
+MELEE CHECK sun_and_moon equips correct native damage and reach
+MELEE CHECK sun_and_moon native guard windup and frontal block with durability loss
+MELEE CHECK sun_and_moon rear and outside-cone hits pass
+MELEE CHECK Harmony cashes out eight status HP only on a landed heavy
+MELEE CHECK Hate third charged cut applies three bleed ticks; weak hits skipped
+MELEE CHECK Sun & Moon same-target alternation, combo heavy and reset
+MELEE CHECK Sun & Moon starts a new sequence on a different target
+MELEE CHECK Heat Sword heavy lights its primary target
+MELEE CHECK Dual Heat Swords second charged cut ignites
+MELEE CHECK Amanata first roll and 30 confirmed hit reroll
+TENNO MELEE PASS

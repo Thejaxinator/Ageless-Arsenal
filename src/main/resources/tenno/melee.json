@@ -1,0 +1,80 @@
+[
+  {
+    "id": "amanata",
+    "name": "Amanata",
+    "family": "Naginata",
+    "damage": 7,
+    "attackSpeed": 1.35,
+    "reach": 4.25,
+    "guardAngle": 85,
+    "durability": 512,
+    "technique": "dice",
+    "trait": "Koumei’s Dice",
+    "description": "Your first charged hit rolls a blessing. Every 30 charged hits rerolls it. A six grants all five."
+  },
+  {
+    "id": "hate",
+    "name": "Hate",
+    "family": "Scythe",
+    "damage": 8,
+    "attackSpeed": 1.25,
+    "reach": 3.55,
+    "guardAngle": 60,
+    "durability": 650,
+    "technique": "reap",
+    "trait": "Reaping Spiral",
+    "description": "Every third charged cut and each heavy opens a three-tick bleed."
+  },
+  {
+    "id": "harmony",
+    "name": "Harmony",
+    "family": "Scythe",
+    "damage": 7,
+    "attackSpeed": 1.5,
+    "reach": 3.55,
+    "guardAngle": 60,
+    "durability": 625,
+    "technique": "resonance",
+    "trait": "Harmonic Resonance",
+    "description": "Heavy hits consume burning, poison, wither and Reaping Spiral bleed for an immediate burst, up to 8 bonus HP."
+  },
+  {
+    "id": "heat_sword",
+    "name": "Heat Sword",
+    "family": "Sword",
+    "damage": 6,
+    "attackSpeed": 1.75,
+    "reach": 3.05,
+    "guardAngle": 55,
+    "durability": 400,
+    "technique": "ignition",
+    "trait": "Heat Wave",
+    "description": "Heavy hits ignite the target and nearby hostile mobs for four seconds."
+  },
+  {
+    "id": "dual_heat_swords",
+    "name": "Dual Heat Swords",
+    "family": "Dual Swords",
+    "damage": 5.5,
+    "attackSpeed": 2.05,
+    "reach": 3.05,
+    "guardAngle": 60,
+    "durability": 460,
+    "technique": "embers",
+    "trait": "Paired Embers",
+    "description": "Every second charged cut ignites the target. A heavy releases a short heat wave."
+  },
+  {
+    "id": "sun_and_moon",
+    "name": "Sun & Moon",
+    "family": "Dual Nikanas",
+    "damage": 6.5,
+    "attackSpeed": 1.85,
+    "reach": 3.35,
+    "guardAngle": 60,
+    "durability": 675,
+    "technique": "crosscut",
+    "trait": "Mountain’s Edge",
+    "description": "Land two consecutive charged cuts on one target to add 2 HP to the second. Heavy strikes spend the combo."
+  }
+]

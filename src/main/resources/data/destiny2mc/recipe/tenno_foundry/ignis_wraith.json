@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:ignis_wraith",
+  "materials": [
+    {
+      "item": "destiny2mc:ignis",
+      "count": 1
+    },
+    {
+      "item": "minecraft:coal",
+      "count": 6
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 8
+    }
+  ]
+}

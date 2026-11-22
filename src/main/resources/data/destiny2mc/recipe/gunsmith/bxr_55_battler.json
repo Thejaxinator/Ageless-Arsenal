@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:bxr_55_battler",
+  "costs": [
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 14
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 10
+    },
+    {
+      "item": "destiny2mc:conduit_lens",
+      "count": 5
+    }
+  ]
+}

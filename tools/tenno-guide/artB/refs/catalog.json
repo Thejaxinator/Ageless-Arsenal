@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Bubonico",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/InfArmCannon.png",
+    "wiki": "https://wiki.warframe.com/w/Bubonico"
+  },
+  {
+    "name": "Cedo",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/Cedo.png",
+    "wiki": "https://wiki.warframe.com/w/Cedo"
+  },
+  {
+    "name": "Cedo Prime",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/CedoPrime.png",
+    "wiki": "https://wiki.warframe.com/w/Cedo_Prime"
+  },
+  {
+    "name": "Coda Bubonico",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/CodaBubonico.png",
+    "wiki": "https://wiki.warframe.com/w/Coda_Bubonico"
+  },
+  {
+    "name": "Ignis",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/Ignis.png",
+    "wiki": "https://wiki.warframe.com/w/Ignis"
+  },
+  {
+    "name": "Ignis Wraith",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/IgnisWraith.png",
+    "wiki": "https://wiki.warframe.com/w/Ignis_Wraith"
+  },
+  {
+    "name": "Torid",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/Torid.png",
+    "wiki": "https://wiki.warframe.com/w/Torid"
+  },
+  {
+    "name": "Aksondol",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/DuelistPistols.png",
+    "wiki": "https://wiki.warframe.com/w/Aksondol"
+  },
+  {
+    "name": "Brakk",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/Brakk.png",
+    "wiki": "https://wiki.warframe.com/w/Brakk"
+  },
+  {
+    "name": "Kuva Brakk",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/KuvaLichBrakkSkin.png",
+    "wiki": "https://wiki.warframe.com/w/Kuva_Brakk"
+  },
+  {
+    "name": "Kuva Nukor",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/KuvaNukor.png",
+    "wiki": "https://wiki.warframe.com/w/Kuva_Nukor"
+  },
+  {
+    "name": "Nukor",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/Nukor.png",
+    "wiki": "https://wiki.warframe.com/w/Nukor"
+  }
+]

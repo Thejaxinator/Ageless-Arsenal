@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:braton_vandal",
+  "materials": [
+    {
+      "item": "destiny2mc:braton",
+      "count": 1
+    },
+    {
+      "item": "minecraft:prismarine_shard",
+      "count": 6
+    },
+    {
+      "item": "minecraft:lapis_lazuli",
+      "count": 4
+    }
+  ]
+}

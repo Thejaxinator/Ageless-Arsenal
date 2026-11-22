@@ -1,0 +1,23 @@
+SHA256 688a258e90f158d10cee23411a69df1c026ae39790630cddc0dff3036fc1f4b3
+HUD CHECK replicated four active forms and two passives with Ace of Spades equipped
+HUD CHECK rebound K cast Healing Rift through the actual key mapping
+HUD CHECK fresh client has Destiny HUD
+HUD CHECK mode 0 equals Destiny 2 FUI with gun
+HUD CHECK mode 1 equals Minecraft Compact with gun
+HUD CHECK mode 2 equals Simple Minimal with gun
+HUD CHECK mode 3 equals Borderlands 2 with gun
+HUD CHECK mode 4 equals Borderlands 4 with gun
+HUD CHECK mode 5 equals Warframe Tenno with gun
+HUD CHECK ability HUD toggle present after reopening settings
+HUD CHECK inventory has visible native drawer toggle
+HUD CHECK open drawer retains the same vanilla InventoryScreen
+HUD CHECK drawer preference survives inventory close and reopen
+HUD CHECK reversed slide settles closed
+HUD CHECK narrow logical width 334
+HUD CHECK compact left drawer opens on a 3x narrow window
+HUD CHECK vanilla recipe-book button remains usable with drawer
+HUD CHECK narrow recipe book closes via vanilla Escape
+HUD CHECK inventory remained interactive through recipe and resize
+HUD CHECK creative inventory inherits drawer preference and toggle
+HUD CHECK creative drawer reopens without replacing the creative screen
+HUD CHECK COMPLETE edition progression=true

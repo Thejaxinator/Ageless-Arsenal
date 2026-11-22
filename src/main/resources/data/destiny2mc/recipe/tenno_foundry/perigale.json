@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:perigale",
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 8
+    },
+    {
+      "item": "minecraft:spyglass",
+      "count": 1
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 4
+    }
+  ]
+}

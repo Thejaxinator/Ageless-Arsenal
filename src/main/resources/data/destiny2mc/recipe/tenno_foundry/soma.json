@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:soma",
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 7
+    },
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 5
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 3
+    }
+  ]
+}

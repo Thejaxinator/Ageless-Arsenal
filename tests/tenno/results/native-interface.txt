@@ -1,0 +1,66 @@
+SHA256 24c7ff045468d5c07d92349c3a8785e7672a659931a0a16cddb09f067efc49a6
+TENNO QA synced tags contain 33 weapons, 27 ranged and six melee
+TENNO QA ranged and melee tags partition the arsenal
+TENNO QA all 33 synced foundry blueprints match registry tags
+TENNO QA selected survival blueprint has a cost: aksondol
+TENNO QA existing Gunsmith accepts Warframe tab click
+TENNO QA empty survival inventory cannot assemble a weapon
+TENNO QA verified Foundry card painted its Arsenal border from the real cursor
+TENNO QA exact ingredients enable assembly
+TENNO QA server consumed exactly the ingredients and granted one aksondol
+TENNO QA duplicate assembly cannot spend the same ingredients twice
+TENNO QA ordinary inventory dispatches proper tooltip for cedo_prime
+TENNO QA ordinary inventory dispatches proper tooltip for sun_and_moon
+TENNO QA ordinary inventory dispatches proper tooltip for ace_of_spades
+TENNO QA ordinary inventory dispatches proper tooltip for bread
+TENNO QA baked mesh amanata
+TENNO QA baked mesh hate
+TENNO QA baked mesh harmony
+TENNO QA baked mesh heat_sword
+TENNO QA baked mesh dual_heat_swords
+TENNO QA baked mesh sun_and_moon
+TENNO QA baked mesh ax_52
+TENNO QA baked mesh grakata
+TENNO QA baked mesh prisma_grakata
+TENNO QA baked mesh twin_grakatas
+TENNO QA baked mesh braton
+TENNO QA baked mesh braton_prime
+TENNO QA baked mesh braton_vandal
+TENNO QA baked mesh burston
+TENNO QA baked mesh burston_prime
+TENNO QA baked mesh ignis
+TENNO QA baked mesh ignis_wraith
+TENNO QA baked mesh brakk
+TENNO QA baked mesh kuva_brakk
+TENNO QA baked mesh nukor
+TENNO QA baked mesh kuva_nukor
+TENNO QA baked mesh cedo
+TENNO QA baked mesh cedo_prime
+TENNO QA baked mesh vesper_77
+TENNO QA baked mesh perigale
+TENNO QA baked mesh perigale_prime
+TENNO QA baked mesh soma
+TENNO QA baked mesh soma_prime
+TENNO QA baked mesh cantare
+TENNO QA baked mesh torid
+TENNO QA baked mesh aksondol
+TENNO QA baked mesh bubonico
+TENNO QA baked mesh coda_bubonico
+TENNO QA melee weapon enters sustained BLOCK guard: harmony
+TENNO QA melee weapon enters sustained BLOCK guard: sun_and_moon
+TENNO QA held attack input fired a scheduled Burston burst; magazine 45 to 42
+TENNO QA shared reload binding refilled the Warframe magazine
+TENNO QA alternate binding consumed Coda Bubonico battery
+TENNO QA dedicated server completed live target and projectile checks
+TENNO QA COMPLETE
+TENNO RANGE Kuva Nukor weakens its first target and chains across two visible targets
+TENNO RANGE solid block stops the Kuva Nukor ray
+TENNO RANGE Cedo Prime glaive struck three distinct enemies and applied successive elements
+TENNO RANGE Torid spore applies poison on impact
+TENNO RANGE surviving Torid cloud affects a target arriving after impact
+TENNO RANGE Aksondol projectile applies cold
+TENNO RANGE Aksondol completed reload creates a freezing field near the shooter
+TENNO RANGE Cantare knife reached the impact target
+TENNO RANGE reloaded Cantare recalled its thrown knife across a new target
+TENNO RANGE Perigale weak-point kill granted Gale Force and conserved ammunition for the remainder of its burst
+TENNO RANGE COMPLETE

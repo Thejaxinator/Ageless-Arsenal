@@ -1,0 +1,14 @@
+GEAR FRAME Destiny: ability row global x=69 physical px, inset=13 GUI px inside ammo card
+GEAR FRAME Compact: ability row global x=87 physical px, inset=19 GUI px inside ammo card
+GEAR FRAME Minimal: ability row global x=30 physical px, inset=0 GUI px inside ammo card
+GEAR FRAME BL2: ability row global x=30 physical px, inset=0 GUI px inside ammo card
+GEAR FRAME BL4: ability row global x=57 physical px, inset=9 GUI px inside ammo card
+GEAR FRAME Tenno: ability row global x=72 physical px, inset=14 GUI px inside ammo card
+GEAR FRAME actual rarity/element header: Notch-Hover
+GEAR FRAME actual rarity/element header: Ability-Binder
+GEAR FRAME actual rarity/element header: Ability-Inventory
+GEAR FRAME actual rarity/element header: Weapon-Card
+GEAR FRAME actual rarity/element header: Armor-Card
+GEAR FRAME actual rarity/element header: Exotic-Card
+GEAR FRAME actual rarity/element header: Gunsmith-Card
+GEAR FRAME vanilla bread retains ordinary tooltip

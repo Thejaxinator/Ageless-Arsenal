@@ -1,0 +1,13 @@
+SHA256 08b1b945f076a64d0832aa127d48518c840a9e59fcc0f8d93eb714b87c50acb9
+MOD STATION declines unopened station
+MOD STATION empty-handed collection session
+MOD STATION empty-handed fusion charges one XP level
+MOD STATION duplicate request cannot debit again
+MOD STATION specific physical Braton bound
+MOD STATION same-ID replacement stack protected
+MOD STATION only selected Braton changed
+MOD STATION stale rank cannot spend XP
+MOD STATION out-of-reach removal declined
+MOD STATION removal preserves permanent rank
+MOD STATION closing session revokes further edits and binds
+MOD STATION COMPLETE

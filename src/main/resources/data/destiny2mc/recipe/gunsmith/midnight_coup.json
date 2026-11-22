@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:midnight_coup",
+  "costs": [
+    {
+      "item": "minecraft:gold_ingot",
+      "count": 8
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 12
+    },
+    {
+      "item": "destiny2mc:breech_seal",
+      "count": 5
+    }
+  ]
+}

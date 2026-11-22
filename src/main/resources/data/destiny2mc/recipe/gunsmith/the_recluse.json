@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:the_recluse",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 12
+    },
+    {
+      "item": "minecraft:string",
+      "count": 8
+    },
+    {
+      "item": "destiny2mc:runed_marrow",
+      "count": 5
+    }
+  ]
+}

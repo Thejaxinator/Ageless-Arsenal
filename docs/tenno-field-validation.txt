@@ -1,0 +1,1 @@
+12 inventory models, 36 animated groups, 1265 textured cuboids. All views have a clear center sight lane.

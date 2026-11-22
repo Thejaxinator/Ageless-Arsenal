@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "salvage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "destiny2mc:runed_marrow"
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "destiny2mc:willbreakers_watch"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "salvage",
+      "recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "destiny2mc:willbreakers_watch"
+    ]
+  }
+}

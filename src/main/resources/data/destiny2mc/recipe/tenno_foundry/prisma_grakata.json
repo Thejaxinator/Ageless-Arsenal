@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:prisma_grakata",
+  "materials": [
+    {
+      "item": "destiny2mc:grakata",
+      "count": 1
+    },
+    {
+      "item": "minecraft:amethyst_shard",
+      "count": 8
+    },
+    {
+      "item": "minecraft:prismarine_crystals",
+      "count": 4
+    }
+  ]
+}

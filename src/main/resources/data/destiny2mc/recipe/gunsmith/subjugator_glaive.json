@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:subjugator_glaive",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 12
+    },
+    {
+      "item": "minecraft:amethyst_shard",
+      "count": 6
+    },
+    {
+      "item": "destiny2mc:resonant_tine",
+      "count": 4
+    }
+  ]
+}

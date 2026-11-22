@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:nukor",
+  "materials": [
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 6
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 4
+    },
+    {
+      "item": "minecraft:glass",
+      "count": 3
+    }
+  ]
+}

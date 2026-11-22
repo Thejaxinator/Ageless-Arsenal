@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:bubonico",
+  "materials": [
+    {
+      "item": "minecraft:bone",
+      "count": 8
+    },
+    {
+      "item": "minecraft:slime_ball",
+      "count": 4
+    },
+    {
+      "item": "minecraft:fermented_spider_eye",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "destiny2mc:mod_pack",
+    "destiny2mc:primary_mod_pack",
+    "destiny2mc:secondary_mod_pack",
+    "destiny2mc:melee_mod_pack"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:cantare",
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 4
+    },
+    {
+      "item": "minecraft:feather",
+      "count": 4
+    },
+    {
+      "item": "minecraft:amethyst_shard",
+      "count": 2
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+dread_grim / 210 pose samples / pass
+dread_husk / 210 pose samples / pass
+dread_attendant / 210 pose samples / pass
+dread_weaver / 210 pose samples / pass
+dread_omen / 210 pose samples / pass
+dread_harbinger / 210 pose samples / pass
+dread_tormentor / 210 pose samples / pass
+dread_geist / 210 pose samples / pass
+rhulk / 210 pose samples / pass
+nezarec / 210 pose samples / pass

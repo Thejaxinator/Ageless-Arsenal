@@ -1,0 +1,1401 @@
+[
+  {
+    "id": "fallen_dreg",
+    "name": "Fallen Dreg",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A small ranged skirmisher. Strafe between shock-pistol bursts and avoid being surrounded."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "fallen_wretch",
+    "name": "Fallen Wretch",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A melee pursuer. Backpedal and fire before its spear reaches you."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "fallen_vandal_sniper",
+    "name": "Fallen Sniper Vandal",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A long-range rifle unit. Move between cover and avoid standing still in an open firing lane."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "fallen_captain_rifle",
+    "name": "Fallen Captain (Shrapnel Launcher)",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A shielded Captain carrying a Shrapnel Launcher. Break its shield, watch the blink flash, then reacquire it."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "fallen_captain_scorch",
+    "name": "Fallen Scorch Captain",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A shielded Captain carrying a Scorch Cannon. Keep solid cover for the rockets and watch its blink."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "fallen_shank",
+    "name": "Fallen Shank",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A small hovering drone. Track its lateral movement and eliminate it before taking on heavier units."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "fallen_bruiser",
+    "name": "Fallen Bruiser [Ketchkiller]",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Watch for the blink as it closes the gap. Step out of reach of its four claws. The heavy cross-strike can knock you back."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "devil_walker",
+    "name": "Devil Walker",
+    "faction": "fallen",
+    "role": "Field boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Sustained damage depletes 55 points of leg integrity.",
+      "A leg break staggers the Walker for 6.5 seconds.",
+      "During that stagger it takes 2.4x damage. Save heavy shots for that opening.",
+      "Repeat leg breaks and clear the Shanks/Captain reinforcements."
+    ],
+    "threats": [
+      "Leave its cannon firing line while it charges."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "sepiks_prime",
+    "name": "Sepiks Prime",
+    "faction": "fallen",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft the named challenge sigil at a crafting table; use it on clear ground.",
+    "mechanics": [
+      "At 70% health, Sepiks shields itself and calls a Captain tether guard.",
+      "Defeat the tether guard to remove immunity; clear the accompanying Shank.",
+      "At 35% health, it calls two Captain guards. Clear both.",
+      "Focus the central eye between shield phases."
+    ],
+    "threats": [
+      "It blinks while firing volleys.",
+      "Close-range attacks let Sepiks damage a target and heal itself."
+    ],
+    "reward": "Two Conquest Tokens plus inherited boss drops."
+  },
+  {
+    "id": "blast_servitor",
+    "name": "Blast Servitor",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A floating Servitor variant. Focus its central eye and keep distance from explosive pressure."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "vanok_arclite",
+    "name": "Vanok, the Arclite",
+    "faction": "fallen",
+    "role": "Field boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Vanok enters shield phases as its health drops.",
+      "Defeat the tethered Servitor guards to end immunity.",
+      "Watch for its teleport and avoid close-range Arc bursts.",
+      "Resume focused damage once protection falls."
+    ],
+    "threats": [
+      "Pressure increases in the final health phase."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "exploder_shank",
+    "name": "Exploder Shank",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Destroy this drone before it reaches close range. Its final approach ends in an explosion."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "tracer_shank",
+    "name": "Tracer Shank",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A precision Shank. Break sightlines and fire during the gaps between shots."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "heavy_shank",
+    "name": "Heavy Shank",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A larger shielded drone. Sustained fire breaks protection; finish it while exposed."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "devils_servitor",
+    "name": "Devils Ether Servitor",
+    "faction": "fallen",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A support Servitor. Prioritize it when it is sustaining other Fallen units."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "archon_priest",
+    "name": "Riksis, Devil Archon",
+    "faction": "fallen",
+    "role": "Field boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Riksis is a durable Fallen field boss with a shield and close-range stomp.",
+      "Break the shield with sustained fire, then keep range from the stomp.",
+      "Use cover between its Shrapnel Launcher attacks."
+    ],
+    "threats": [
+      "Flanking helps prevent its frontal fire from pinning you down."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_thrall",
+    "name": "Hive Thrall",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "The Thrall lunges and claws with its left hand, then its right. Each claw deals 1.5 base damage.",
+      "The claws land four ticks apart. Stepping out of reach or behind cover can make the second swipe miss."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_cursed_thrall",
+    "name": "Cursed Thrall",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Glows before its close-range detonation. Shoot early or retreat from the 3.5-block blast."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_acolyte",
+    "name": "Hive Acolyte",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Fires timed soulfire bursts. Use solid cover and move between bursts."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_knight",
+    "name": "Hive Boomer Knight",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Below 72% health, it can raise a frontal shield and heal. Flank during the stance; frontal hits deal only 12% damage during its protected frames."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_wizard",
+    "name": "Hive Wizard",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Floats while firing and casts a marked poison cloud. Leaving the cloud lets its two-second poison and Darkness effects expire."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_ogre",
+    "name": "Hive Ogre",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A durable eye-blast unit. Keep cover between bursts and avoid its heavy close-range melee."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_shrieker",
+    "name": "Hive Shrieker",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A stationary hovering turret. Use cover, then burst it down from a clear firing angle."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "lucent_knight",
+    "name": "Lucent Lightbearer Knight",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Uses a healing shield stance like other Knights. After defeating it, destroy the Hive Ghost before it revives the Knight."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "hive_ghost",
+    "name": "Lucent Hive Ghost",
+    "faction": "hive",
+    "role": "Support",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A resurrection support unit released by a Lucent Knight. Destroy it promptly to prevent revival."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "lucent_moth",
+    "name": "Lucent Overshield Moth",
+    "faction": "hive",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A small hovering explosive threat. Shoot it before it reaches its close-range burst."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "oryx_boss",
+    "name": "Oryx, the Taken King",
+    "faction": "hive",
+    "role": "Raid boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft the named challenge sigil at a crafting table; use it on clear ground.",
+    "mechanics": [
+      "Oryx flies and rotates through a marked slam, Gathering Darkness and a charging sword attack.",
+      "Leave the slam circle and move sideways off his charge path.",
+      "During Gathering Darkness, deal 28 raw damage to interrupt the cast and stagger him.",
+      "If you cannot interrupt it, retreat beyond 14 blocks or break line of sight before the blast."
+    ],
+    "threats": [
+      "The Darkness blast arrives about 4.1 seconds into its cast.",
+      "This fight uses open-world attacks; it has no platform or bomb puzzle."
+    ],
+    "reward": "Four Conquest Tokens plus inherited boss drops."
+  },
+  {
+    "id": "vex_goblin",
+    "name": "Vex Goblin",
+    "faction": "vex",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A ranged Vex unit with an exposed radiolarian core. Strafe between bolts and aim at the bright body core."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "vex_hobgoblin",
+    "name": "Vex Hobgoblin",
+    "faction": "vex",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A precision unit that enters a healing lock below 68% health. It takes only 18% damage during protected lock frames; use that pause to reposition."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "vex_harpy",
+    "name": "Vex Harpy",
+    "faction": "vex",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A hovering Vex drone. Track its movement and focus the central eye between its volleys."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "vex_minotaur",
+    "name": "Hezen Praetorian Minotaur",
+    "faction": "vex",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A shielded heavy Vex unit with blink repositioning. Watch the departure flash and leave room behind you."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "vex_hydra",
+    "name": "Vex Hydra",
+    "faction": "vex",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Rotating shield sectors reduce damage to 25%. Change your firing angle to shoot through a gap."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "vex_wyvern",
+    "name": "Vex Wyvern",
+    "faction": "vex",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Crouches over a landing marker, jumps, then dives into the marked location. Dodge sideways and attack during the landing recovery."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "vex_oracle",
+    "name": "Vault Oracle",
+    "faction": "vex",
+    "role": "Support",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A floating encounter node. Destroy it when a boss mechanic calls for removing an Oracle or shield node."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "persys_boss",
+    "name": "Persys, Primordial Ruin",
+    "faction": "vex",
+    "role": "Field boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "Persys uses a heavier Wyvern leap-and-dive attack.",
+      "Watch the crouch and marked landing circle, then move sideways.",
+      "Attack during its recovery and keep room to escape the next dive."
+    ],
+    "threats": [
+      "This retained field boss has no reactor-door puzzle."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "atheon_boss",
+    "name": "Atheon, Time's Conflux",
+    "faction": "vex",
+    "role": "Raid boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft the named challenge sigil at a crafting table; use it on clear ground.",
+    "mechanics": [
+      "Atheon periodically grants nearby Guardians Time's Vengeance.",
+      "Watch for the announcement: the bonus lasts eight seconds.",
+      "Use that window for your strongest shots while moving around its projectile bursts."
+    ],
+    "threats": [
+      "There is no teleport or oracle-order puzzle in this version."
+    ],
+    "reward": "Four Conquest Tokens plus inherited boss drops."
+  },
+  {
+    "id": "protheon_boss",
+    "name": "Protheon, Modular Mind",
+    "faction": "vex",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft the named challenge sigil at a crafting table; use it on clear ground.",
+    "mechanics": [
+      "Protheon uses the articulated Vex ranged and melee move set.",
+      "Strafe between bursts and move away when it closes for melee.",
+      "Aim at the exposed radiolarian core and use solid cover to reload."
+    ],
+    "threats": [
+      "The fight stays in your world; no arena-floor transitions occur."
+    ],
+    "reward": "Two Conquest Tokens plus inherited boss drops."
+  },
+  {
+    "id": "vex_sphinx",
+    "name": "Vex Sphinx",
+    "faction": "vex",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Existing faction encounters and spawn eggs.",
+    "mechanics": [
+      "A heavy Rising Vex adaptation with two articulated tentacles over its shoulders. Dodge the marked two-part tentacle strike and watch for blink repositioning."
+    ],
+    "threats": [
+      "Avoid being surrounded by supporting units."
+    ],
+    "reward": "Faction materials and inherited enemy drops."
+  },
+  {
+    "id": "cabal_legionary",
+    "name": "Legionary",
+    "faction": "cabal",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Deserts, badlands and savannas.",
+    "mechanics": [
+      "Fires a three-shot burst after raising its weapon.",
+      "Move between bursts; solid blocks stop the incoming bolts."
+    ],
+    "threats": [
+      "Close-range melee when cornered."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "cabal_phalanx",
+    "name": "Phalanx",
+    "faction": "cabal",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Deserts, badlands and savannas.",
+    "mechanics": [
+      "When the shield rises, frontal damage drops to 15%.",
+      "Flank or wait until the four-second stance ends."
+    ],
+    "threats": [
+      "Its gun remains active between shield stances."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "cabal_psion",
+    "name": "Psion",
+    "faction": "cabal",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Deserts, badlands and savannas.",
+    "mechanics": [
+      "The cast marks a 2.8-block zone before it erupts.",
+      "Step outside the marker to avoid the suspension field."
+    ],
+    "threats": [
+      "The field persists briefly after the cast."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "cabal_centurion",
+    "name": "Centurion",
+    "faction": "cabal",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Deserts, badlands and savannas.",
+    "mechanics": [
+      "The Centurion crouches, then launches into a jet-assisted jump.",
+      "Keep cover between you and its aerial firing bursts."
+    ],
+    "threats": [
+      "Watch its landing position before closing in."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "cabal_colossus",
+    "name": "Colossus",
+    "faction": "cabal",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Deserts, badlands and savannas.",
+    "mechanics": [
+      "A marked cast precedes three tracking missiles.",
+      "Break line of sight with solid cover while they approach."
+    ],
+    "threats": [
+      "The Colossus also fires ordinary ranged bursts."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "cabal_warbeast",
+    "name": "Warbeast",
+    "faction": "cabal",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Deserts, badlands and savannas.",
+    "mechanics": [
+      "A landing circle appears before the leap.",
+      "Move sideways out of the circle before the dive hits."
+    ],
+    "threats": [
+      "The impact damages and knocks back nearby targets."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "cabal_incendior",
+    "name": "Incendior",
+    "faction": "cabal",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Deserts, badlands and savannas.",
+    "mechanics": [
+      "Keep more than seven blocks away from the flame stream.",
+      "Use cover or a long-range weapon."
+    ],
+    "threats": [
+      "Close hits set the target on fire for two seconds."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "taken_thrall",
+    "name": "Taken Thrall",
+    "faction": "taken",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Forests, dark forests and old-growth pine taiga.",
+    "mechanics": [
+      "Watch the departure particles and the collapse of its silhouette.",
+      "Reacquire it after the teleport; the move uses nearby clear ground."
+    ],
+    "threats": [
+      "Taken Thrall close to melee range quickly."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "taken_acolyte",
+    "name": "Taken Acolyte",
+    "faction": "taken",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Forests, dark forests and old-growth pine taiga.",
+    "mechanics": [
+      "Avoid the marked Void cast and its follow-up bolts.",
+      "Use cover during the projectile volley."
+    ],
+    "threats": [
+      "Acolytes can keep firing while other Taken support them."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "taken_goblin",
+    "name": "Taken Goblin",
+    "faction": "taken",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Forests, dark forests and old-growth pine taiga.",
+    "mechanics": [
+      "During its support stance it protects and heals nearby Taken within seven blocks.",
+      "Defeat the Goblin to cut those support pulses."
+    ],
+    "threats": [
+      "Supported allies gain temporary damage resistance."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "taken_captain",
+    "name": "Taken Captain",
+    "faction": "taken",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Forests, dark forests and old-growth pine taiga.",
+    "mechanics": [
+      "Its special attack launches a slow Darkness projectile.",
+      "Strafe away from the projectile and use solid cover."
+    ],
+    "threats": [
+      "The Captain can pressure at range while allies advance."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "taken_knight",
+    "name": "Taken Knight",
+    "faction": "taken",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Forests, dark forests and old-growth pine taiga.",
+    "mechanics": [
+      "The Knight marks a burning zone before casting.",
+      "Move outside the mark; do not stand in the lingering fire."
+    ],
+    "threats": [
+      "The hazard lasts five seconds."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "taken_phalanx",
+    "name": "Taken Phalanx",
+    "faction": "taken",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Forests, dark forests and old-growth pine taiga.",
+    "mechanics": [
+      "Flank its shield to avoid frontal damage reduction.",
+      "Back away more than six blocks during the raised-shield blast."
+    ],
+    "threats": [
+      "Repulsion can push you toward other hazards."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "scorn_stalker",
+    "name": "Stalker",
+    "faction": "scorn",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Swamps, mangrove swamps and dark forests.",
+    "mechanics": [
+      "Fires a three-shot burst after raising its weapon.",
+      "Move between bursts; solid blocks stop the incoming bolts."
+    ],
+    "threats": [
+      "Close-range melee when cornered."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "scorn_raider",
+    "name": "Raider",
+    "faction": "scorn",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Swamps, mangrove swamps and dark forests.",
+    "mechanics": [
+      "The Raider compresses into mist, then reforms nearby.",
+      "Track the particle flash and prepare for its next shot."
+    ],
+    "threats": [
+      "Its precision weapon punishes standing still."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "scorn_lurker",
+    "name": "Lurker",
+    "faction": "scorn",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Swamps, mangrove swamps and dark forests.",
+    "mechanics": [
+      "When the shield rises, frontal damage drops to 15%.",
+      "Flank or wait until the four-second stance ends."
+    ],
+    "threats": [
+      "Its gun remains active between shield stances."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "scorn_ravager",
+    "name": "Ravager",
+    "faction": "scorn",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Swamps, mangrove swamps and dark forests.",
+    "mechanics": [
+      "Stay clear of the marked burning impact.",
+      "Backpedal when the Ravager reaches melee range."
+    ],
+    "threats": [
+      "Censer hits leave a short-lived fire patch."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "scorn_chieftain",
+    "name": "Chieftain",
+    "faction": "scorn",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Swamps, mangrove swamps and dark forests.",
+    "mechanics": [
+      "The Chieftain channels support to Scorn within seven blocks.",
+      "Focus it to remove healing and short-lived protection from its allies."
+    ],
+    "threats": [
+      "Do not spend heavy ammunition on heavily supported targets."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "scorn_screeb",
+    "name": "Screeb",
+    "faction": "scorn",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Swamps, mangrove swamps and dark forests.",
+    "mechanics": [
+      "The Screeb commits to a short detonation windup at close range.",
+      "Kill it early or move beyond the four-block blast."
+    ],
+    "threats": [
+      "Its explosion damages entities without destroying terrain."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "scorn_abomination",
+    "name": "Abomination",
+    "faction": "scorn",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Swamps, mangrove swamps and dark forests.",
+    "mechanics": [
+      "An Arc line and ground marker telegraph the blast.",
+      "Leave the three-block marked impact area."
+    ],
+    "threats": [
+      "The Abomination can survive several ordinary shots."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_grim",
+    "name": "Grim",
+    "faction": "dread",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "End highlands/midlands and selected high mountains.",
+    "mechanics": [
+      "The Grim flies and fires from above.",
+      "Keep outside seven blocks or break line of sight during its screech."
+    ],
+    "threats": [
+      "The screech briefly slows and disorients nearby targets."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_husk",
+    "name": "Husk",
+    "faction": "dread",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "End highlands/midlands and selected high mountains.",
+    "mechanics": [
+      "Avoid the two-hit blade swing.",
+      "Land the final killing hit in the middle of its chest to prevent a Geist."
+    ],
+    "threats": [
+      "Other killing blows release a pursuing Geist."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_attendant",
+    "name": "Attendant",
+    "faction": "dread",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "End highlands/midlands and selected high mountains.",
+    "mechanics": [
+      "A marked cast launches a slowing Stasis bolt.",
+      "Dodge the shot before it reaches you."
+    ],
+    "threats": [
+      "Being slowed makes nearby melee enemies more dangerous."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_weaver",
+    "name": "Weaver",
+    "faction": "dread",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "End highlands/midlands and selected high mountains.",
+    "mechanics": [
+      "Watch the Strand cast and break line of sight.",
+      "Avoid the projectile to prevent being pulled out of cover."
+    ],
+    "threats": [
+      "The pull can drag you into a second enemy's attack."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_omen",
+    "name": "Omen",
+    "faction": "dread",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "End highlands/midlands and selected high mountains.",
+    "mechanics": [
+      "Three freezing zones spread sideways from the marked target.",
+      "Step beyond the fan instead of moving into an adjacent lane."
+    ],
+    "threats": [
+      "The zones remain active after the Omen finishes casting."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_harbinger",
+    "name": "Harbinger",
+    "faction": "dread",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "End highlands/midlands and selected high mountains.",
+    "mechanics": [
+      "A small ground marker precedes a suspension field.",
+      "Leave the marked area before the cast completes."
+    ],
+    "threats": [
+      "The Harbinger is a durable ranged threat."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_tormentor",
+    "name": "Tormentor",
+    "faction": "dread",
+    "role": "Combatant",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "End highlands/midlands and selected high mountains.",
+    "mechanics": [
+      "Break both glowing shoulder nodes with aimed hits; each needs 18 raw damage.",
+      "Until both nodes break, incoming damage is reduced to 35%.",
+      "Both broken nodes cause a brief stagger."
+    ],
+    "threats": [
+      "Leave the landing marker before its leap attack."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "dread_geist",
+    "name": "Geist",
+    "faction": "dread",
+    "role": "Support",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Released by a Husk killed without a final chest hit.",
+    "mechanics": [
+      "A Geist pursues after a Husk dies without a final chest hit.",
+      "Shoot its bright body before it reaches you."
+    ],
+    "threats": [
+      "It bursts at close range."
+    ],
+    "reward": "Faction material drops."
+  },
+  {
+    "id": "valus_ta_aurc",
+    "name": "Valus Ta’aurc",
+    "faction": "cabal",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "A cast telegraphs a five-rocket tracking salvo.",
+      "Reach solid cover before the rockets arrive.",
+      "Use the pauses between salvos to deal damage; there is no immunity puzzle."
+    ],
+    "threats": [
+      "Avoid clustering beside another Guardian.",
+      "Rocket impacts damage entities while leaving terrain intact."
+    ],
+    "reward": "Two Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "taniks",
+    "name": "Taniks, the Scarred",
+    "faction": "fallen",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "His special move collapses his silhouette before a nearby blink.",
+      "Watch the departure flash and turn toward his new position.",
+      "A three-projectile artillery burst follows the teleport."
+    ],
+    "threats": [
+      "Keep solid cover nearby; do not chase the departure position."
+    ],
+    "reward": "Two Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "bracus_zahn",
+    "name": "Bracus Zahn",
+    "faction": "cabal",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "A cast summons two Legionaries and grants five seconds of shielding.",
+      "During that shield he takes only 20% incoming damage.",
+      "Clear the adds, escape the marked Solar hazard, then resume focused damage."
+    ],
+    "threats": [
+      "Standing in the Solar pool deals repeated damage."
+    ],
+    "reward": "Two Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "alak_hul",
+    "name": "Alak-Hul, the Darkblade",
+    "faction": "hive",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "A five-block landing mark appears before the axe slam.",
+      "Move out before the axe falls, about 1.6 seconds into the move.",
+      "He repositions after the impact; reacquire him before attacking."
+    ],
+    "threats": [
+      "Keep space for lateral movement and avoid walls behind you."
+    ],
+    "reward": "Two Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "hashladun",
+    "name": "Hashladûn",
+    "faction": "hive",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "She floats while firing and periodically marks a four-block zone.",
+      "Move away before the cast lands; the burning cloud remains for five seconds.",
+      "Attack from a clear angle while keeping the cloud between fights out of your path."
+    ],
+    "threats": [
+      "The cloud also applies Darkness."
+    ],
+    "reward": "Two Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "fikrul",
+    "name": "Fikrul, the Fanatic",
+    "faction": "scorn",
+    "role": "Strike boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "His cast calls two Scorn Stalkers and pulls his target inward.",
+      "Immediately leave the Arc pool at the marked position.",
+      "Clear the adds between focused damage bursts."
+    ],
+    "threats": [
+      "The Arc pool remains for roughly 4.5 seconds."
+    ],
+    "reward": "Two Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "crota",
+    "name": "Crota, Son of Oryx",
+    "faction": "hive",
+    "role": "Raid boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "Outside a kneel, Crota takes 40% incoming damage.",
+      "Bait his marked slam and leave its five-block impact circle.",
+      "After the slam, he kneels for four seconds: use that damage window.",
+      "A floating Oversoul appears. Destroy it before the end of the kneel to prevent its blast."
+    ],
+    "threats": [
+      "An intact Oversoul bursts at 3.5 seconds into the kneel.",
+      "Maintain a route out of the 15-block blast radius."
+    ],
+    "reward": "Four Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "templar",
+    "name": "The Templar",
+    "faction": "vex",
+    "role": "Raid boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "A special cast creates three floating shield nodes.",
+      "While the timed shield is active, incoming damage is reduced to 20%.",
+      "Destroy all three nodes to collapse protection early, then focus the central eye.",
+      "The Templar can rebuild the nodes on a later cast."
+    ],
+    "threats": [
+      "The shield also expires after 7.5 seconds.",
+      "Keep cover from its ranged volleys while shooting nodes."
+    ],
+    "reward": "Four Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "golgoroth",
+    "name": "Golgoroth",
+    "faction": "hive",
+    "role": "Raid boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "Strike from behind to draw its gaze.",
+      "Rear hits deal 1.5x damage and trigger a 2.75-second stagger.",
+      "Use the stagger for team damage while another Guardian controls its attention.",
+      "Move out of the marked slam and its lingering dark pool."
+    ],
+    "threats": [
+      "Do not stand in the four-block pool after the slam."
+    ],
+    "reward": "Four Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "rhulk",
+    "name": "Rhulk, Disciple of the Witness",
+    "faction": "dread",
+    "role": "Raid boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "A straight line marks his rush for about 1.2 seconds.",
+      "Move sideways off that line before he accelerates.",
+      "After the rush he creates three resonant hazard lanes.",
+      "Move between or outside those lanes, then attack during recovery."
+    ],
+    "threats": [
+      "The rush deals repeated close-range hits.",
+      "There is no symbol-deposit phase in this adaptation."
+    ],
+    "reward": "Four Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "nezarec",
+    "name": "Nezarec, Final God of Pain",
+    "faction": "dread",
+    "role": "Raid boss",
+    "site": "",
+    "origin": "Ageless Arsenals",
+    "spawn": "Craft its named challenge sigil, then use it on clear ground. Nearby Guardians scale boss health.",
+    "mechanics": [
+      "Aim at both glowing shoulder nodes; each requires 18 raw damage.",
+      "Until both break, he takes only 35% incoming damage.",
+      "Breaking both creates a brief stagger for focused fire.",
+      "Leave his leap marker, then stay clear of the five-block lingering dark zone."
+    ],
+    "threats": [
+      "Do not follow him directly into his landing point."
+    ],
+    "reward": "Four Conquest Tokens, eight faction materials and an Exotic Engram."
+  },
+  {
+    "id": "vorgeth",
+    "name": "Vorgeth, the Boundless Hunger",
+    "faction": "taken",
+    "role": "Dungeon boss",
+    "site": "petition_court",
+    "origin": "Court of Petitions / The Shattered Throne",
+    "spawn": "Use the Locator to find Court of Petitions. Right-click its entrance altar to begin. No sigil is needed.",
+    "mechanics": [
+      "Activate the altar. Vorgeth is immune until the petition cycle is complete.",
+      "Defeat all four named Keepers of Petitions. Each kill adds a shared mark and refreshes a 45-second timer.",
+      "At four marks, stand for one second in the violet basin seven blocks toward the entrance from the center.",
+      "The shield falls for 20 seconds. Focus the eye while dodging Void bolts.",
+      "When the shield returns, repeat. An expired mark damages nearby Guardians and resets the Keepers."
+    ],
+    "threats": [
+      "Use pillars to interrupt eye-blast volleys.",
+      "Move out of the three-block stomp marker."
+    ],
+    "reward": "Three Conquest Tokens, eight faction materials and an Exotic Engram. The altar recharges for five minutes. After ten seconds without a living survival Guardian nearby, the fight resets."
+  },
+  {
+    "id": "zulmak",
+    "name": "Zulmak, Instrument of Torment",
+    "faction": "hive",
+    "role": "Dungeon boss",
+    "site": "heresy_pit",
+    "origin": "Cradle of Embers / Pit of Heresy",
+    "spawn": "Use the Locator to find Cradle of Embers. Right-click its entrance altar to begin. No sigil is needed.",
+    "mechanics": [
+      "Activate the altar, then defeat the three named Heretical Keepers around the arena.",
+      "After each kill, step into that Keeper's glowing outer seal. The team must extinguish all three seals.",
+      "Zulmak becomes vulnerable for 18 seconds. Damage counts only while the attacking Guardian is inside the ritual ring, within eight blocks of the center.",
+      "Clear the Cursed Thrall that enter during damage.",
+      "With three seconds remaining, leave the ring. His final flame blast hits the ring, then the Keepers return."
+    ],
+    "threats": [
+      "Move outside the marked axe slam.",
+      "Leaving the damage ring early is safer than chasing one more shot."
+    ],
+    "reward": "Three Conquest Tokens, eight faction materials and an Exotic Engram. The altar recharges for five minutes. After ten seconds without a living survival Guardian nearby, the fight resets."
+  },
+  {
+    "id": "phryzhia",
+    "name": "Phry'zhia, the Insatiable",
+    "faction": "hive",
+    "role": "Dungeon boss",
+    "site": "avarice_vault",
+    "origin": "Rusted Vault / Grasp of Avarice",
+    "spawn": "Use the Locator to find Rusted Vault. Right-click its entrance altar to begin. No sigil is needed.",
+    "mechanics": [
+      "Activate the altar. Break the two glowing side receivers with any weapon; each releases three Avarice hoarders.",
+      "Each hoarder drops two floating cursed engrams. Walk into them to collect Burdened by Riches.",
+      "Carry the engrams to the amber crystal seven blocks toward the entrance. Stand within two blocks to deposit them, one every half second.",
+      "A shared total of 12 deposits removes the shield for 20 seconds. Shoot the exposed eye, then repeat.",
+      "Carried riches expire after 30 seconds without another pickup, causing damage and losing those riches. Receivers return if more are needed."
+    ],
+    "threats": [
+      "Keep pillars between you and the Ogre's shots.",
+      "Do not collect more riches than you can deliver before the timer expires."
+    ],
+    "reward": "Three Conquest Tokens, eight faction materials and an Exotic Engram. The altar recharges for five minutes. After ten seconds without a living survival Guardian nearby, the fight resets."
+  },
+  {
+    "id": "akelous",
+    "name": "Akelous, the Siren's Current",
+    "faction": "vex",
+    "role": "Dungeon boss",
+    "site": "siren_spire",
+    "origin": "Siren's Watch / Spire of the Watcher",
+    "spawn": "Use the Locator to find Siren's Watch. Right-click its entrance altar to begin. No sigil is needed.",
+    "mechanics": [
+      "Activate the altar. Defeat the Conduit Minotaur to grant nearby Guardians 30 seconds of Arctrician.",
+      "While Arctrician is active, shoot terminal 1 then terminal 2 on each of the four radial circuits. Wrong-order shots do not advance a circuit.",
+      "Completing all four circuits exposes six eyes. Destroy all six within 15 seconds.",
+      "The central core is vulnerable for 15 seconds. Follow its slow retreat while keeping an escape route.",
+      "The final three seconds warn of Repulsion. Retreat beyond 13 blocks or behind solid cover. Survive the blast and repeat."
+    ],
+    "threats": [
+      "A new Conduit Minotaur appears if the team needs another Arctrician buff.",
+      "Failing the eye timer triggers Repulsion and resets the circuits."
+    ],
+    "reward": "Three Conquest Tokens, eight faction materials and an Exotic Engram. The altar recharges for five minutes. After ten seconds without a living survival Guardian nearby, the fight resets."
+  }
+]

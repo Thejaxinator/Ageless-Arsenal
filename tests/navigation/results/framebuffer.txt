@@ -1,0 +1,8 @@
+FRAME 01-Destiny-Crafting | 854×480 | one selected franchise and one selected tool
+FRAME 02-Destiny-Perks | 854×480 | one selected franchise and one selected tool
+FRAME 03-Warframe-Blueprints | 854×480 | one selected franchise and one selected tool
+FRAME 04-Warframe-Mods | 854×480 | one selected franchise and one selected tool
+FRAME 01-Destiny-Crafting and 02-Destiny-Perks have distinct usable bodies
+FRAME 03-Warframe-Blueprints and 04-Warframe-Mods have distinct usable bodies
+FRAME 05-Creative-Warframe | native item-picker slots and vanilla tab frame
+FRAME 06-Creative-Combat | native item-picker slots and vanilla tab frame

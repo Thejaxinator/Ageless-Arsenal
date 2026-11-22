@@ -1,0 +1,13 @@
+SHA256 688a258e90f158d10cee23411a69df1c026ae39790630cddc0dff3036fc1f4b3
+DRAWER CHECK Native focused Enter opens the drawer
+DRAWER CHECK Native hotbar click picked up four logs
+DRAWER CHECK Drawer paper kept the outside cursor stack
+DRAWER CHECK Right-click placed exactly one log into vanilla crafting
+DRAWER CHECK Vanilla crafting result updated with live drawer
+DRAWER CHECK Native output slot crafted four oak planks
+DRAWER CHECK Crafted output moved into an inventory slot
+DRAWER CHECK Remainder stayed in hotbar
+DRAWER CHECK True outside click reached the vanilla menu
+DRAWER CHECK Vanilla outside drop removed exactly one log
+DRAWER CHECK Creative inventory restores drawer and original creative screen
+DRAWER CHECK COMPLETE

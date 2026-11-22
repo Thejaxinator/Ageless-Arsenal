@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"destiny2mc:block/cosmodrome_chest"},"facing=east":{"model":"destiny2mc:block/cosmodrome_chest","y":90},"facing=south":{"model":"destiny2mc:block/cosmodrome_chest","y":180},"facing=west":{"model":"destiny2mc:block/cosmodrome_chest","y":270}}}

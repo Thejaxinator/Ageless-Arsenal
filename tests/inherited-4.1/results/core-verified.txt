@@ -1,0 +1,18 @@
+SMITH 18 native blueprints, 108 paid perk swaps, 18 network recipe round trips
+SMITH DROP entity.destiny2mc.fallen_dreg playerCredit=true salvage=1
+SMITH fallen_dreg dropped ether_induction_coil
+SMITH DROP entity.destiny2mc.vex_goblin playerCredit=true salvage=1
+SMITH vex_goblin dropped conduit_lens
+SMITH DROP entity.destiny2mc.hive_thrall playerCredit=true salvage=1
+SMITH hive_thrall dropped runed_marrow
+SMITH DROP entity.destiny2mc.cabal_legionary playerCredit=true salvage=1
+SMITH cabal_legionary dropped breech_seal
+SMITH DROP entity.destiny2mc.taken_thrall playerCredit=true salvage=1
+SMITH taken_thrall dropped inversion_knot
+SMITH DROP entity.destiny2mc.scorn_stalker playerCredit=true salvage=1
+SMITH scorn_stalker dropped dark_ether_bellows
+SMITH DROP entity.destiny2mc.dread_husk playerCredit=true salvage=1
+SMITH dread_husk dropped resonant_tine
+SMITH DROP entity.destiny2mc.valus_ta_aurc playerCredit=true salvage=3
+SMITH DROP entity.destiny2mc.scorn_stalker playerCredit=true salvage=0
+SMITH COMPLETE

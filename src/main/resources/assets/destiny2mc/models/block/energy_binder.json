@@ -1,0 +1,584 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "destiny2mc:block/binder_hull",
+    "hull": "destiny2mc:block/binder_hull",
+    "edge": "destiny2mc:block/binder_edge",
+    "recess": "destiny2mc:block/binder_recess",
+    "signal": "destiny2mc:block/binder_signal",
+    "copper": "destiny2mc:block/binder_copper",
+    "glass": "destiny2mc:block/binder_glass"
+  },
+  "elements": [
+    {
+      "name": "Foot",
+      "from": [
+        1,
+        0,
+        1
+      ],
+      "to": [
+        15,
+        1.5,
+        15
+      ],
+      "faces": {
+        "up": {
+          "texture": "#edge"
+        },
+        "down": {
+          "texture": "#edge"
+        },
+        "east": {
+          "texture": "#edge"
+        },
+        "west": {
+          "texture": "#edge"
+        },
+        "north": {
+          "texture": "#edge"
+        },
+        "south": {
+          "texture": "#edge"
+        }
+      }
+    },
+    {
+      "name": "Pedestal",
+      "from": [
+        3,
+        1.5,
+        3
+      ],
+      "to": [
+        13,
+        10.5,
+        13
+      ],
+      "faces": {
+        "up": {
+          "texture": "#hull"
+        },
+        "down": {
+          "texture": "#hull"
+        },
+        "east": {
+          "texture": "#hull"
+        },
+        "west": {
+          "texture": "#hull"
+        },
+        "north": {
+          "texture": "#hull"
+        },
+        "south": {
+          "texture": "#hull"
+        }
+      }
+    },
+    {
+      "name": "Recessed waist",
+      "from": [
+        2.8,
+        4,
+        2.8
+      ],
+      "to": [
+        13.2,
+        5,
+        13.2
+      ],
+      "faces": {
+        "up": {
+          "texture": "#recess"
+        },
+        "down": {
+          "texture": "#recess"
+        },
+        "east": {
+          "texture": "#recess"
+        },
+        "west": {
+          "texture": "#recess"
+        },
+        "north": {
+          "texture": "#recess"
+        },
+        "south": {
+          "texture": "#recess"
+        }
+      }
+    },
+    {
+      "name": "Circuit band",
+      "from": [
+        2.7,
+        4.4,
+        2.7
+      ],
+      "to": [
+        13.3,
+        4.65,
+        13.3
+      ],
+      "faces": {
+        "up": {
+          "texture": "#signal"
+        },
+        "down": {
+          "texture": "#signal"
+        },
+        "east": {
+          "texture": "#signal"
+        },
+        "west": {
+          "texture": "#signal"
+        },
+        "north": {
+          "texture": "#signal"
+        },
+        "south": {
+          "texture": "#signal"
+        }
+      }
+    },
+    {
+      "name": "Deck rim",
+      "from": [
+        0,
+        10,
+        0
+      ],
+      "to": [
+        16,
+        11.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "Socket deck",
+      "from": [
+        0,
+        11.5,
+        0
+      ],
+      "to": [
+        16,
+        12.5,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#hull"
+        },
+        "down": {
+          "texture": "#hull"
+        },
+        "east": {
+          "texture": "#hull"
+        },
+        "west": {
+          "texture": "#hull"
+        },
+        "north": {
+          "texture": "#hull"
+        },
+        "south": {
+          "texture": "#hull"
+        }
+      }
+    },
+    {
+      "name": "Channel socket",
+      "from": [
+        2,
+        12.5,
+        2
+      ],
+      "to": [
+        6,
+        13,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#edge"
+        },
+        "down": {
+          "texture": "#edge"
+        },
+        "east": {
+          "texture": "#edge"
+        },
+        "west": {
+          "texture": "#edge"
+        },
+        "north": {
+          "texture": "#edge"
+        },
+        "south": {
+          "texture": "#edge"
+        }
+      }
+    },
+    {
+      "name": "Contact",
+      "from": [
+        3,
+        13,
+        3
+      ],
+      "to": [
+        5,
+        13.3,
+        5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#signal"
+        },
+        "down": {
+          "texture": "#signal"
+        },
+        "east": {
+          "texture": "#signal"
+        },
+        "west": {
+          "texture": "#signal"
+        },
+        "north": {
+          "texture": "#signal"
+        },
+        "south": {
+          "texture": "#signal"
+        }
+      }
+    },
+    {
+      "name": "Channel socket",
+      "from": [
+        10,
+        12.5,
+        2
+      ],
+      "to": [
+        14,
+        13,
+        6
+      ],
+      "faces": {
+        "up": {
+          "texture": "#edge"
+        },
+        "down": {
+          "texture": "#edge"
+        },
+        "east": {
+          "texture": "#edge"
+        },
+        "west": {
+          "texture": "#edge"
+        },
+        "north": {
+          "texture": "#edge"
+        },
+        "south": {
+          "texture": "#edge"
+        }
+      }
+    },
+    {
+      "name": "Contact",
+      "from": [
+        11,
+        13,
+        3
+      ],
+      "to": [
+        13,
+        13.3,
+        5
+      ],
+      "faces": {
+        "up": {
+          "texture": "#signal"
+        },
+        "down": {
+          "texture": "#signal"
+        },
+        "east": {
+          "texture": "#signal"
+        },
+        "west": {
+          "texture": "#signal"
+        },
+        "north": {
+          "texture": "#signal"
+        },
+        "south": {
+          "texture": "#signal"
+        }
+      }
+    },
+    {
+      "name": "Channel socket",
+      "from": [
+        2,
+        12.5,
+        10
+      ],
+      "to": [
+        6,
+        13,
+        14
+      ],
+      "faces": {
+        "up": {
+          "texture": "#edge"
+        },
+        "down": {
+          "texture": "#edge"
+        },
+        "east": {
+          "texture": "#edge"
+        },
+        "west": {
+          "texture": "#edge"
+        },
+        "north": {
+          "texture": "#edge"
+        },
+        "south": {
+          "texture": "#edge"
+        }
+      }
+    },
+    {
+      "name": "Contact",
+      "from": [
+        3,
+        13,
+        11
+      ],
+      "to": [
+        5,
+        13.3,
+        13
+      ],
+      "faces": {
+        "up": {
+          "texture": "#signal"
+        },
+        "down": {
+          "texture": "#signal"
+        },
+        "east": {
+          "texture": "#signal"
+        },
+        "west": {
+          "texture": "#signal"
+        },
+        "north": {
+          "texture": "#signal"
+        },
+        "south": {
+          "texture": "#signal"
+        }
+      }
+    },
+    {
+      "name": "Channel socket",
+      "from": [
+        10,
+        12.5,
+        10
+      ],
+      "to": [
+        14,
+        13,
+        14
+      ],
+      "faces": {
+        "up": {
+          "texture": "#edge"
+        },
+        "down": {
+          "texture": "#edge"
+        },
+        "east": {
+          "texture": "#edge"
+        },
+        "west": {
+          "texture": "#edge"
+        },
+        "north": {
+          "texture": "#edge"
+        },
+        "south": {
+          "texture": "#edge"
+        }
+      }
+    },
+    {
+      "name": "Contact",
+      "from": [
+        11,
+        13,
+        11
+      ],
+      "to": [
+        13,
+        13.3,
+        13
+      ],
+      "faces": {
+        "up": {
+          "texture": "#signal"
+        },
+        "down": {
+          "texture": "#signal"
+        },
+        "east": {
+          "texture": "#signal"
+        },
+        "west": {
+          "texture": "#signal"
+        },
+        "north": {
+          "texture": "#signal"
+        },
+        "south": {
+          "texture": "#signal"
+        }
+      }
+    },
+    {
+      "name": "Emitter well",
+      "from": [
+        6,
+        12.5,
+        6
+      ],
+      "to": [
+        10,
+        13,
+        10
+      ],
+      "faces": {
+        "up": {
+          "texture": "#recess"
+        },
+        "down": {
+          "texture": "#recess"
+        },
+        "east": {
+          "texture": "#recess"
+        },
+        "west": {
+          "texture": "#recess"
+        },
+        "north": {
+          "texture": "#recess"
+        },
+        "south": {
+          "texture": "#recess"
+        }
+      }
+    },
+    {
+      "name": "Emitter",
+      "from": [
+        7,
+        13,
+        7
+      ],
+      "to": [
+        9,
+        13.4,
+        9
+      ],
+      "faces": {
+        "up": {
+          "texture": "#copper"
+        },
+        "down": {
+          "texture": "#copper"
+        },
+        "east": {
+          "texture": "#copper"
+        },
+        "west": {
+          "texture": "#copper"
+        },
+        "north": {
+          "texture": "#copper"
+        },
+        "south": {
+          "texture": "#copper"
+        }
+      }
+    },
+    {
+      "name": "Suspended prism",
+      "from": [
+        6.7,
+        14.2,
+        6.7
+      ],
+      "to": [
+        9.3,
+        16.8,
+        9.3
+      ],
+      "faces": {
+        "up": {
+          "texture": "#glass"
+        },
+        "down": {
+          "texture": "#glass"
+        },
+        "east": {
+          "texture": "#glass"
+        },
+        "west": {
+          "texture": "#glass"
+        },
+        "north": {
+          "texture": "#glass"
+        },
+        "south": {
+          "texture": "#glass"
+        }
+      },
+      "rotation": {
+        "origin": [
+          8,
+          15.5,
+          8
+        ],
+        "axis": "z",
+        "angle": 45
+      }
+    }
+  ]
+}

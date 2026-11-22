@@ -1,0 +1,14 @@
+{
+  "providers": [
+    {
+      "type": "ttf",
+      "file": "destiny2mc:atlas_semibold.ttf",
+      "size": 10,
+      "oversample": 3,
+      "shift": [
+        0,
+        1
+      ]
+    }
+  ]
+}

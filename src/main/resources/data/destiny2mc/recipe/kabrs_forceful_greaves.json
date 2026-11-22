@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "I I",
+    "F M"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "F": {
+      "item": "destiny2mc:conduit_lens"
+    },
+    "M": {
+      "item": "destiny2mc:mote_of_light"
+    }
+  },
+  "result": {
+    "id": "destiny2mc:kabrs_forceful_greaves"
+  }
+}

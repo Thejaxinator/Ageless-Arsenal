@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:cedo_prime",
+  "materials": [
+    {
+      "item": "destiny2mc:cedo",
+      "count": 1
+    },
+    {
+      "item": "minecraft:gold_ingot",
+      "count": 6
+    },
+    {
+      "item": "minecraft:amethyst_shard",
+      "count": 4
+    }
+  ]
+}

@@ -1,0 +1,268 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ageless Arsenals weapon firing program",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "version"
+  ],
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "trigger": {
+      "type": "string",
+      "enum": [
+        "press",
+        "automatic",
+        "charge",
+        "release"
+      ],
+      "default": "press"
+    },
+    "feed": {
+      "type": "string",
+      "enum": [
+        "magazine",
+        "capacitor"
+      ],
+      "default": "magazine"
+    },
+    "cost": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 128,
+      "default": 1
+    },
+    "recharge_ticks": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 1200,
+      "default": 0
+    },
+    "cooldown": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 600,
+      "default": 6
+    },
+    "charge_ticks": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 200,
+      "default": 0
+    },
+    "burst": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 12,
+      "default": 1
+    },
+    "interval": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 40,
+      "default": 1
+    },
+    "count": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 16,
+      "default": 1
+    },
+    "delivery": {
+      "type": "string",
+      "enum": [
+        "ray",
+        "projectile"
+      ],
+      "default": "ray"
+    },
+    "pattern": {
+      "type": "string",
+      "enum": [
+        "cone",
+        "fan",
+        "ring"
+      ],
+      "default": "cone"
+    },
+    "angle": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 45,
+      "default": 0
+    },
+    "pierce": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 8,
+      "default": 1
+    },
+    "speed": {
+      "type": "number",
+      "minimum": 0.05,
+      "maximum": 5,
+      "default": 1.5
+    },
+    "radius": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 8,
+      "default": 0
+    },
+    "damage_scale": {
+      "type": "number",
+      "minimum": 0.01,
+      "maximum": 10,
+      "default": 1
+    },
+    "last_mult": {
+      "type": "number",
+      "minimum": 0.1,
+      "maximum": 5,
+      "default": 1
+    },
+    "flight": {
+      "type": "string",
+      "enum": [
+        "bolt",
+        "sticky",
+        "seeker",
+        "rocket",
+        "blight",
+        "arrow",
+        "frost",
+        "pull",
+        "dark",
+        "lob"
+      ],
+      "default": "bolt"
+    },
+    "on_hit": {
+      "type": "string",
+      "enum": [
+        "none",
+        "swarm",
+        "collapse",
+        "conductor",
+        "precision_stack",
+        "unarmored_precision",
+        "anti_armor",
+        "refund",
+        "master"
+      ],
+      "default": "none"
+    },
+    "fx": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_/.-]{0,63}$",
+      "default": "kinetic"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "trigger"
+        ],
+        "properties": {
+          "trigger": {
+            "enum": [
+              "charge",
+              "release"
+            ]
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "charge_ticks"
+        ],
+        "properties": {
+          "charge_ticks": {
+            "minimum": 1
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "charge_ticks": {
+            "const": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "feed"
+        ],
+        "properties": {
+          "feed": {
+            "const": "capacitor"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "recharge_ticks": {
+            "minimum": 1,
+            "default": 20
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "recharge_ticks": {
+            "const": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "delivery"
+        ],
+        "properties": {
+          "delivery": {
+            "const": "projectile"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "pierce": {
+            "const": 1
+          },
+          "on_hit": {
+            "const": "none"
+          }
+        }
+      },
+      "else": {
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "flight"
+              ]
+            },
+            {
+              "required": [
+                "speed"
+              ]
+            },
+            {
+              "required": [
+                "radius"
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "$comment": "The server additionally checks that cost fits the base capacity and (burst - 1) * interval is less than cooldown."
+}

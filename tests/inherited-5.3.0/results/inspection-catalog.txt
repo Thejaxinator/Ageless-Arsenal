@@ -1,0 +1,7 @@
+SHA256 bf34514cdb6c103c02bb374b39b048285d8eba410f5d3c71f1f06e070ffcbecc
+CARD AUDIT All 70 weapon stacks, 15 armor stacks and 38 abilities drew at viewport edges.
+CARD AUDIT Renamed Ace reports its actual partial magazine, Backup Mag capacity, primary reserve and intrinsic.
+CARD AUDIT Exotic armor reports the real perk, slot protection and damaged stack durability.
+CARD AUDIT Item hide-additional-tooltip flag delegates to the original Minecraft components.
+CARD AUDIT F3+H preserves native roll, custom name and registry ID in inventory and Gunsmith. Bread keeps its original border after exotic gear.
+CARD AUDIT COMPLETE

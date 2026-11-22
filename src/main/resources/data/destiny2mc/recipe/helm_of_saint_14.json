@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "ASA",
+    "FCF",
+    " M "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "S": {
+      "item": "destiny2mc:conquest_token"
+    },
+    "F": {
+      "item": "destiny2mc:conduit_lens"
+    },
+    "C": {
+      "item": "minecraft:iron_helmet"
+    },
+    "M": {
+      "item": "destiny2mc:mote_of_light"
+    }
+  },
+  "result": {
+    "id": "destiny2mc:helm_of_saint_14"
+  }
+}

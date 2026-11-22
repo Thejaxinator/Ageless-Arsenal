@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:vex_slap_rifle",
+  "costs": [
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 12
+    },
+    {
+      "item": "minecraft:quartz",
+      "count": 6
+    },
+    {
+      "item": "destiny2mc:conduit_lens",
+      "count": 4
+    }
+  ]
+}

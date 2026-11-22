@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:hung_jury_sr4",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 14
+    },
+    {
+      "item": "minecraft:quartz",
+      "count": 8
+    },
+    {
+      "item": "destiny2mc:resonant_tine",
+      "count": 5
+    }
+  ]
+}

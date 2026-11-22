@@ -1,0 +1,31 @@
+{
+  "schema_version": "1.5.0",
+  "dimension": "destiny2mc:strike_void",
+  "instance_stride_x": 4096,
+  "strikes": [
+    {
+      "id": 0,
+      "slug": "devils_lair",
+      "title": "THE DEVIL'S LAIR",
+      "location": "Cosmodrome, Old Russia",
+      "encounters": [
+        {"index": 0, "type": "CLEAR_ENEMIES", "beat": "Rocketyard Approach", "objective": "Breach the House of Devils outer perimeter", "gate_z": 42, "darkness_zone": false},
+        {"index": 1, "type": "DEFEND_POINT", "beat": "The Refinery", "objective": "Protect Ghost while decrypting the 3 Laser Mesh layers", "gate_z": 94, "waves": 3, "hack_ticks": 180, "darkness_zone": true},
+        {"index": 2, "type": "KILL_BOSS", "beat": "The Blast", "objective": "Destroy the Devil Walker guarding the Refinery Blast Yard", "gate_z": 158, "boss": "devil_walker", "darkness_zone": true},
+        {"index": 3, "type": "KILL_BOSS", "beat": "The Devils' Lair", "objective": "Destroy Sepiks Prime, High Servitor of the House of Devils", "gate_z": 222, "boss": "sepiks_prime", "darkness_zone": true}
+      ]
+    },
+    {
+      "id": 1,
+      "slug": "fulminator",
+      "title": "THE FULMINATOR",
+      "location": "Jiangshi Weather Control Facility",
+      "encounters": [
+        {"index": 0, "type": "CLEAR_ENEMIES", "beat": "Sneak In — Facility Approach", "objective": "Defeat the Fallen guards outside the Weather Control Hall", "gate_z": 42, "darkness_zone": false},
+        {"index": 1, "type": "DEFEND_POINT", "beat": "Hunt for Vanok — Control Room", "objective": "Capture the Weather Control Room & unlock the backdoor", "gate_z": 94, "waves": 2, "hack_ticks": 140, "darkness_zone": true},
+        {"index": 2, "type": "DESTROY_OBJECTIVE", "beat": "Deep Dive — Sub-Lake Conduit", "objective": "Destroy the 2 Arc Conduit Servitors sealing the Fulminator Lift", "gate_z": 154, "targets": 2, "darkness_zone": true},
+        {"index": 3, "type": "KILL_BOSS", "beat": "Fulminator Storm Spire", "objective": "Defeat Vanok, the Arclite and shut down the Fulminator", "gate_z": 222, "boss": "vanok_arclite", "darkness_zone": true}
+      ]
+    }
+  ]
+}

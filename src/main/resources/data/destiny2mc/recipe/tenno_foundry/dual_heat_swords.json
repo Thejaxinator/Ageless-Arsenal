@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:dual_heat_swords",
+  "materials": [
+    {
+      "item": "destiny2mc:heat_sword",
+      "count": 1
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 2
+    },
+    {
+      "item": "minecraft:leather",
+      "count": 1
+    }
+  ]
+}

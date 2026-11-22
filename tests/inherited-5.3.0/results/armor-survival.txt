@@ -1,0 +1,24 @@
+Ageless-Arsenals-5.3.0-Progression-neoforge-1.21.1.jar
+SHA256 bf34514cdb6c103c02bb374b39b048285d8eba410f5d3c71f1f06e070ffcbecc
+Minecraft 1.21.1 / NeoForge 21.1.266 / Normal / Patrol
+ARMOR CHECK 15 distinct grid recipes, correct native equip slots, armor materials, durability, repair and protection enchantment tags
+ARMOR CHECK Dreg shock bolt Patrol unarmored=1.7099991 HP; single helmet=1.6282425 HP; starter Kabr pair=1.2128029 HP
+ARMOR CHECK Willbreaker two-piece melee mitigation
+ARMOR CHECK Rull two-piece blast mitigation
+ARMOR CHECK armor-bypassing damage unaffected
+ARMOR CHECK Armamentarium grants the first grenade; its HUD slot remains ready
+ARMOR CHECK second grenade starts the ordinary cooldown; third cast rejected
+ARMOR CHECK reserve shared across elements and chest swaps
+ARMOR CHECK reserve survives death clone
+ARMOR CHECK Saint-14 barricade grants two absorption hearts and blinds nearby hostiles
+ARMOR CHECK Saint ward cannot retrigger during its lockout
+ARMOR CHECK Saint ward accepts a successful vanilla shield block event
+ARMOR CHECK Bakris shifts forward and stops its entire collision box before a solid wall
+ARMOR CHECK failed repeat cast cannot shift twice
+ARMOR CHECK Bakris respects the world border
+ARMOR CHECK boss awards a raid piece atheon_boss
+ARMOR CHECK boss awards a raid piece crota
+ARMOR CHECK boss awards a raid piece valus_ta_aurc
+ARMOR CHECK ordinary kills keep ordinary salvage
+ARMOR CHECK two player-credited Vex Goblin deaths pay both starter piece salvage and mote costs
+ARMOR SURVIVAL PASS

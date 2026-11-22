@@ -1,0 +1,17 @@
+{
+  "name": "destiny2mc:frontier/exodus_bulkhead",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "destiny2mc:frontier/exodus_bulkhead",
+        "processors": {
+          "processors": []
+        },
+        "projection": "rigid"
+      }
+    }
+  ]
+}

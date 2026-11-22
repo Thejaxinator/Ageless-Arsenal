@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","category":"equipment","pattern":["CCC","PA ","I  "],"key":{"C":{"item":"minecraft:copper_ingot"},"P":{"item":"destiny2mc:plundered_ether_alloy"},"A":{"item":"minecraft:amethyst_shard"},"I":{"item":"minecraft:iron_ingot"}},"result":{"id":"destiny2mc:blood_feud","count":1}}

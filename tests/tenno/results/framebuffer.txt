@@ -1,0 +1,8 @@
+TENNO FRAME Blueprint-Card: 4599 pixels of its Arsenal accent
+TENNO FRAME Card-sun_and_moon: 4599 pixels of its Arsenal accent
+TENNO FRAME Card-cedo_prime: 4599 pixels of its Arsenal accent
+TENNO FRAME correct independent styling: Foundry
+TENNO FRAME correct independent styling: Card-ace_of_spades
+TENNO FRAME correct independent styling: Card-bread
+TENNO FRAME crossed guard and dual equipment change both halves of the first-person view
+TENNO FRAME Burston target remains visible directly above its central sight

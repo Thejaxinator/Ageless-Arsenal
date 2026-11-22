@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "trigger": "charge",
+  "delivery": "ray",
+  "fx": "kinetic",
+  "cooldown": 8,
+  "charge_ticks": 14,
+  "pierce": 3,
+  "on_hit": "anti_armor"
+}

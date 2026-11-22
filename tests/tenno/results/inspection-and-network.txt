@@ -1,0 +1,7 @@
+SHA256 24c7ff045468d5c07d92349c3a8785e7672a659931a0a16cddb09f067efc49a6
+FOUNDRY AUDIT All 27 ranged and six melee cards render at screen edges. Their real magazine, guard, durability and technique fields agree with the selected item.
+FOUNDRY AUDIT Standard items, hide-additional and advanced-tooltip contexts retain vanilla tooltips.
+FOUNDRY AUDIT Mouse and keyboard filters on the live bench reveal all six melee and 27 ranged blueprints.
+FOUNDRY AUDIT One repeated request consumed exactly one recipe and granted one weapon despite materials for two.
+FOUNDRY AUDIT Unopened and out-of-reach stations declined the request without debiting any materials.
+FOUNDRY AUDIT COMPLETE

@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:hammerhead",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 16
+    },
+    {
+      "item": "minecraft:gunpowder",
+      "count": 8
+    },
+    {
+      "item": "destiny2mc:breech_seal",
+      "count": 5
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "destiny2mc:block/siren_spire_altar"
+  }
+}

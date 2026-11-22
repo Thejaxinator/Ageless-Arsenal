@@ -1,0 +1,9 @@
+SHA256 bf34514cdb6c103c02bb374b39b048285d8eba410f5d3c71f1f06e070ffcbecc
+ARMOR VIEW four slots replicated for Kabr's armor: battlecage_of_kabr, kabrs_wrath, light_of_the_great_prism, kabrs_forceful_greaves
+ARMOR VIEW four slots replicated for Willbreaker's armor: willbreakers_watch, willbreakers_resolve, mark_of_the_pit, willbreakers_greaves
+ARMOR VIEW four slots replicated for Armor of Rull: mask_of_rull, chassis_of_rull, shadows_mark, greaves_of_rull
+ARMOR VIEW four slots replicated for Helm of Saint-14: helm_of_saint_14, kabrs_wrath, light_of_the_great_prism, kabrs_forceful_greaves
+ARMOR VIEW four slots replicated for The Armamentarium: battlecage_of_kabr, the_armamentarium, light_of_the_great_prism, kabrs_forceful_greaves
+ARMOR VIEW four slots replicated for Mask of Bakris: mask_of_bakris, willbreakers_resolve, mark_of_the_pit, willbreakers_greaves
+ARMOR VIEW three equipped armor stands replicated through the dedicated server
+ARMOR VIEW COMPLETE

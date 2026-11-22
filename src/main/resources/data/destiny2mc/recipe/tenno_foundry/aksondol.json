@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:aksondol",
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 6
+    },
+    {
+      "item": "minecraft:packed_ice",
+      "count": 2
+    },
+    {
+      "item": "minecraft:quartz",
+      "count": 4
+    }
+  ]
+}

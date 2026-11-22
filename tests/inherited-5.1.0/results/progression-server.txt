@@ -1,0 +1,15 @@
+Ageless-Arsenals-5.1.0-Progression-neoforge-1.21.1.jar
+SHA-256 f67a0e1d15b79b8be5ceb630b9ecfc33c5ba03862aa5e7022d76d4f850bc1c9a
+CAREER NATIVE Dreg pays 12 career XP and 1 vanilla XP alongside ordinary drops
+CAREER NATIVE Level 20 gives 40 health and 2 armor
+CAREER NATIVE Vanilla level spending preserves career level
+CAREER NATIVE Level 50 gives 60 health and 5 armor without stacking
+CAREER NATIVE Death clone keeps level and restores bonus hearts
+CAREER NATIVE Periodic player NBT save restores injured bonus hearts without a logout event
+CAREER NATIVE Lifetime points capped
+CAREER NATIVE Veterans gain 25% base health and 2 armor once
+CAREER NATIVE Veteran rank, attributes and name survive saving
+CAREER NATIVE Level 50 player can promote a naturally spawning Dreg
+CAREER NATIVE Spawn eggs skip veteran promotion
+CAREER NATIVE Level 1 players retain ordinary natural spawns
+CAREER NATIVE COMPLETE

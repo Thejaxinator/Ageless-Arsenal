@@ -1,0 +1,20 @@
+{
+  "replace": false,
+  "values": [
+    "destiny2mc:hive_thrall",
+    "destiny2mc:hive_cursed_thrall",
+    "destiny2mc:hive_acolyte",
+    "destiny2mc:hive_knight",
+    "destiny2mc:hive_wizard",
+    "destiny2mc:hive_ogre",
+    "destiny2mc:hive_shrieker",
+    "destiny2mc:lucent_knight",
+    "destiny2mc:oryx_boss",
+    "destiny2mc:alak_hul",
+    "destiny2mc:hashladun",
+    "destiny2mc:crota",
+    "destiny2mc:golgoroth",
+    "destiny2mc:zulmak",
+    "destiny2mc:phryzhia"
+  ]
+}

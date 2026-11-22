@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:hate",
+  "materials": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 6
+    },
+    {
+      "item": "minecraft:obsidian",
+      "count": 2
+    },
+    {
+      "item": "minecraft:bone",
+      "count": 3
+    }
+  ]
+}

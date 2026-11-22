@@ -1,0 +1,3 @@
+SMITH UI survival interaction, synchronized recipe and paid Wire Rifle craft
+SMITH UI paid Backup Mag selected and persisted on client after server mutation
+SMITH UI COMPLETE

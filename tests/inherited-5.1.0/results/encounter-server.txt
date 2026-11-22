@@ -1,0 +1,13 @@
+Minecraft 1.21.1 / NeoForge 21.1.266 / Normal / separate fresh dedicated servers
+
+JAR: Ageless-Arsenals-5.0.0-Energy-Binder-neoforge-1.21.1.jar
+SHA-256: 5c5015374d5db36b040f2d2269dcd3542e8bf83c82e8a2d4c9035e08c7716e4e
+ENCOUNTER Dreg 1.7100 HP; rapid bolt 1.1115 HP; Protection IV netherite Valus 0.3532 HP Patrol and 1.0080 HP Original
+ENCOUNTER COMPLETE
+
+JAR: Ageless-Arsenals-5.1.0-Progression-neoforge-1.21.1.jar
+SHA-256: f67a0e1d15b79b8be5ceb630b9ecfc33c5ba03862aa5e7022d76d4f850bc1c9a
+ENCOUNTER Dreg 1.7100 HP; rapid bolt 1.1115 HP; Protection IV netherite Valus 0.3532 HP Patrol and 1.0080 HP Original
+ENCOUNTER COMPLETE
+
+Checks cover the native damage pipeline, full Protection IV netherite, rapid consecutive impacts, unrelated environmental damage, world settings serialization, permission checks, and stale update rejection.

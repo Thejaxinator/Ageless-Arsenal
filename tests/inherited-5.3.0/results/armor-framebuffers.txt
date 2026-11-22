@@ -1,0 +1,13 @@
+ARMOR PIXEL front, reverse and detail are occupied on Kabr
+ARMOR PIXEL front, reverse and detail are occupied on Willbreaker
+ARMOR PIXEL front, reverse and detail are occupied on Rull
+ARMOR PIXEL front, reverse and detail are occupied on Saint-14
+ARMOR PIXEL front, reverse and detail are occupied on Armamentarium
+ARMOR PIXEL front, reverse and detail are occupied on Bakris
+ARMOR PIXEL Kabr / Willbreaker changed 33.6% of comparison rectangle
+ARMOR PIXEL Kabr / Rull changed 40.0% of comparison rectangle
+ARMOR PIXEL Willbreaker / Rull changed 42.7% of comparison rectangle
+ARMOR PIXEL Kabr / Saint-14 changed 38.1% of comparison rectangle
+ARMOR PIXEL Willbreaker / Bakris changed 34.0% of comparison rectangle
+ARMOR PIXEL Kabr / Armamentarium changed 56.1% of comparison rectangle
+ARMOR PIXEL all six kits confirmed

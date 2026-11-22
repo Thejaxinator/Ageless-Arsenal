@@ -1,0 +1,5 @@
+Ageless-Arsenals-6.3.0-Progression-neoforge-1.21.1.jar
+SHA256 08b1b945f076a64d0832aa127d48518c840a9e59fcc0f8d93eb714b87c50acb9
+SOCKET CHECK 33 physical weapons x 22 mod definitions: 190 type-compatible installs, other pairs rejected, duplicate exclusion, ordering and Minecraft serialization.
+SOCKET CHECK owner and borrower ranks, whole-collection updates, defensive NBT filtering, unknown-data preservation, multi-stat launch snapshots and independent removal.
+SOCKET CHECK PASS

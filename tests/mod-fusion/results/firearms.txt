@@ -1,0 +1,23 @@
+SHA256 08b1b945f076a64d0832aa127d48518c840a9e59fcc0f8d93eb714b87c50acb9
+WF RANGED MODS rank-five Serration damage = 7.39202880859375
+WF RANGED MODS capacity 45→67 without granting free ammo
+WF RANGED MODS modded reload stays pending at 24 ticks
+WF RANGED MODS modded reload finishes in 25 ticks
+WF RANGED MODS Speed Trigger fired 15 paid rounds in 30 ticks, stock would fire 10
+WF RANGED MODS borrower cannot inherit owner capacity
+WF RANGED MODS borrowed rifle's damage = 3.299999952316284
+WF RANGED MODS Vigilante added individual rays while charging one round per shot
+WF RANGED MODS extra multishot weak-point contacts count toward Gale Force within the same burst
+WF RANGED MODS Hellfire additional elemental damage = 6.83758544921875
+WF RANGED MODS Hellfire applied the three-second burn on a real target
+WF RANGED MODS Ammo Stock scales Coda battery 36→58
+WF RANGED MODS battery recharge waits 19 ticks with Tactical Pump
+WF RANGED MODS Coda gains one charge per tick after the modded wait
+WF RANGED MODS battery fills its expanded capacity
+WF RANGED MODS Coda alternate volley preserves innate Viral effect and scaled blast damage
+WF RANGED MODS Chilling Grasp applies Slowness on pellet impact
+WF RANGED MODS Cantare retains launch damage after socket removal = 7.03997802734375
+WF RANGED MODS returning knife retains the original damage snapshot = 14.78399658203125
+WF RANGED MODS modded Kuva microwave chains while preserving Weakness
+WF RANGED MODS Torid field tick retains launch modifier = 2.08001708984375
+WF RANGED MODS PASS

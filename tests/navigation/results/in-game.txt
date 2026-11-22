@@ -1,0 +1,30 @@
+SHA256 09af184ecc4c5659947885c15a112421594d386d1ffb7ef970cc36df50f11cad
+NAV QA Destiny / Crafting active (0,0)
+NAV QA Destiny Perks subtab accepted a left click
+NAV QA Destiny / Perks active (0,1)
+NAV QA Destiny Apply Perk button accepts chosen change
+NAV QA server changed the owned Ace of Spades perk
+NAV QA Warframe / Blueprints active (1,0)
+NAV QA Assemble Weapon button accepts click
+NAV QA server assembled destiny2mc:aksondol at Warframe Blueprints
+NAV QA Warframe / Weapon Mods active (1,1)
+NAV QA Serration installed on Braton
+NAV QA fusion spent one level and activated rank one on Braton
+NAV QA return to Destiny remembers Perks active (0,1)
+NAV QA left subtab returns to Destiny Crafting active (0,0)
+NAV QA return to Warframe remembers Mods active (1,1)
+NAV QA left subtab returns to Warframe Blueprints active (1,0)
+NAV QA 33 tagged weapons and four mod packs
+NAV QA clicked creative tab Combat
+NAV QA vanilla Combat contains its sword and zero Warframe items
+NAV QA clicked creative tab Warframe
+NAV QA real Warframe item picker contains all 37 unique items
+NAV QA primary, secondary and melee groups start with AX-52, Twin Grakatas and Amanata
+NAV QA pack group item mod_pack
+NAV QA pack group item primary_mod_pack
+NAV QA pack group item secondary_mod_pack
+NAV QA pack group item melee_mod_pack
+NAV QA Warframe tab shows the Twin Grakatas icon
+NAV QA Paracausal and vanilla Tools omit all 37 Warframe items
+NAV QA global Creative Search includes all 37 Warframe items
+NAV QA COMPLETE

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_mote": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "destiny2mc:mote_of_light"
+          }
+        ]
+      }
+    },
+    "has_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "destiny2mc:energy_binder"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_mote",
+      "has_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "destiny2mc:energy_binder"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+MOD FRAME Collection contains the full Foundry and Warframe card border
+MOD FRAME Ranked contains the full Foundry and Warframe card border
+MOD FRAME Installed contains the full Foundry and Warframe card border
+MOD FRAME selected card rank lamps increased from 0 to 125 colored pixels
+MOD FRAME all six installed cells differ from the empty rack
+MOD FRAME pack reveal banner rendered above the in-world hotbar
+MOD FRAME vanilla crafting table, equipped weapon inspection, and native pack tooltip all captured

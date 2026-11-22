@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "destiny2mc:cabal_legionary",
+    "destiny2mc:cabal_phalanx",
+    "destiny2mc:cabal_psion",
+    "destiny2mc:cabal_centurion",
+    "destiny2mc:cabal_colossus",
+    "destiny2mc:cabal_warbeast",
+    "destiny2mc:cabal_incendior",
+    "destiny2mc:valus_ta_aurc",
+    "destiny2mc:bracus_zahn"
+  ]
+}

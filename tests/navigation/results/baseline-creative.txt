@@ -1,0 +1,2 @@
+Legacy fingerprint operator=false 82518640bae3b73ab3188cc389175a6c26ea85c885c30b9afdf0570c50976659
+Legacy fingerprint operator=true ade2bf37bdb38e2cc85090a950f192df5b61d82dc73fe53e4ca7f38dcad81737

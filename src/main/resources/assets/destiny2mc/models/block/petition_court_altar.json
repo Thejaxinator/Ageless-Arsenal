@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "destiny2mc:block/petition_court_altar"
+  }
+}

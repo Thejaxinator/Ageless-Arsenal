@@ -1,0 +1,46 @@
+Artifact: Ageless-Arsenals-4.0.0-Core-neoforge-1.21.1.jar
+SHA-256: 59224a54ae211dfe22adeb77608ab5a200b180f45dc2248cbffee59e8e36f9d5
+WEAPON CHECK all 70 item IDs and held specs match
+WEAPON CHECK Telesto rejects an uncharged trigger
+WEAPON CHECK one Telesto round created seven independent Void entities
+WEAPON CHECK seven owned sticky projectiles with distinct entity IDs
+WEAPON CHECK seven distinct flight directions
+WEAPON CHECK opposing Telesto paths span the authored spread
+WEAPON CHECK repeat input cannot duplicate the accepted volley
+WEAPON CHECK all seven bolts attached to the test wall
+WEAPON CHECK sticky projectile survives save/load
+WEAPON CHECK all seven wall charges detonated after their fuse
+WEAPON CHECK pulse trigger spends first round immediately
+WEAPON CHECK two subsequent pulse rounds spend ammo at tick intervals
+WEAPON CHECK holstering cancels pending burst rounds
+WEAPON CHECK normal reload starts after a burst
+WEAPON CHECK reload refills magazine through the existing ammo path
+WEAPON CHECK new weapon fired and damaged survival target wire_rifle
+WEAPON CHECK new weapon fired and damaged survival target vex_slap_rifle
+WEAPON CHECK new weapon fired and damaged survival target hive_boomer
+WEAPON CHECK new weapon fired and damaged survival target cabal_slug_rifle
+WEAPON CHECK new weapon fired and damaged survival target taken_shrapnel_launcher
+WEAPON CHECK new weapon fired and damaged survival target scorn_crossbow
+WEAPON CHECK new weapon fired and damaged survival target subjugator_glaive
+WEAPON CHECK new weapon fired and damaged survival target outbreak_perfected
+WEAPON CHECK new weapon fired and damaged survival target graviton_lance
+WEAPON CHECK new weapon fired and damaged survival target riskrunner
+WEAPON CHECK new weapon fired and damaged survival target dead_mans_tale
+WEAPON CHECK new weapon fired and damaged survival target forerunner
+WEAPON CHECK new weapon fired and damaged survival target arbalest
+WEAPON CHECK new weapon fired and damaged survival target hammerhead
+WEAPON CHECK new weapon fired and damaged survival target midnight_coup
+WEAPON CHECK new weapon fired and damaged survival target the_recluse
+WEAPON CHECK new weapon fired and damaged survival target hung_jury_sr4
+WEAPON CHECK new weapon fired and damaged survival target bxr_55_battler
+WEAPON CHECK real datapack reload replaced scout trigger and delivery
+WEAPON CHECK release program holds its charged salvo
+WEAPON CHECK same item fires three pull bolts after release
+WEAPON CHECK capacitor spends two units for an entire fan
+WEAPON CHECK capacitor ignores manual magazine reload
+WEAPON CHECK holstered capacitor recovered one unit after six ticks
+WEAPON CHECK special gun converted to capacitor preserves ammo bricks
+WEAPON CHECK invalid definition rejects reload
+WEAPON CHECK failed reload retains last valid program
+WEAPON CHECK removing pack override restores shipped scout behavior
+WEAPON CHECK COMPLETE

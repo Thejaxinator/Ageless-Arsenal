@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "trigger": "press",
+  "delivery": "projectile",
+  "fx": "taken",
+  "cooldown": 12,
+  "count": 5,
+  "pattern": "fan",
+  "angle": 6,
+  "flight": "bolt",
+  "speed": 1.4
+}

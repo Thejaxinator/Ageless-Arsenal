@@ -1,0 +1,1 @@
+{"type":"minecraft:crafting_shaped","category":"equipment","pattern":["CCC","ESP","I  "],"key":{"C":{"item":"minecraft:copper_ingot"},"E":{"item":"destiny2mc:eclipse_monolith_cipher"},"S":{"item":"destiny2mc:scorch_ether_core"},"P":{"item":"destiny2mc:plundered_ether_alloy"},"I":{"item":"minecraft:iron_ingot"}},"result":{"id":"destiny2mc:total_lockdown","count":1}}

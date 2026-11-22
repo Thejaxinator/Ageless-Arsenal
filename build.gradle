@@ -1,0 +1,45 @@
+plugins {
+    id 'java-library'
+    id 'net.neoforged.moddev' version '2.0.139'
+}
+group = 'com.jax.destiny2mc'
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+neoForge { version = '21.1.266' }
+repositories { mavenCentral() }
+
+// Use the same rig emitter and reproducible JAR writer on all three OSes.
+// ModDevGradle provides Minecraft and NeoForge on the mapped compile classpath.
+def compiler = javaToolchains.compilerFor(java.toolchain)
+def python = providers.gradleProperty('pythonExe').orElse('python')
+// The native entity renderer has compile-time references to generated ModelPart factories.
+// Expose them to the standard Java and IDE tasks as well as the bundle writer.
+def rigDir = layout.buildDirectory.dir('generated/rig-classes')
+def generateRigClasses = tasks.register('generateRigClasses', Exec) {
+    inputs.files(fileTree('models/rigs'), files('tools/bake_rigs.py', 'tools/build_rigs.py', 'tools/jvm_asm.py'))
+    outputs.dir(rigDir)
+    doFirst {
+        delete(rigDir.get().asFile)
+        commandLine python.get(), 'tools/bake_rigs.py', rigDir.get().asFile.absolutePath
+    }
+}
+sourceSets.main.output.dir(rigDir, builtBy: generateRigClasses)
+tasks.named('compileJava', JavaCompile) {
+    dependsOn generateRigClasses
+    classpath += files(rigDir)
+    options.compilerArgs += ['-proc:none']
+}
+def targetName = file('release-name.txt').text.trim()
+tasks.register('bundleMod', Exec) {
+    dependsOn configurations.compileClasspath.buildDependencies
+    inputs.files(sourceSets.main.allSource, fileTree('models/rigs'), fileTree('tools'), file('build.py'), file('release-name.txt'))
+    inputs.files(configurations.compileClasspath)
+    outputs.file(layout.buildDirectory.file("libs/${targetName}.jar"))
+    doFirst {
+        def list = layout.buildDirectory.file('platform-classpath.txt').get().asFile
+        list.parentFile.mkdirs()
+        list.text = configurations.compileClasspath.asPath
+        commandLine python.get(), 'build.py', '--classpath-file', list.absolutePath, '--javac', compiler.get().executablePath.asFile.absolutePath
+    }
+}
+tasks.named('jar') { enabled = false; setDependsOn([]) }
+tasks.named('assemble') { setDependsOn(['bundleMod']) }

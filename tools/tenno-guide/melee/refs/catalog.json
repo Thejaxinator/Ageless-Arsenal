@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Amanata",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/NaginataWeapon.png",
+    "wiki": "https://wiki.warframe.com/w/Amanata"
+  },
+  {
+    "name": "Dual Heat Swords",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/DualHeatSwords.png",
+    "wiki": "https://wiki.warframe.com/w/Dual_Heat_Swords"
+  },
+  {
+    "name": "Harmony",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/TnChoirScythe.png",
+    "wiki": "https://wiki.warframe.com/w/Harmony"
+  },
+  {
+    "name": "Hate",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/Hate.png",
+    "wiki": "https://wiki.warframe.com/w/Hate"
+  },
+  {
+    "name": "Heat Sword",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/HeatSword.png",
+    "wiki": "https://wiki.warframe.com/w/Heat_Sword"
+  },
+  {
+    "name": "Sun & Moon",
+    "icon": "https://raw.githubusercontent.com/WFCD/warframe-items/master/data/img/TeshinDualSwords.png",
+    "wiki": "https://wiki.warframe.com/w/Sun_%26_Moon"
+  }
+]

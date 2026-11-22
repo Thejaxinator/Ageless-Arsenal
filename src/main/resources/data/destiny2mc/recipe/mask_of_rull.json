@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "IFI",
+    "I M"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "F": {
+      "item": "destiny2mc:breech_seal"
+    },
+    "M": {
+      "item": "destiny2mc:mote_of_light"
+    }
+  },
+  "result": {
+    "id": "destiny2mc:mask_of_rull"
+  }
+}

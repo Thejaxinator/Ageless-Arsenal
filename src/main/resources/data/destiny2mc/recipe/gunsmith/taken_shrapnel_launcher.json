@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:taken_shrapnel_launcher",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 12
+    },
+    {
+      "item": "minecraft:obsidian",
+      "count": 3
+    },
+    {
+      "item": "destiny2mc:inversion_knot",
+      "count": 4
+    }
+  ]
+}

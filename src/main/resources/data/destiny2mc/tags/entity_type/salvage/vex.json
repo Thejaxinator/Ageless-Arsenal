@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "destiny2mc:vex_goblin",
+    "destiny2mc:vex_hobgoblin",
+    "destiny2mc:vex_harpy",
+    "destiny2mc:vex_minotaur",
+    "destiny2mc:vex_hydra",
+    "destiny2mc:vex_wyvern",
+    "destiny2mc:persys_boss",
+    "destiny2mc:atheon_boss",
+    "destiny2mc:protheon_boss",
+    "destiny2mc:vex_sphinx",
+    "destiny2mc:templar",
+    "destiny2mc:akelous"
+  ]
+}

@@ -1,0 +1,11 @@
+SHA256 fc96e71c13708ad36e83c106174ecc4fa09dafff07038bc3219971fe9287f258
+HUD PREFERENCES fresh profile defaults to Destiny with visible abilities and closed drawer
+HUD PREFERENCES settings hotkey works empty-handed
+HUD PREFERENCES native visibility button hides strip
+HUD PREFERENCES native theme button cycles from Destiny to Tenno
+HUD PREFERENCES Done returns to world
+HUD PREFERENCES reloading preferences restores all three choices independently
+HUD PREFERENCES existing compact profile migrates and missing controls take defaults
+HUD PREFERENCES reset appearance leaves gameplay and inventory visibility choices intact
+HUD PREFERENCES all ten native buttons fit the minimum GUI size
+HUD PREFERENCES COMPLETE

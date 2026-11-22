@@ -1,0 +1,87 @@
+{
+  "roster": [
+    {
+      "id": "scorn_stalker",
+      "kind": 113,
+      "joints": 36,
+      "cubes": 104
+    },
+    {
+      "id": "scorn_raider",
+      "kind": 114,
+      "joints": 47,
+      "cubes": 134
+    },
+    {
+      "id": "scorn_lurker",
+      "kind": 115,
+      "joints": 61,
+      "cubes": 136
+    },
+    {
+      "id": "scorn_ravager",
+      "kind": 116,
+      "joints": 54,
+      "cubes": 104
+    },
+    {
+      "id": "scorn_chieftain",
+      "kind": 117,
+      "joints": 45,
+      "cubes": 142
+    },
+    {
+      "id": "scorn_screeb",
+      "kind": 118,
+      "joints": 28,
+      "cubes": 70
+    },
+    {
+      "id": "scorn_abomination",
+      "kind": 119,
+      "joints": 31,
+      "cubes": 86
+    },
+    {
+      "id": "fikrul",
+      "kind": 133,
+      "joints": 51,
+      "cubes": 156
+    }
+  ],
+  "changed_pose_pixels": {
+    "scorn_lurker": 7008,
+    "scorn_ravager": 8844,
+    "scorn_screeb": 10567,
+    "fikrul": 10859
+  },
+  "overlay_sha256": {
+    "ageless.scorn.mixins.json": "a998a126adcd3fdd2ee2b274a1143c88730598d57ac8923ab924b72aaa0b987d",
+    "assets/destiny2mc/textures/entity/fikrul.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/fikrul_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "assets/destiny2mc/textures/entity/scorn_abomination.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/scorn_abomination_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "assets/destiny2mc/textures/entity/scorn_chieftain.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/scorn_chieftain_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "assets/destiny2mc/textures/entity/scorn_lurker.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/scorn_lurker_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "assets/destiny2mc/textures/entity/scorn_raider.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/scorn_raider_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "assets/destiny2mc/textures/entity/scorn_ravager.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/scorn_ravager_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "assets/destiny2mc/textures/entity/scorn_screeb.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/scorn_screeb_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "assets/destiny2mc/textures/entity/scorn_stalker.png": "7ade2fde5da083a5f502c02745dd6b2335dd5c5fba596f0063a5351d190a82b1",
+    "assets/destiny2mc/textures/entity/scorn_stalker_glow.png": "af22dd1dbc31e178ba4018a6c04a20f79a16a463b75b14b2fca02eca91ae9288",
+    "com/jax/destiny2mc/ageless/scorn/ScornPose.class": "4a9fa5182269fb5f687ca44f0dce6b9476ea920db4a5aacf5368be8755d35f4c",
+    "com/jax/destiny2mc/ageless/scorn/mixin/ScornModelMixin.class": "59c5e077143a26e284ce7e3c5ecf58d710b6f20b8170423a3744fc1457c63231",
+    "com/jax/destiny2mc/client/model/ConvertedRig113.class": "f4b50d22f2c430bfb66df71873161ce9284781f7b6a2baae1504414eedf95d24",
+    "com/jax/destiny2mc/client/model/ConvertedRig114.class": "a876fc38b657f47aea6c648ca081e2d9b36ab18f29bc5aef96b676625828d7ba",
+    "com/jax/destiny2mc/client/model/ConvertedRig115.class": "8e5d8ddd802d3039ee70fccf48a77ce180c9f95503a77a17576627200f20c1fd",
+    "com/jax/destiny2mc/client/model/ConvertedRig116.class": "96f98732dfe6f18c6d9d6261204849cdf49bcbe4618692bd7b1adf82fd8498d0",
+    "com/jax/destiny2mc/client/model/ConvertedRig117.class": "fb9df6b46bf1709f8109741233e43b73ac96cc16a4af735123cdab9dc4c795d3",
+    "com/jax/destiny2mc/client/model/ConvertedRig118.class": "67c8aaa6fcd89abbcc5b8001c9c3aebeda83c47db5e646e9bb5efe9ebf8be55f",
+    "com/jax/destiny2mc/client/model/ConvertedRig119.class": "f9f9079d84c11715e67d5e7dc6b6827ad720cd7b85c73bdd4a23b8b9cd07f8dd",
+    "com/jax/destiny2mc/client/model/ConvertedRig133.class": "6342519be5713f40d0fc314d5a13accfd294f2d4b3348514c539301d17f9f239"
+  }
+}

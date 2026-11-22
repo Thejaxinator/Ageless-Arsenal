@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:forerunner",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 18
+    },
+    {
+      "item": "minecraft:quartz",
+      "count": 12
+    },
+    {
+      "item": "destiny2mc:breech_seal",
+      "count": 8
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+CAREER CURVE PASS: all 16073 XP totals map to the correct level
+L1 0 XP, 20.00 max HP, +0 armor, 0% veteran chance
+L10 792 XP, 29.47 max HP, +1 armor, 5% veteran chance
+L20 2812 XP, 40.00 max HP, +2 armor, 10% veteran chance
+L35 8092 XP, 50.00 max HP, +3 armor, 19% veteran chance
+L50 16072 XP, 60.00 max HP, +5 armor, 28% veteran chance

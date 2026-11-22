@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "trigger": "release",
+  "charge_ticks": 4,
+  "feed": "capacitor",
+  "cost": 2,
+  "recharge_ticks": 6,
+  "cooldown": 8,
+  "delivery": "projectile",
+  "flight": "pull",
+  "count": 3,
+  "pattern": "fan",
+  "angle": 6,
+  "speed": 1.5,
+  "damage_scale": 0.35,
+  "fx": "strand"
+}

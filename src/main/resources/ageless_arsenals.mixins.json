@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.jax.destiny2mc.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "VolleyStampMixin"
+  ],
+  "client": [
+    "HeldGunMixin",
+    "PlayerArmMixin",
+    "DreadPoseMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,2 @@
+[0.002s][warning][perf,memops] Cannot use file /tmp/hsperfdata_agent/32 because it is locked by another process (errno = 11)
+PASS: all four routes have exactly two franchise and two tool labels. All 57600 header coordinates agree with the declared hit areas.

@@ -1,0 +1,8 @@
+Ageless-Arsenals-6.3.1-Progression-neoforge-1.21.1.jar
+SHA-256 09af184ecc4c5659947885c15a112421594d386d1ffb7ef970cc36df50f11cad
+Legacy fingerprint operator=false 82518640bae3b73ab3188cc389175a6c26ea85c885c30b9afdf0570c50976659
+Legacy fingerprint operator=true ade2bf37bdb38e2cc85090a950f192df5b61d82dc73fe53e4ca7f38dcad81737
+Ordered Warframe-only category: 19 primary, 8 secondary, 6 melee, 4 packs. All 37 appear once in native Search and in no other category; operator and standard players.
+Survival lists 33 blueprints, crafts AX-52 with ingredients and assembles all four mod packs.
+COMPLETE
+Non-Warframe item IDs and ordering in all pre-existing category tabs match release 6.3.0 for both permission states.

@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "trigger": "automatic",
+  "delivery": "ray",
+  "fx": "arc",
+  "cooldown": 2,
+  "on_hit": "conductor"
+}

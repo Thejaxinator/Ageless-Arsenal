@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:cabal_slug_rifle",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 14
+    },
+    {
+      "item": "minecraft:gunpowder",
+      "count": 8
+    },
+    {
+      "item": "destiny2mc:breech_seal",
+      "count": 4
+    }
+  ]
+}

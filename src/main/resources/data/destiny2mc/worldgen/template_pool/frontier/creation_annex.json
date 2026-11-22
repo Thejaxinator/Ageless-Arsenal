@@ -1,0 +1,17 @@
+{
+  "name": "destiny2mc:frontier/creation_annex",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "destiny2mc:frontier/creation_annex",
+        "processors": {
+          "processors": []
+        },
+        "projection": "rigid"
+      }
+    }
+  ]
+}

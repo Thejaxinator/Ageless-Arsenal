@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:dead_mans_tale",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 18
+    },
+    {
+      "item": "minecraft:dark_oak_log",
+      "count": 4
+    },
+    {
+      "item": "destiny2mc:dark_ether_bellows",
+      "count": 8
+    }
+  ]
+}

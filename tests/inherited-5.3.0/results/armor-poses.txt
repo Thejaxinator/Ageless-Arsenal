@@ -1,0 +1,18 @@
+[0.001s][warning][perf,memops] Cannot use file /tmp/hsperfdata_agent/34 because it is locked by another process (errno = 11)
+WARN StatusConsoleListener Advanced terminal features are not available in this environment
+battlecage_of_kabr 15 posed parts
+kabrs_wrath 35 posed parts
+light_of_the_great_prism 10 posed parts
+kabrs_forceful_greaves 12 posed parts
+willbreakers_watch 19 posed parts
+willbreakers_resolve 36 posed parts
+mark_of_the_pit 9 posed parts
+willbreakers_greaves 12 posed parts
+mask_of_rull 11 posed parts
+chassis_of_rull 27 posed parts
+shadows_mark 13 posed parts
+greaves_of_rull 10 posed parts
+helm_of_saint_14 19 posed parts
+the_armamentarium 29 posed parts
+mask_of_bakris 26 posed parts
+ARMOR POSE PASS 15 native mesh layers; 283 posed parts, parent visibility and animation preserved.

@@ -1,0 +1,11 @@
+SHA256 08b1b945f076a64d0832aa127d48518c840a9e59fcc0f8d93eb714b87c50acb9
+MOD COLLECTION All four recipes assemble through the real recipe manager; native recipe discoveries and pack tag present.
+MOD COLLECTION Collecting paper then an unopened pack awarded all four recipe-book entries.
+MOD COLLECTION PRIMARY pool dealt exactly 11 distinct eligible cards; both hands; completed pack preserved.
+MOD COLLECTION SECONDARY pool dealt exactly 5 distinct eligible cards; both hands; completed pack preserved.
+MOD COLLECTION MELEE pool dealt exactly 6 distinct eligible cards; both hands; completed pack preserved.
+MOD COLLECTION General pack and spectator behavior; two player collections kept isolated.
+MOD COLLECTION Rank 0 to 3 cost 6 Minecraft levels; unowned/unknown, spectator, stale, insufficient, and capped attempts rejected.
+MOD COLLECTION Native clone events and saved-player NBT round trip preserved all 22 cards and ranks with independent copies.
+MOD COLLECTION Owner-only full snapshot plus revealed-card ID survives network codec round-trip.
+MOD COLLECTION COMPLETE

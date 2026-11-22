@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "trigger": "charge",
+  "delivery": "ray",
+  "fx": "arc",
+  "cooldown": 8,
+  "charge_ticks": 10,
+  "pierce": 2
+}

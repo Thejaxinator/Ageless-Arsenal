@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "trigger": "charge",
+  "delivery": "projectile",
+  "fx": "resonance",
+  "cooldown": 7,
+  "charge_ticks": 12,
+  "flight": "frost",
+  "speed": 1.8
+}

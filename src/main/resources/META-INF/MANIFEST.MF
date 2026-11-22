@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Specification-Title: Ageless Arsenals
+Specification-Vendor: Thejaxinator
+Specification-Version: 6.3.1
+Implementation-Title: Ageless Arsenals
+Implementation-Version: 6.3.1
+

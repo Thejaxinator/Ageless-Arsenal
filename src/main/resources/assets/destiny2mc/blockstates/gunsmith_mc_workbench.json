@@ -1,0 +1,1 @@
+{"variants":{"facing=north":{"model":"destiny2mc:block/gunsmith_mc_workbench"},"facing=east":{"model":"destiny2mc:block/gunsmith_mc_workbench","y":90},"facing=south":{"model":"destiny2mc:block/gunsmith_mc_workbench","y":180},"facing=west":{"model":"destiny2mc:block/gunsmith_mc_workbench","y":270}}}

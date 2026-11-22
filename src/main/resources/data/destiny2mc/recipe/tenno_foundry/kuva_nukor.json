@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:tenno_foundry",
+  "result": "destiny2mc:kuva_nukor",
+  "materials": [
+    {
+      "item": "destiny2mc:nukor",
+      "count": 1
+    },
+    {
+      "item": "minecraft:nether_wart",
+      "count": 6
+    },
+    {
+      "item": "minecraft:redstone",
+      "count": 8
+    }
+  ]
+}

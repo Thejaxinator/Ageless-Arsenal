@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:arbalest",
+  "costs": [
+    {
+      "item": "minecraft:iron_ingot",
+      "count": 18
+    },
+    {
+      "item": "minecraft:end_rod",
+      "count": 2
+    },
+    {
+      "item": "destiny2mc:conduit_lens",
+      "count": 8
+    }
+  ]
+}

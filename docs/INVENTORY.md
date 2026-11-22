@@ -1,0 +1,11 @@
+# Inventory loadout drawer
+
+Click the small chevron on the inventory’s left rail to inspect the character’s four active abilities and two passives. The chevron follows the outer edge of the drawer during its 210 ms slide. Click again to close it, or reverse the animation while it is moving. Hover over the chevron for a Paracausal hint with the current loadout. The native control retains the narrated names **Show abilities** and **Hide abilities**, keyboard focus, and Enter/Space activation.
+
+The drawer and its handle use the inventory texture supplied by the active Minecraft resource pack. On a wide display each row shows an icon, ability name and key. At compact GUI sizes the six abilities fit into two columns. Hover over any occupied row or cell for the Destiny-style inspection card; the artwork, element and mechanics come from that ability’s catalog entry. Currency, career information and empty-slot labels use the usual Minecraft tooltips. When carrying an item, the drawer intercepts clicks on its own paper and suppresses hover text.
+
+The Energy Binder shares those ability cards. Hover a catalogue entry, a filled loadout slot, or the inspection pane’s title/icon. Keyboard focus on a catalogue entry or bound slot also exposes the card. The purchase price, cooldown, ownership and binding data come from the character’s live Binder snapshot. Hovering a card changes no purchase, binding or cooldown.
+
+The notch is 12 by 22 GUI pixels. The left drawer rail reserves its width so that the open handle stays reachable. If the recipe book takes the remaining margin, the drawer tucks itself away, and the handle can close the book and restore the loadout. Native inventory menus, crafting, drag/drop, creative tabs and recipe search are responsible for their usual item handling. Only the drawer’s own hit area consumes clicks. Its saved preference is independent of the combat display.
+
+Source classes are `com.jax.destiny2mc.binder.client.BinderInventory`, `EnergyBinderScreen` and the shared `GearHoverCard`. The native `DrawerNotchCheck` fixture checks closed/open geometry, keyboard activation, small-window recipe coexistence, creative inventory and real carried-stack crafting behavior.

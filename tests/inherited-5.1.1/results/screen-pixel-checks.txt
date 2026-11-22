@@ -1,0 +1,6 @@
+PIXEL CHECK four Destiny slot glyphs at expected left anchor: [393, 388, 707, 450]
+PIXEL CHECK no ability icons in the lower-left strip when hidden by F1 or the Ability HUD toggle
+PIXEL CHECK independent empty-hand ability strip and ammo-only HUD
+PIXEL CHECK six distinct bound ability rows
+PIXEL CHECK left drawer changes the paper area while preserving the vanilla inventory slot grid
+PIXEL CHECK opening animation captured 4 native rendered frames

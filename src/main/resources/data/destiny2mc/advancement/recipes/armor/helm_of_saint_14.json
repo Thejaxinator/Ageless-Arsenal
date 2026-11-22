@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "salvage": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "destiny2mc:conquest_token"
+          }
+        ]
+      }
+    },
+    "recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "destiny2mc:helm_of_saint_14"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "salvage",
+      "recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "destiny2mc:helm_of_saint_14"
+    ]
+  }
+}

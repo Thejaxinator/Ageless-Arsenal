@@ -1,0 +1,18 @@
+{
+  "type": "destiny2mc:gunsmith",
+  "result": "destiny2mc:riskrunner",
+  "costs": [
+    {
+      "item": "minecraft:copper_ingot",
+      "count": 18
+    },
+    {
+      "item": "minecraft:lightning_rod",
+      "count": 2
+    },
+    {
+      "item": "destiny2mc:ether_induction_coil",
+      "count": 8
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+SHA256 08b1b945f076a64d0832aa127d48518c840a9e59fcc0f8d93eb714b87c50acb9
+UPGRADE QA synced crafting recipe for mod_pack
+UPGRADE QA baked pack artwork mod_pack
+UPGRADE QA synced crafting recipe for primary_mod_pack
+UPGRADE QA baked pack artwork primary_mod_pack
+UPGRADE QA synced crafting recipe for secondary_mod_pack
+UPGRADE QA baked pack artwork secondary_mod_pack
+UPGRADE QA synced crafting recipe for melee_mod_pack
+UPGRADE QA baked pack artwork melee_mod_pack
+UPGRADE QA new survival player has an empty collection
+UPGRADE QA ordinary table consumed paper, copper and redstone for one pack
+UPGRADE QA focused crafting consumed the generic pack and iron
+UPGRADE QA opening a crafted survival pack grants one new rank-zero card
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA a new card consumed exactly one primary pack
+UPGRADE QA completed primary collection keeps unopened spare packs
+UPGRADE QA native gunsmith opens Warframe tab
+UPGRADE QA native Gunsmith opens weapon Mods
+UPGRADE QA rank request with zero XP leaves every card at rank zero
+UPGRADE QA installing owned rank-zero serration writes a real weapon socket
+UPGRADE QA rank one spent exactly one Minecraft level
+UPGRADE QA rank two spent exactly two Minecraft levels
+UPGRADE QA one rank-two unlock serves Braton and Soma simultaneously
+UPGRADE QA removing a socket on Soma preserves Braton and owned rank
+UPGRADE QA six compatible Braton cards equipped with no level or capacity charge
+UPGRADE QA COMPLETE

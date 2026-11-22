@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "trigger": "automatic",
+  "delivery": "ray",
+  "fx": "solar",
+  "cooldown": 8,
+  "burst": 3,
+  "interval": 2
+}

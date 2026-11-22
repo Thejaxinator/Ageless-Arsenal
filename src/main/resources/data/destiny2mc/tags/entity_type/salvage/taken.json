@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "destiny2mc:taken_thrall",
+    "destiny2mc:taken_acolyte",
+    "destiny2mc:taken_goblin",
+    "destiny2mc:taken_captain",
+    "destiny2mc:taken_knight",
+    "destiny2mc:taken_phalanx",
+    "destiny2mc:vorgeth"
+  ]
+}

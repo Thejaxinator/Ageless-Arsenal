@@ -1,0 +1,38 @@
+{
+  "criteria": {
+    "has_material": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#destiny2mc:frontier_materials"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_material"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "destiny2mc:summon_valus_ta_aurc",
+      "destiny2mc:summon_taniks",
+      "destiny2mc:summon_bracus_zahn",
+      "destiny2mc:summon_alak_hul",
+      "destiny2mc:summon_hashladun",
+      "destiny2mc:summon_fikrul",
+      "destiny2mc:summon_crota",
+      "destiny2mc:summon_templar",
+      "destiny2mc:summon_golgoroth",
+      "destiny2mc:summon_rhulk",
+      "destiny2mc:summon_nezarec",
+      "destiny2mc:summon_sepiks_prime",
+      "destiny2mc:summon_protheon_boss",
+      "destiny2mc:summon_oryx_boss",
+      "destiny2mc:summon_atheon_boss"
+    ]
+  }
+}

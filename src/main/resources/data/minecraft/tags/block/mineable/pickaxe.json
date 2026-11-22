@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "destiny2mc:gunsmith_fui_workbench",
+    "destiny2mc:gunsmith_mc_workbench",
+    "destiny2mc:cosmodrome_chest",
+    "destiny2mc:fallen_chest",
+    "destiny2mc:awoken_chest",
+    "destiny2mc:leviathan_chest",
+    "destiny2mc:energy_binder"
+  ]
+}

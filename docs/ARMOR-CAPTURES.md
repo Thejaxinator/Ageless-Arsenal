@@ -1,0 +1,7 @@
+# Wearable armor captures
+
+The six studio views show the same Java Edition player in three-quarter, reverse and detail views. Minecraft's inventory entity renderer supplies the lighting and camera, and NeoForge dispatches its normal humanoid armor layers. The fixture changes equipment through dedicated-server commands, verifies every slot on the connected client, then captures the framebuffer. The studio screen is a test fixture. The armor stand lineup is rendered in the Overworld.
+
+Each exotic detail shows the exotic equipped in its native slot. Helm of Saint-14 and The Armamentarium appear over the other Kabr pieces. Mask of Bakris appears with the Willbreaker chest, mark and greaves. The item names and models come from the release JAR.
+
+To reproduce, compile `ArmorShowcaseCheck.java` as a separate client test mod with ID `ageless_armor_showcase`. Launch an operator-enabled test player in a disposable NeoForge 21.1.266 server and pass `-Dbinder.port=<server port>` and `-Dbinder.shots=<writable screenshot folder>` to the client. The client checks the equipment packets for all six outfits and the three armor stands and emits `ARMOR VIEW COMPLETE` upon reaching the last view. Run `python check_frames.py <shots>` with NumPy and Pillow to check front/reverse/detail coverage, missing-texture colors and differences between corresponding regular and exotic pieces. The optional screenshot capture runner accepts the same pre-resolved Java 21 + NeoForge development SDK used for the other native fixtures.

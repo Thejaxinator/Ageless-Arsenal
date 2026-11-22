@@ -1,0 +1,44 @@
+SHA256 24c7ff045468d5c07d92349c3a8785e7672a659931a0a16cddb09f067efc49a6
+TENNO RANGE ax_52 primary damages native zombie; remaining=39
+TENNO RANGE grakata primary damages native zombie; remaining=59
+TENNO RANGE prisma_grakata primary damages native zombie; remaining=119
+TENNO RANGE twin_grakatas primary damages native zombie; remaining=118
+TENNO RANGE braton primary damages native zombie; remaining=44
+TENNO RANGE braton_prime primary damages native zombie; remaining=74
+TENNO RANGE braton_vandal primary damages native zombie; remaining=49
+TENNO RANGE burston primary damages native zombie; remaining=42
+TENNO RANGE burston_prime primary damages native zombie; remaining=42
+TENNO RANGE ignis primary damages native zombie; remaining=149
+TENNO RANGE ignis_wraith primary damages native zombie; remaining=199
+TENNO RANGE brakk primary damages native zombie; remaining=4
+TENNO RANGE kuva_brakk primary damages native zombie; remaining=10
+TENNO RANGE nukor primary damages native zombie; remaining=49
+TENNO RANGE kuva_nukor primary damages native zombie; remaining=76
+TENNO RANGE cedo primary damages native zombie; remaining=39
+TENNO RANGE cedo_prime primary damages native zombie; remaining=39
+TENNO RANGE vesper_77 primary damages native zombie; remaining=7
+TENNO RANGE perigale primary damages native zombie; remaining=8
+TENNO RANGE perigale_prime primary damages native zombie; remaining=20
+TENNO RANGE soma primary damages native zombie; remaining=99
+TENNO RANGE soma_prime primary damages native zombie; remaining=199
+TENNO RANGE cantare primary damages native zombie; remaining=5
+TENNO RANGE torid primary damages native zombie; remaining=4
+TENNO RANGE aksondol primary damages native zombie; remaining=7
+TENNO RANGE bubonico primary damages native zombie; remaining=26
+TENNO RANGE coda_bubonico primary damages native zombie; remaining=35
+TENNO RANGE burst first round stands alone
+TENNO RANGE burst schedules next two rounds
+TENNO RANGE reload is timed
+TENNO RANGE reload refills magazine
+TENNO RANGE Kuva beam chains to two neighbors
+TENNO RANGE base Nukor remains single-target
+TENNO RANGE Cedo free glaive ricochets and primes distinct statuses
+TENNO RANGE Coda three viral salvos spend nine charge
+TENNO RANGE Coda recharges a depleted partial battery
+TENNO RANGE Cantare blade crosses a target on its return
+TENNO RANGE Aksondol spent-round reload mist
+TENNO RANGE Perigale four headshots grant Gale Force
+TENNO RANGE Gale Force waives next burst cost
+TENNO RANGE AX-52 four hip shots cost one round
+TENNO RANGE solid cover stops hitscan
+TENNO RANGED PASS

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "IFI",
+    "I M"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "F": {
+      "item": "destiny2mc:runed_marrow"
+    },
+    "M": {
+      "item": "destiny2mc:mote_of_light"
+    }
+  },
+  "result": {
+    "id": "destiny2mc:willbreakers_watch"
+  }
+}

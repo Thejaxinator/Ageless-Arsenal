@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "trigger": "press",
+  "delivery": "projectile",
+  "fx": "arc",
+  "cooldown": 13,
+  "flight": "lob",
+  "speed": 1.22,
+  "radius": 2.5
+}
