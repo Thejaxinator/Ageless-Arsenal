@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:disk",
+  "config": {
+    "state_provider": {
+      "fallback": {
+        "type": "minecraft:simple_state_provider",
+        "state": {
+          "Name": "destiny2mc:fake_radiolaria"
+        }
+      },
+      "rules": []
+    },
+    "target": {
+      "type": "minecraft:matching_blocks",
+      "blocks": [
+        "minecraft:stone",
+        "minecraft:smooth_stone",
+        "minecraft:polished_andesite",
+        "minecraft:red_terracotta",
+        "minecraft:terracotta",
+        "minecraft:deepslate",
+        "minecraft:grass_block",
+        "minecraft:dirt"
+      ]
+    },
+    "radius": {
+      "type": "minecraft:uniform",
+      "min_inclusive": 4,
+      "max_inclusive": 7
+    },
+    "half_height": 1
+  }
+}

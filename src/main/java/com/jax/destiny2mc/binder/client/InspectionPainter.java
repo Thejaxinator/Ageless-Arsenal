@@ -13,7 +13,7 @@ import net.minecraft.util.FormattedCharSequence;
 /** The entire card is measured before it is positioned. All coordinates passed by callers
  * are screen coordinates, even when a workstation renders its content at a different scale. */
 final class InspectionPainter {
-    private static final int PAPER=0xf3222428, RULE=0xff626267, WHITE=0xfff6f5f1;
+    private static final int PAPER=0xf20e1218, RULE=0x38ffffff, WHITE=0xfff2f4f7;
     private static final int FAINT=0xffbbc0c5, DIM=0xff92999e;
     private InspectionPainter() {}
 
@@ -141,9 +141,9 @@ final class InspectionPainter {
             lines(g,f,row.values(),valueX,rowY,WHITE);
             if(row.fraction()>=0){
                 int barY=rowY+row.textHeight();
-                g.fill(valueX,barY,w-9,barY+2,0xff494b51);
+                g.fill(valueX,barY,w-9,barY+2,0x26ffffff);
                 int amt=(int)Math.round((w-9-valueX)*Math.clamp(row.fraction(),0,1));
-                if(amt>0)g.fill(valueX,barY,valueX+amt,barY+2,mix(card.accent(),WHITE,.37));
+                if(amt>0)g.fill(valueX,barY,valueX+amt,barY+2,WHITE);
             }
             rowY+=row.height();
         }

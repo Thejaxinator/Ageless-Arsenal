@@ -3,42 +3,29 @@
   "biomes": [
     "minecraft:dark_forest",
     "minecraft:old_growth_pine_taiga",
-    "minecraft:forest"
+    "minecraft:forest",
+    "minecraft:the_end",
+    "minecraft:end_highlands",
+    "minecraft:end_midlands",
+    "minecraft:small_end_islands",
+    "minecraft:end_barrens"
   ],
   "spawners": [
     {
-      "type": "destiny2mc:taken_thrall",
-      "weight": 3,
-      "minCount": 1,
-      "maxCount": 2
-    },
-    {
-      "type": "destiny2mc:taken_acolyte",
-      "weight": 3,
-      "minCount": 1,
-      "maxCount": 2
-    },
-    {
-      "type": "destiny2mc:taken_goblin",
-      "weight": 3,
-      "minCount": 1,
-      "maxCount": 2
-    },
-    {
       "type": "destiny2mc:taken_captain",
-      "weight": 1,
+      "weight": 3,
       "minCount": 1,
       "maxCount": 1
     },
     {
       "type": "destiny2mc:taken_knight",
-      "weight": 1,
+      "weight": 3,
       "minCount": 1,
       "maxCount": 1
     },
     {
       "type": "destiny2mc:taken_phalanx",
-      "weight": 1,
+      "weight": 3,
       "minCount": 1,
       "maxCount": 1
     }
