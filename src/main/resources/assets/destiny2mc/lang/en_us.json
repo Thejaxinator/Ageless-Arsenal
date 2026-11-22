@@ -389,5 +389,9 @@
   "item.destiny2mc.corpus_nullifier_spawn_egg": "Nullifier Crewman Spawn Egg",
   "item.destiny2mc.corpus_bursa_spawn_egg": "Isolator Bursa Spawn Egg",
   "item.destiny2mc.corpus_hyena_spawn_egg": "Hyena Proxy Spawn Egg",
-  "item.destiny2mc.corpus_raknoid_spawn_egg": "Scyto Raknoid Spawn Egg"
+  "item.destiny2mc.corpus_raknoid_spawn_egg": "Scyto Raknoid Spawn Egg",
+  "item.destiny2mc.proto_shield_mk1": "MK-I Corpus Proto-Shield",
+  "item.destiny2mc.proto_shield_mk2": "MK-II Corpus Proto-Shield",
+  "item.destiny2mc.proto_shield_mk3": "MK-III Corpus Proto-Shield",
+  "item.destiny2mc.proto_shield_prime": "Prime Proto-Shield Generator"
 }
