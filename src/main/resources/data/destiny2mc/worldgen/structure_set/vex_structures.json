@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:vex_gate_shrine",
+      "weight": 3
+    },
+    {
+      "structure": "destiny2mc:vex_citadel_conflux",
+      "weight": 2
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 16,
+    "separation": 7,
+    "salt": 630918274
+  }
+}

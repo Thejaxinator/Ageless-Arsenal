@@ -1,0 +1,17 @@
+{
+  "name": "destiny2mc:factions/decor/fallen_pike_wreck",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "element_type": "minecraft:single_pool_element",
+        "location": "destiny2mc:factions/decor/fallen_pike_wreck",
+        "processors": {
+          "processors": []
+        },
+        "projection": "rigid"
+      }
+    }
+  ]
+}

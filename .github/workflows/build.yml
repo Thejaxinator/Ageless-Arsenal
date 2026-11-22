@@ -1,0 +1,61 @@
+name: Build Ageless Arsenal
+
+on:
+  push:
+    branches:
+      - main
+      - 'Update*'
+      - 'update*'
+      - 'feat/**'
+  pull_request:
+    branches:
+      - main
+      - 'Update*'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: Compile Mod JAR
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3 (for rig bytecode baker)
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Java 21 (Temurin)
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Make gradlew executable
+        run: chmod +x gradlew
+
+      - name: Compile and build JAR
+        run: ./gradlew build --no-daemon --stacktrace
+
+      - name: Upload compiled JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ageless-arsenal-jar-${{ github.run_number }}
+          path: |
+            build/libs/*.jar
+            !build/libs/*-sources.jar
+            !build/libs/*-javadoc.jar
+          if-no-files-found: error
+          retention-days: 30

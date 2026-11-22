@@ -1,0 +1,14 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:fallen_outpost",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 18,
+    "separation": 8,
+    "salt": 410928371
+  }
+}

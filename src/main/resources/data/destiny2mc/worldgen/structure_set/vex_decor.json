@@ -1,0 +1,22 @@
+{
+  "structures": [
+    {
+      "structure": "destiny2mc:vex_conflux_node",
+      "weight": 3
+    },
+    {
+      "structure": "destiny2mc:vex_radiolaria_fountain",
+      "weight": 2
+    },
+    {
+      "structure": "destiny2mc:vex_mini_obelisk",
+      "weight": 3
+    }
+  ],
+  "placement": {
+    "type": "minecraft:random_spread",
+    "spacing": 9,
+    "separation": 4,
+    "salt": 714290833
+  }
+}

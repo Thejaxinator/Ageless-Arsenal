@@ -394,4 +394,10 @@
   "item.destiny2mc.proto_shield_mk2": "MK-II Corpus Proto-Shield",
   "item.destiny2mc.proto_shield_mk3": "MK-III Corpus Proto-Shield",
   "item.destiny2mc.proto_shield_prime": "Prime Proto-Shield Generator"
+  "block.destiny2mc.fake_radiolaria": "Radiolaria",
+  "death.attack.radiolaria": "%1$s was dissolved by Vex Radiolaria",
+  "biome.destiny2mc.fallen_timberland": "Fallen Timberland",
+  "biome.destiny2mc.hive_crags": "Hive Crags",
+  "biome.destiny2mc.vex_expanse": "Radiolarian Expanse",
+  "biome.destiny2mc.cabal_barrens": "Cabal Barrens"
 }

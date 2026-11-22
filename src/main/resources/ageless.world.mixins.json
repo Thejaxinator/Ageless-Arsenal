@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.jax.destiny2mc.world.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "OverworldBiomeBuilderMixin",
+    "SurfaceSystemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
