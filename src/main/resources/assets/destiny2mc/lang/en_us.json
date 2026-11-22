@@ -369,5 +369,11 @@
   "tooltip.destiny2mc.mod_pack.duplicate": "Unlocks one missing card at rank 0.",
   "message.destiny2mc.mod_pack.unlocked": "Unlocked %s  •  Rank 0",
   "message.destiny2mc.mod_pack.complete": "%s complete. All cards in this pack are already unlocked.",
-  "itemGroup.destiny2mc.warframe": "Warframe"
+  "itemGroup.destiny2mc.warframe": "Warframe",
+  "entity.destiny2mc.corpus_crewman": "Corpus Crewman",
+  "entity.destiny2mc.corpus_moa": "Corpus MOA",
+  "entity.destiny2mc.corpus_shield_osprey": "Shield Osprey",
+  "item.destiny2mc.corpus_crewman_spawn_egg": "Corpus Crewman Spawn Egg",
+  "item.destiny2mc.corpus_moa_spawn_egg": "Corpus MOA Spawn Egg",
+  "item.destiny2mc.corpus_shield_osprey_spawn_egg": "Shield Osprey Spawn Egg"
 }

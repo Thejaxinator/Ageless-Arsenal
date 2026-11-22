@@ -1397,5 +1397,59 @@
       "Failing the eye timer triggers Repulsion and resets the circuits."
     ],
     "reward": "Three Conquest Tokens, eight faction materials and an Exotic Engram. The altar recharges for five minutes. After ten seconds without a living survival Guardian nearby, the fight resets."
+  },
+  {
+    "id": "corpus_crewman",
+    "name": "Corpus Crewman",
+    "faction": "corpus",
+    "role": "Rifleman",
+    "site": "",
+    "origin": "Warframe — Corpus",
+    "spawn": "Patrols snowy plains, frozen peaks, ice spikes, and stony shores at night.",
+    "mechanics": [
+      "Engages at mid-range with sustained rapid-fire Arc plasma bursts from a twin-prong Dera rifle.",
+      "Advances in squads alongside MOAs and relies on Shield Ospreys for defensive over-shielding."
+    ],
+    "threats": [
+      "Accurate burst fire pressures exposed targets across open snowy terrain.",
+      "Take out nearby Shield Ospreys first so Crewman squads lose their shield tether."
+    ],
+    "reward": "Drops Resonant Shards and standard combat loot."
+  },
+  {
+    "id": "corpus_moa",
+    "name": "Corpus MOA",
+    "faction": "corpus",
+    "role": "Bipedal Walker",
+    "site": "",
+    "origin": "Warframe — Corpus",
+    "spawn": "Spawns alongside Corpus Crewmen across frozen Overworld biomes and rocky coasts.",
+    "mechanics": [
+      "Sprints rapidly on reverse-jointed walker legs to close distance and flank entrenched players.",
+      "Fires high-impact Arc plasma bolts from its swiveling gold dorsal cannon turret."
+    ],
+    "threats": [
+      "High movement speed makes it harder to kite than standard Crewmen.",
+      "Focus fire on the central chassis and turret before it closes to point-blank range."
+    ],
+    "reward": "Drops Resonant Shards and standard combat loot."
+  },
+  {
+    "id": "corpus_shield_osprey",
+    "name": "Shield Osprey",
+    "faction": "corpus",
+    "role": "Support Drone",
+    "site": "",
+    "origin": "Warframe — Corpus",
+    "spawn": "Hovers above Corpus patrols in snowy plains, frozen peaks, ice spikes, and stony shores.",
+    "mechanics": [
+      "Maintains elevated hover above the squad while projecting an Arc shield tether to nearby Corpus allies.",
+      "Tethered allies regenerate health and gain heavy damage resistance until the Osprey is destroyed or staggered."
+    ],
+    "threats": [
+      "High-priority support unit: ignoring it lets Crewmen and MOAs shrug off sustained fire.",
+      "Use hitscan or fast projectile weapons to pick it out of the air first."
+    ],
+    "reward": "Drops Resonant Shards and standard combat loot."
   }
 ]
