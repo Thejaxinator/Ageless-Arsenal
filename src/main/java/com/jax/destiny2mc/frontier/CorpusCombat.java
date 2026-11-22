@@ -2,6 +2,8 @@ package com.jax.destiny2mc.frontier;
 
 import com.jax.destiny2mc.tenno.mods.ModStat;
 import com.jax.destiny2mc.tenno.mods.WeaponMods;
+import com.jax.destiny2mc.tenno.shield.ProtoShieldItem;
+import com.jax.destiny2mc.tenno.shield.ProtoShieldSystem;
 import java.util.Map;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -30,12 +32,12 @@ import net.minecraft.world.phys.Vec3;
  *     - Uncombined Toxin (or Toxin Tenno weapons / Poison) bypasses Proto-Shields & Bursa frontal shields straight to HP
  *     - Electricity deals +50% bonus damage to Corpus robotics (MOAs, Ospreys, Bursas, Hyenas, Raknoids)
  *     - Viral (+65%) and Heat (+35%) amplify damage to exposed Corpus health once shields are stripped
- * - Nullifier Crewman (149): destructible shrinking energy dome with per-hit damage cap, dorsal drone instant collapse, & buff suppression
+ * - Nullifier Crewman (149): destructible shrinking energy dome with per-hit damage cap, dorsal drone instant collapse, & buff/Proto-Shield suppression
  * - Isolator Bursa (150): 80% frontal riot-shield deflection + 2.0x rear console weakpoint crit
  * - Shockwave MOA (148): telegraphed ground-level jumpable Arc shockwave ring
  * - Hyena Proxy (151): fast predator flanking & Magnetic shield disruption
  * - Scyto Raknoid (152): Cryo-Web snare volley + 1.75x frosted dorsal dome weakpoint
- * - Warframe Mod Pack drops from elite Corpus units
+ * - Warframe Mod Pack & tiered Proto-Shield drops from Corpus units
  */
 public final class CorpusCombat {
     private static final String TAG_SHIELD = "CorpusShield";
@@ -111,7 +113,7 @@ public final class CorpusCombat {
             }
         }
 
-        // 2. Nullifier Crewman (149): Shrinking energy dome visual & interior ability/buff suppression
+        // 2. Nullifier Crewman (149): Shrinking energy dome visual & interior ability/buff/Proto-Shield suppression
         if (mob.unit.kind() == 149) {
             float bubble = data.getFloat(TAG_BUBBLE);
             int cd = data.getInt(TAG_BUBBLE_CD);
@@ -138,11 +140,12 @@ public final class CorpusCombat {
                             1, 0, 0, 0, 0);
                     }
                 }
-                // Suppress player buffs & absorption inside the Nullifier field
+                // Suppress player buffs, absorption, and equipped Proto-Shields inside the Nullifier field
                 if (mob.tickCount % 10 == 0) {
                     for (Player p : level.getEntitiesOfClass(Player.class, mob.getBoundingBox().inflate(radius),
                         e -> !e.isSpectator() && !e.isCreative() && e.distanceTo(mob) <= radius)) {
                         if (p.getAbsorptionAmount() > 0f) p.setAbsorptionAmount(0f);
+                        ProtoShieldSystem.drainFromNullifier(p, 4.0f);
                         p.removeEffect(MobEffects.DAMAGE_BOOST);
                         p.removeEffect(MobEffects.DAMAGE_RESISTANCE);
                         p.removeEffect(MobEffects.MOVEMENT_SPEED);
@@ -355,7 +358,7 @@ public final class CorpusCombat {
         }
     }
 
-    /** Bonus Warframe Mod Pack drop chance for elite Corpus units. */
+    /** Bonus Warframe Mod Pack & unlockable Proto-Shield drops for Corpus units. */
     public static void onDeath(FrontierMob mob) {
         if (!isCorpus(mob) || mob.level().isClientSide) return;
         int kind = mob.unit.kind();
@@ -371,6 +374,22 @@ public final class CorpusCombat {
             Item pack = BuiltInRegistries.ITEM.get(ResourceLocation.fromNamespaceAndPath("destiny2mc", pick));
             if (pack != Items.AIR) {
                 mob.spawnAtLocation(new ItemStack(pack, 1));
+            }
+        }
+
+        // Unlockable Player Proto-Shield drops scaled by Corpus unit tier
+        ProtoShieldItem.Tier dropTier = null;
+        float shieldChance = 0f;
+        switch (kind) {
+            case 150 -> { dropTier = ProtoShieldItem.Tier.MK3; shieldChance = 0.14f; }
+            case 151, 152 -> { dropTier = ProtoShieldItem.Tier.MK2; shieldChance = 0.14f; }
+            case 147, 148, 149 -> { dropTier = ProtoShieldItem.Tier.MK1; shieldChance = 0.12f; }
+            default -> { dropTier = ProtoShieldItem.Tier.MK1; shieldChance = 0.04f; }
+        }
+        if (dropTier != null && mob.getRandom().nextFloat() < shieldChance) {
+            Item shieldItem = ProtoShieldSystem.itemFor(dropTier);
+            if (shieldItem != null) {
+                mob.spawnAtLocation(new ItemStack(shieldItem, 1));
             }
         }
     }

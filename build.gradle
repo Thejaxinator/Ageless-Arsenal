@@ -5,7 +5,14 @@ plugins {
 group = 'com.jax.destiny2mc'
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 neoForge { version = '21.1.266' }
-repositories { mavenCentral() }
+repositories {
+    mavenCentral()
+    maven { url = 'https://maven.theillusivec4.top/' }
+}
+dependencies {
+    compileOnly 'top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1:api'
+    runtimeOnly 'top.theillusivec4.curios:curios-neoforge:9.5.1+1.21.1'
+}
 
 // Use the same rig emitter and reproducible JAR writer on all three OSes.
 // ModDevGradle provides Minecraft and NeoForge on the mapped compile classpath.
