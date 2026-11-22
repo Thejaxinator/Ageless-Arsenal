@@ -94,37 +94,25 @@
   "spawners": {
     "monster": [
       {
-        "type": "destiny2mc:hive_thrall",
-        "weight": 40,
-        "minCount": 2,
-        "maxCount": 5
-      },
-      {
-        "type": "destiny2mc:hive_acolyte",
-        "weight": 28,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "destiny2mc:hive_cursed_thrall",
+        "type": "destiny2mc:hive_knight",
         "weight": 14,
         "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "destiny2mc:hive_knight",
-        "weight": 12,
-        "minCount": 1,
-        "maxCount": 2
+        "maxCount": 1
       },
       {
         "type": "destiny2mc:hive_wizard",
-        "weight": 8,
+        "weight": 10,
         "minCount": 1,
         "maxCount": 1
       },
       {
         "type": "destiny2mc:hive_ogre",
+        "weight": 6,
+        "minCount": 1,
+        "maxCount": 1
+      },
+      {
+        "type": "destiny2mc:lucent_knight",
         "weight": 4,
         "minCount": 1,
         "maxCount": 1

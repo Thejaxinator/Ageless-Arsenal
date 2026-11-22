@@ -1,6 +1,7 @@
 package com.jax.destiny2mc.frontier;
 
 import com.jax.destiny2mc.ModRegistries;
+import com.jax.destiny2mc.world.FactionBiomes;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
@@ -19,8 +20,8 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 /**
  * Registers natural spawn placements for legacy Fallen, Hive, and Vex entities.
- * Hive spawns freely underground (caves / below surface) and only rarely on the
- * surface in field and forest biomes.
+ * Hive spawns freely underground (caves / below surface) and on the surface in
+ * Hive Crags, and only rarely on the surface in field and forest biomes.
  */
 @EventBusSubscriber(modid = "destiny2mc", bus = EventBusSubscriber.Bus.MOD)
 public final class FactionSpawnPlacements {
@@ -77,7 +78,7 @@ public final class FactionSpawnPlacements {
             );
         }
 
-        // Hive (underground-heavy, rare on surface in fields and forests)
+        // Hive (underground-heavy, full surface spawns in Hive Crags, rare on surface in fields and forests)
         EntityType<Monster>[] hive = new EntityType[] {
             (EntityType<Monster>) ModRegistries.HIVE_KNIGHT.get(),
             (EntityType<Monster>) ModRegistries.HIVE_WIZARD.get(),
@@ -99,8 +100,9 @@ public final class FactionSpawnPlacements {
     }
 
     /**
-     * Hive spawns freely underground (no sky view or below Y=56). On the surface,
-     * Hive only spawns rarely (~12.5%) and only in field/forest biomes tagged by
+     * Hive spawns freely underground (no sky view or below Y=56) and on the surface
+     * in their home biome ({@code destiny2mc:hive_crags}). Elsewhere on the surface,
+     * Hive only spawns rarely (~12.5%) in field/forest biomes tagged by
      * {@code #destiny2mc:has_hive_surface}.
      */
     public static boolean checkHiveSpawnRules(
@@ -120,6 +122,10 @@ public final class FactionSpawnPlacements {
         if (underground) {
             return true;
         }
-        return level.getBiome(pos).is(HIVE_SURFACE_BIOMES) && random.nextInt(HIVE_SURFACE_RARITY) == 0;
+        var biome = level.getBiome(pos);
+        if (biome.is(FactionBiomes.HIVE_CRAGS)) {
+            return true;
+        }
+        return biome.is(HIVE_SURFACE_BIOMES) && random.nextInt(HIVE_SURFACE_RARITY) == 0;
     }
 }

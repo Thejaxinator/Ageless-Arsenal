@@ -93,44 +93,20 @@
   "spawners": {
     "monster": [
       {
-        "type": "destiny2mc:cabal_legionary",
-        "weight": 34,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
-        "type": "destiny2mc:cabal_phalanx",
-        "weight": 22,
-        "minCount": 1,
-        "maxCount": 2
-      },
-      {
-        "type": "destiny2mc:cabal_psion",
-        "weight": 20,
-        "minCount": 1,
-        "maxCount": 3
-      },
-      {
-        "type": "destiny2mc:cabal_warbeast",
-        "weight": 22,
-        "minCount": 2,
-        "maxCount": 4
-      },
-      {
         "type": "destiny2mc:cabal_centurion",
-        "weight": 8,
+        "weight": 16,
         "minCount": 1,
         "maxCount": 1
       },
       {
         "type": "destiny2mc:cabal_incendior",
-        "weight": 7,
+        "weight": 12,
         "minCount": 1,
         "maxCount": 1
       },
       {
         "type": "destiny2mc:cabal_colossus",
-        "weight": 5,
+        "weight": 8,
         "minCount": 1,
         "maxCount": 1
       }

@@ -1,12 +1,6 @@
 name: Generate Faction Binary Assets
 
 on:
-  push:
-    branches:
-      - feat/faction-biomes-and-structures
-    paths:
-      - 'tools/generate_faction_*.py'
-      - '.github/workflows/generate-faction-binaries.yml'
   workflow_dispatch:
 
 permissions:
