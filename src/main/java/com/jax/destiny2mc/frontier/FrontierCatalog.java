@@ -48,7 +48,14 @@ public final class FrontierCatalog {
   new Unit(142,"akelous","Akelous, the Siren's Current","vex","akelous",740,0.18f,2.2f,3.6f,9,2,"dungeon_akelous",true,false,true),
   new Unit(143,"corpus_crewman","Corpus Crewman","corpus","crewman",38,0.26f,0.72f,2.25f,5,2,"burst",false,false,false),
   new Unit(144,"corpus_moa","Corpus MOA","corpus","moa",54,0.31f,0.88f,2.15f,6,2,"arcbolt",false,false,false),
-  new Unit(145,"corpus_shield_osprey","Shield Osprey","corpus","osprey",30,0.29f,1.1f,1.25f,4,2,"tether",false,false,true)
+  new Unit(145,"corpus_shield_osprey","Shield Osprey","corpus","osprey",30,0.29f,1.1f,1.25f,4,2,"tether",false,false,true),
+  new Unit(146,"corpus_prod_crewman","Prod Crewman","corpus","crewman",34,0.32f,0.72f,2.20f,6,2,"prod",false,false,false),
+  new Unit(147,"corpus_tech","Corpus Tech","corpus","crewman",92,0.22f,0.86f,2.65f,7,2,"burst",false,false,false),
+  new Unit(148,"corpus_shockwave_moa","Shockwave MOA","corpus","moa",68,0.29f,0.92f,2.25f,8,2,"shockwave",false,false,false),
+  new Unit(149,"corpus_nullifier","Nullifier Crewman","corpus","crewman",64,0.25f,0.76f,2.45f,9,2,"nullifier",false,false,false),
+  new Unit(150,"corpus_bursa","Isolator Bursa","corpus","bursa",165,0.21f,1.45f,2.10f,10,2,"bursa",false,false,false),
+  new Unit(151,"corpus_hyena","Hyena Proxy","corpus","hyena",120,0.36f,1.25f,1.45f,9,2,"hyena",false,false,false),
+  new Unit(152,"corpus_raknoid","Scyto Raknoid","corpus","raknoid",110,0.28f,1.65f,1.85f,8,2,"raknoid",false,false,false)
  };
  public static Unit get(String id){for(Unit u:UNITS)if(u.id().equals(id))return u;throw new IllegalArgumentException(id);}
  public static Unit kind(int k){return UNITS[Math.max(0,Math.min(UNITS.length-1,k-100))];}
