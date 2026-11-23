@@ -4,7 +4,7 @@ import com.jax.destiny2mc.tenno.abilities.WarframeAbilityId;
 import com.jax.destiny2mc.tenno.abilities.WarframeId;
 import java.util.List;
 
-/** Warframe active powers, passives, and Tenno Parkour exposed as first-class Energy Binder entries.
+/** Void-Bound active powers, passives, and parkour exposed as first-class Energy Binder entries.
  * Active IDs match WarframeAbilityId.key() so BinderState cooldowns and slots drive them directly. */
 public final class WarframeBinderCatalog {
     public static final String TENNO_PARKOUR = "wf_tenno_parkour";
@@ -45,8 +45,8 @@ public final class WarframeBinderCatalog {
     );
 
     private static final List<BinderAbility> PASSIVES = List.of(
-        new BinderAbility(TENNO_PARKOUR, "Tenno Parkour", "kinetic", "warframe_movement",
-            "Unlock Warframe movement: Crouch+Jump to Bullet Jump, Double Jump, Wall Hop, Wall Latch, Aim Glide, and Slide.",
+        new BinderAbility(TENNO_PARKOUR, "Void-Bound Parkour", "kinetic", "warframe_movement",
+            "Unlock Void-Bound movement: Crouch+Jump to Bullet Jump, Double Jump, Wall Hop, Wall Latch, Aim Glide, and Slide.",
             12, 3, 0),
         passive(PASSIVE_EXCALIBUR, "Excalibur: Swordsmanship", "kinetic",
             "Swords strike 15% harder and grant Haste I while held.", 14, 3),

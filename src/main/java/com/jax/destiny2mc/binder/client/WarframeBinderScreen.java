@@ -21,7 +21,7 @@ import static com.jax.destiny2mc.binder.client.BinderGraphics.color;
 import static com.jax.destiny2mc.binder.client.BinderGraphics.frame;
 import static com.jax.destiny2mc.binder.client.BinderGraphics.text;
 
-/** Separate Warframe powers screen inside the Energy Binder station, sharing the same
+/** Separate Void-Bound powers screen inside the Energy Binder station, sharing the same
  * 4 active slots, 2 passive slots, Motes/XP unlock ledger, and Z/X/C/V HUD bindings. */
 public final class WarframeBinderScreen extends Screen {
     private static final int W = 560, H = 330, ROWS = 6;
@@ -37,7 +37,7 @@ public final class WarframeBinderScreen extends Screen {
     private int ox, oy;
 
     public WarframeBinderScreen() {
-        super(Component.literal("Warframe Powers"));
+        super(Component.literal("Void-Bound Powers"));
     }
 
     @Override public boolean isPauseScreen() { return false; }
@@ -116,7 +116,7 @@ public final class WarframeBinderScreen extends Screen {
 
         for (int i = 0; i < TABS.length; i++) {
             int t = i;
-            add("tab" + i, TABS[i] + " Warframe abilities", 14 + i * 106, 50, 102, 19, true, () -> tab(t));
+            add("tab" + i, TABS[i] + " Void-Bound abilities", 14 + i * 106, 50, 102, 19, true, () -> tab(t));
         }
         add("destiny", "Destiny abilities", 449, 50, 97, 19, true, () -> {
             switchingScreen = true;
@@ -182,7 +182,7 @@ public final class WarframeBinderScreen extends Screen {
 
     private static String subtitleFor(BinderAbility a) {
         WarframeId wf = WarframeBinderCatalog.warframeFor(a.id());
-        String frame = wf != null ? wf.displayName().toUpperCase(Locale.ROOT) : "TENNO";
+        String frame = wf != null ? wf.displayName().toUpperCase(Locale.ROOT) : "VOID-BOUND";
         String role = switch (a.category()) {
             case "warframe_movement" -> "PARKOUR";
             case "warframe_passive" -> "PASSIVE";
@@ -267,15 +267,15 @@ public final class WarframeBinderScreen extends Screen {
         g.pose().translate(ox, oy, 0);
         g.pose().scale(scale, scale, 1);
 
-        // Translucent charcoal Warframe station frame with crisp top overhang rail
+        // Translucent charcoal Void-Bound station frame with crisp top overhang rail
         g.fillGradient(0, 0, W, H, 0xF0161B23, 0xF60C1016);
         g.fill(0, 0, W, 1, VitruvianUi.WHITE_RAIL);
         g.fill(14, 10, 17, 41, VitruvianUi.SKY_BLUE);
-        text(g, font, "TENNO  ·  ENERGY BINDER", 23, 10, VitruvianUi.SKY_BLUE);
+        text(g, font, "VOID-BOUND  ·  ENERGY BINDER", 23, 10, VitruvianUi.SKY_BLUE);
         g.pose().pushPose();
         g.pose().translate(22, 24, 0);
         g.pose().scale(1.7f, 1.7f, 1);
-        text(g, font, "Warframe Powers", 0, 0, VitruvianUi.IVORY);
+        text(g, font, "Void-Bound Powers", 0, 0, VitruvianUi.IVORY);
         g.pose().popPose();
 
         text(g, font, "MOTES OF LIGHT", 363, 12, VitruvianUi.MUTED);
@@ -296,7 +296,7 @@ public final class WarframeBinderScreen extends Screen {
         }
         button(g, "destiny", "‹ Destiny", 449, 50, 97, 19, false, true, mx, my);
 
-        // Left Warframe ability catalog
+        // Left Void-Bound ability catalog
         for (int i = 0; i < ROWS && scroll + i < list.size(); i++) {
             var row = list.get(scroll + i);
             int y = 79 + i * 24;
@@ -393,7 +393,7 @@ public final class WarframeBinderScreen extends Screen {
         }
 
         text(g, font, clip(font, pending ? "Waiting for the station…"
-                : s.message().isBlank() ? "Mix Destiny & Warframe powers across your 6 binder slots." : s.message(), W - 28),
+                : s.message().isBlank() ? "Mix Destiny & Void-Bound powers across your 6 binder slots." : s.message(), W - 28),
                 14, 315, VitruvianUi.MUTED);
         g.pose().popPose();
         drawInspectCard(g, mx, my, a);

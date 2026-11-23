@@ -26,12 +26,41 @@ jobs:
         run: python -m pip install --upgrade pillow
       - name: Fetch and bake Warframe Wiki ability icons
         run: python3 tools/bake_warframe_ability_icons.py
-      - name: Commit generated Warframe ability sprites
+      - name: Sync Void-Bound labels in EnergyBinderScreen and GearHoverCard
+        run: |
+          python3 - << 'PY'
+          from pathlib import Path
+
+          patches = {
+              Path("src/main/java/com/jax/destiny2mc/binder/client/EnergyBinderScreen.java"): [
+                  ('"Warframe abilities"', '"Void-Bound abilities"'),
+                  ('"Warframe ›"', '"Void-Bound ›"'),
+              ],
+              Path("src/main/java/com/jax/destiny2mc/binder/client/GearHoverCard.java"): [
+                  ('case "warframe_active" -> "Warframe ability";', 'case "warframe_active" -> "Void-Bound ability";'),
+                  ('case "warframe_passive" -> "Warframe passive";', 'case "warframe_passive" -> "Void-Bound passive";'),
+                  ('case "warframe_movement" -> "Warframe parkour";', 'case "warframe_movement" -> "Void-Bound parkour";'),
+                  ('String grade=ability.isWarframe() ? "Tenno" : "Paracausal";', 'String grade=ability.isWarframe() ? "Void-Bound" : "Paracausal";'),
+              ],
+          }
+
+          for path, replacements in patches.items():
+              text = path.read_text(encoding="utf-8")
+              updated = text
+              for old, new in replacements:
+                  updated = updated.replace(old, new)
+              if updated != text:
+                  path.write_text(updated, encoding="utf-8")
+                  print(f"Updated {path}")
+          PY
+      - name: Commit generated assets and Void-Bound label updates
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/main/resources/assets/destiny2mc/textures/gui/sprites/binder/ability/*.png
+          git add src/main/resources/assets/destiny2mc/textures/gui/sprites/binder/ability/*.png \
+                  src/main/java/com/jax/destiny2mc/binder/client/EnergyBinderScreen.java \
+                  src/main/java/com/jax/destiny2mc/binder/client/GearHoverCard.java
           if ! git diff --cached --quiet; then
-            git commit -m "chore(binder): bake Warframe Wiki icons for Warframe abilities and passives"
+            git commit -m "chore(binder): sync Void-Bound labels and Warframe Wiki ability icons"
             git push
           fi
