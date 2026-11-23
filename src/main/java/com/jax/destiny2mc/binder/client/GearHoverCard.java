@@ -152,13 +152,13 @@ public final class GearHoverCard {
         String kind=switch (ability.category()) {
             case "class" -> "Class ability"; case "movement","jump" -> "Movement passive";
             case "passive" -> "Subclass passive";
-            case "warframe_active" -> "Warframe ability";
-            case "warframe_passive" -> "Warframe passive";
-            case "warframe_movement" -> "Warframe parkour";
+            case "warframe_active" -> "Void-Bound ability";
+            case "warframe_passive" -> "Void-Bound passive";
+            case "warframe_movement" -> "Void-Bound parkour";
             default -> title(ability.category());
         };
         String element=title(ability.element());
-        String grade=ability.isWarframe() ? "Tenno" : "Paracausal";
+        String grade=ability.isWarframe() ? "Void-Bound" : "Paracausal";
         int accent=ability.isWarframe() ? WarframeBinderCatalog.accentColor(ability.id()) : BinderGraphics.color(ability.element());
         String metric="", unit="";
         var stats=new ArrayList<Stat>();
