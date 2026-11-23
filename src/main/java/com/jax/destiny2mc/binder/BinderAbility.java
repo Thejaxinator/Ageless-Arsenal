@@ -11,6 +11,11 @@ public record BinderAbility(String id, String name, String element, String categ
     }
 
     public boolean isPassive() {
-        return category.equals("movement") || category.equals("jump") || category.equals("passive");
+        return category.equals("movement") || category.equals("jump") || category.equals("passive")
+                || category.equals("warframe_passive") || category.equals("warframe_movement");
+    }
+
+    public boolean isWarframe() {
+        return category.startsWith("warframe_");
     }
 }

@@ -1,5 +1,7 @@
 package com.jax.destiny2mc.binder;
 
+import com.jax.destiny2mc.tenno.abilities.WarframeAbilityId;
+import com.jax.destiny2mc.tenno.abilities.WarframeActiveAbilities;
 import net.minecraft.server.level.ServerPlayer;
 import java.util.Arrays;
 import java.util.List;
@@ -55,6 +57,10 @@ public final class ActiveAbilities {
      * come from the server player, never arbitrary client coordinates. */
     public static boolean cast(ServerPlayer owner,String id){
         if(id==null || !owner.isAlive() || owner.isSpectator()) return false;
+        WarframeAbilityId warframeAbility = WarframeAbilityId.byKey(id);
+        if (warframeAbility != null) {
+            return WarframeActiveAbilities.castFromBinder(owner, warframeAbility);
+        }
         Action action;
         try { action=Action.valueOf(id.toUpperCase(Locale.ROOT)); }
         catch(IllegalArgumentException ignored){return false;}
