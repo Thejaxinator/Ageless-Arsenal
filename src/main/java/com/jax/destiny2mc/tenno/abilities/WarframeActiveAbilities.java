@@ -22,6 +22,16 @@ public final class WarframeActiveAbilities {
     private WarframeActiveAbilities() {
     }
 
+    /** Cast entry point used by the Energy Binder after BinderState validates ownership and cooldown. */
+    public static boolean castFromBinder(ServerPlayer player, WarframeAbilityId ability) {
+        if (player == null || ability == null || player.isSpectator() || !player.isAlive()) {
+            return false;
+        }
+        WarframeAbilityState state = WarframeAbilityState.get(player.getUUID());
+        executeCast(player, player.serverLevel(), state, ability);
+        return true;
+    }
+
     public static boolean tryCast(ServerPlayer player, WarframeAbilityId ability) {
         if (player == null || ability == null || player.isSpectator() || !player.isAlive()) {
             return false;
@@ -41,8 +51,11 @@ public final class WarframeActiveAbilities {
         }
 
         state.setCooldown(ability, ability.cooldownTicks());
-        ServerLevel level = player.serverLevel();
+        executeCast(player, player.serverLevel(), state, ability);
+        return true;
+    }
 
+    private static void executeCast(ServerPlayer player, ServerLevel level, WarframeAbilityState state, WarframeAbilityId ability) {
         switch (ability) {
             case URIEL_INFERNALIS -> castUrielInfernalis(player, level, state);
             case URIEL_BRIMSTONE -> castUrielBrimstone(player, level);
@@ -56,7 +69,6 @@ public final class WarframeActiveAbilities {
             case FROST_SNOW_GLOBE -> castFrostSnowGlobe(player, level, state);
             case FOLLIE_INKWELL_MIRAGE -> castFollieInkwellMirage(player, level, state);
         }
-        return true;
     }
 
     public static void tickActiveEffects(ServerPlayer player) {

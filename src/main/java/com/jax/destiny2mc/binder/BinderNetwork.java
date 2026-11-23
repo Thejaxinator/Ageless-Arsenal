@@ -1,5 +1,6 @@
 package com.jax.destiny2mc.binder;
 
+import com.jax.destiny2mc.tenno.parkour.ParkourNetwork;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.LinkedHashSet;
@@ -60,5 +61,6 @@ public final class BinderNetwork {
             if(ctx.player() instanceof ServerPlayer p) BinderState.handle(p,r);
         });
         registrar.playToClient(Reply.TYPE,Reply.CODEC,(r,ctx)->BinderClientState.receive(r.data(),r.open()));
+        ParkourNetwork.register(e);
     }
 }

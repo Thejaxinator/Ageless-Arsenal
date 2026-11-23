@@ -1,5 +1,7 @@
 package com.jax.destiny2mc.tenno.parkour;
 
+import com.jax.destiny2mc.binder.BinderState;
+import com.jax.destiny2mc.binder.WarframeBinderCatalog;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -22,6 +24,15 @@ public final class ParkourServerHandler {
             return;
         }
         ParkourState state = ParkourState.get(player.getUUID());
+        if (!BinderState.hasPassive(player, WarframeBinderCatalog.TENNO_PARKOUR)) {
+            if (state.pose() != ParkourPose.NONE) {
+                state.setPose(ParkourPose.NONE);
+                if (state.consumeDirty()) {
+                    ParkourNetwork.broadcastPose(player, state);
+                }
+            }
+            return;
+        }
 
         switch (requestedAction) {
             case BULLET_JUMP -> tryBulletJump(player, state);
@@ -44,6 +55,15 @@ public final class ParkourServerHandler {
             return;
         }
         ParkourState state = ParkourState.get(player.getUUID());
+        if (!BinderState.hasPassive(player, WarframeBinderCatalog.TENNO_PARKOUR)) {
+            if (state.pose() != ParkourPose.NONE) {
+                state.setPose(ParkourPose.NONE);
+                if (state.consumeDirty()) {
+                    ParkourNetwork.broadcastPose(player, state);
+                }
+            }
+            return;
+        }
         state.decrementCooldowns();
         state.incrementPoseTicks();
 

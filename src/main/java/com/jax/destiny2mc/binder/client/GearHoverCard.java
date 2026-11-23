@@ -6,6 +6,7 @@ import com.jax.destiny2mc.armor.ArsenalArmorItem;
 import com.jax.destiny2mc.binder.BinderAbility;
 import com.jax.destiny2mc.binder.BinderClientState;
 import com.jax.destiny2mc.binder.BinderSnapshot;
+import com.jax.destiny2mc.binder.WarframeBinderCatalog;
 import com.jax.destiny2mc.client.DestinyHudRenderer;
 import com.jax.destiny2mc.item.DestinyGunItem;
 import com.jax.destiny2mc.weapon.GunDataHelper;
@@ -150,10 +151,15 @@ public final class GearHoverCard {
         boolean owned=state.unlocked().contains(ability.id());
         String kind=switch (ability.category()) {
             case "class" -> "Class ability"; case "movement","jump" -> "Movement passive";
-            case "passive" -> "Subclass passive"; default -> title(ability.category());
+            case "passive" -> "Subclass passive";
+            case "warframe_active" -> "Warframe ability";
+            case "warframe_passive" -> "Warframe passive";
+            case "warframe_movement" -> "Warframe parkour";
+            default -> title(ability.category());
         };
         String element=title(ability.element());
-        String grade="Paracausal";
+        String grade=ability.isWarframe() ? "Tenno" : "Paracausal";
+        int accent=ability.isWarframe() ? WarframeBinderCatalog.accentColor(ability.id()) : BinderGraphics.color(ability.element());
         String metric="", unit="";
         var stats=new ArrayList<Stat>();
         if (!ability.isPassive()) {
@@ -169,7 +175,7 @@ public final class GearHoverCard {
         for(int i=0;i<state.active().size();i++) if (state.active().get(i).equals(ability.id())) bindings.add(BinderKeys.keyName(i));
         for(int i=0;i<state.passive().size();i++) if (state.passive().get(i).equals(ability.id())) bindings.add("Passive "+(i+1));
         String footer=!bindings.isEmpty() ? "Equipped    "+String.join(" / ",bindings) : owned ? "Unlocked" : "Locked";
-        InspectionPainter.draw(g,mx,my,new Card(ability.name(),element+"  •  "+kind,grade,BinderGraphics.color(ability.element()),ItemStack.EMPTY,ability.id(),
+        InspectionPainter.draw(g,mx,my,new Card(ability.name(),element+"  •  "+kind,grade,accent,ItemStack.EMPTY,ability.id(),
             metric,unit,"",ability.description(),stats,footer));
     }
 

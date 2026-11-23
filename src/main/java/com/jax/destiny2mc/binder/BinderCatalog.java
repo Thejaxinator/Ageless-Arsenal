@@ -11,6 +11,8 @@ public final class BinderCatalog {
     static {
         ActiveAbilities.catalog().forEach(BinderCatalog::add);
         PassiveAbilities.catalog().forEach(BinderCatalog::add);
+        WarframeBinderCatalog.actives().forEach(BinderCatalog::add);
+        WarframeBinderCatalog.passives().forEach(BinderCatalog::add);
         ALL = List.copyOf(INDEX.values());
     }
     private static void add(BinderAbility ability) {

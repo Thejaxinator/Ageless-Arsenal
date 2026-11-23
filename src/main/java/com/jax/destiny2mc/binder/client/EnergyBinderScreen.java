@@ -16,7 +16,7 @@ public final class EnergyBinderScreen extends Screen {
     private int tab,scroll,slot;
     private String selected="",focus="",lastMessage="";
     private Object signature;
-    private boolean pending, inspectFocus;
+    private boolean switchingScreen, pending, inspectFocus;
     private int pendingTicks;
     private BinderSnapshot beforeRequest;
     private final List<Control> controls=new ArrayList<>();
@@ -27,16 +27,16 @@ public final class EnergyBinderScreen extends Screen {
     @Override protected void init(){
         scale=Math.min(width/(float)W,height/(float)H);
         ox=Math.round((width-W*scale)/2);oy=Math.round((height-H*scale)/2);
-        signature=null;
+        signature=null;switchingScreen=false;
         BinderClientState.refresh();sync();
     }
-    @Override public void removed(){if(minecraft!=null && minecraft.getConnection()!=null)BinderClientState.close();}
+    @Override public void removed(){if(!switchingScreen && minecraft!=null && minecraft.getConnection()!=null)BinderClientState.close();}
     @Override public void tick(){
         if(pending && (BinderClientState.snapshot()!=beforeRequest||--pendingTicks<=0))pending=false;
         sync();
     }
     private List<BinderAbility> entries(){
-        return BinderCatalog.all().stream().filter(a->switch(tab){
+        return BinderCatalog.all().stream().filter(a->!a.isWarframe()).filter(a->switch(tab){
             case 0->a.category().equalsIgnoreCase("grenade");case 1->a.category().equalsIgnoreCase("melee");
             case 2->!passive(a)&&!a.category().equalsIgnoreCase("melee")&&!a.category().equalsIgnoreCase("grenade");
             default->passive(a);
@@ -62,6 +62,7 @@ public final class EnergyBinderScreen extends Screen {
         if(getFocused() instanceof Control c)focus=c.id;
         clearWidgets();controls.clear();
         for(int i=0;i<TABS.length;i++){int t=i;add("tab"+i,TABS[i]+" abilities",14+i*87,50,84,19,true,()->tab(t));}
+        add("warframe","Warframe abilities",449,50,97,19,true,()->{switchingScreen=true;minecraft.setScreen(new WarframeBinderScreen());});
         for(int i=0;i<ROWS&&scroll+i<list.size();i++){
             BinderAbility a=list.get(scroll+i);
             add("entry"+a.id(),a.name()+", "+a.element()+", "+(state.unlocked().contains(a.id())?"owned":"locked"),14,79+i*24,204,22,true,()->{selected=a.id();}).ability=a;
@@ -125,6 +126,7 @@ public final class EnergyBinderScreen extends Screen {
         text(g,font,"MOTES OF LIGHT",363,12,DIM);text(g,font,Integer.toString(s.motes()),363,27,GOLD);
         text(g,font,"XP LEVELS",475,12,DIM);text(g,font,Integer.toString(s.levels()),475,27,LIGHT);
         for(int i=0;i<TABS.length;i++)button(g,"tab"+i,TABS[i],14+i*87,50,84,19,tab==i,true,mx,my);
+        button(g,"warframe","Warframe ›",449,50,97,19,false,true,mx,my);
         for(int i=0;i<ROWS&&scroll+i<list.size();i++){
             var row=list.get(scroll+i);int y=79+i*24;boolean chosen=row.id().equals(selected),owned=s.unlocked().contains(row.id());
             g.fill(14,y,218,y+22,chosen?0xff33434b:PANEL);
@@ -159,7 +161,10 @@ public final class EnergyBinderScreen extends Screen {
             g.fill(x,267,x+85,307,chosen?0xff30443f:PANEL);frame(g,x,267,85,40,hover("slot"+i,mx,my)?LIGHT:chosen?ACCENT:LINE);
             String key=i<4?BinderKeys.keyName(i):"P"+(i-3);
             text(g,font,clip(font,key,69),x+6,272,chosen?ACCENT:DIM);
-            if(current!=null)AbilityGlyph.draw(g,current.id(),x+65,268,16,color(current.element()));
+            if(current!=null){
+                int glyphColor=current.isWarframe()?WarframeBinderCatalog.accentColor(current.id()):color(current.element());
+                AbilityGlyph.draw(g,current.id(),x+65,268,16,glyphColor);
+            }
             String label=current==null?"Empty":current.name();int y=284;
             for(var line:font.split(Component.literal(label),74)){if(y>294)break;g.drawString(font,line,x+6,y,current==null?DIM:LIGHT,false);y+=9;}
         }

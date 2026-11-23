@@ -10,7 +10,8 @@
     "HeldGunMixin",
     "PlayerArmMixin",
     "DreadPoseMixin",
-    "CorpusPoseMixin"
+    "CorpusPoseMixin",
+    "PlayerParkourPoseMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,9 +1,17 @@
 package com.jax.destiny2mc.tenno.parkour;
 
+import com.jax.destiny2mc.binder.BinderClientState;
+import com.jax.destiny2mc.binder.WarframeBinderCatalog;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.player.LocalPlayer;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.ClientPlayerNetworkEvent;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.network.PacketDistributor;
 
+@EventBusSubscriber(modid = "destiny2mc", value = Dist.CLIENT)
 public final class ParkourClientInput {
     private static boolean prevJumpDown;
     private static boolean prevUseDown;
@@ -14,12 +22,24 @@ public final class ParkourClientInput {
     private ParkourClientInput() {
     }
 
+    @SubscribeEvent
+    public static void onClientTick(ClientTickEvent.Post event) {
+        onClientTick();
+    }
+
+    @SubscribeEvent
+    public static void onLoggingOut(ClientPlayerNetworkEvent.LoggingOut event) {
+        resetHeldStates();
+        ParkourClientState.clear();
+    }
+
     public static void onClientTick() {
         ParkourClientState.tickAll();
 
         Minecraft mc = Minecraft.getInstance();
         LocalPlayer player = mc.player;
-        if (player == null || mc.screen != null || player.isSpectator() || player.isPassenger()) {
+        if (player == null || mc.screen != null || player.isSpectator() || player.isPassenger()
+                || !BinderClientState.snapshot().passive().contains(WarframeBinderCatalog.TENNO_PARKOUR)) {
             resetHeldStates();
             return;
         }
