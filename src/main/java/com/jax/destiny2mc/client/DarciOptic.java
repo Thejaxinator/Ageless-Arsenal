@@ -50,10 +50,9 @@ public final class DarciOptic {
             distance = (int)Math.round(eye.distanceTo(hit.getLocation()));
         }
     }
-    static void draw(GuiGraphics gui, int cx, int cy) {
+    public static void draw(GuiGraphics gui, int cx, int cy) {
         if (target == null || !target.isAlive()) return;
         var font = Minecraft.getInstance().font;
-        // A small instrument panel fits along the lower lip of the physical optic at any GUI scale.
         float scale = Mth.clamp(gui.guiHeight()/455f,.55f,1.5f);
         var pose = gui.pose();
         pose.pushPose();

@@ -8,6 +8,7 @@
   ],
   "client": [
     "HeldGunMixin",
+    "MouseHandlerZoomMixin",
     "PlayerArmMixin",
     "DreadPoseMixin",
     "CorpusPoseMixin",
