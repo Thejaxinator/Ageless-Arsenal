@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - The-Void
+      - 'feat/**'
     paths:
       - 'tools/bake_warframe_ability_icons.py'
       - '.github/workflows/generate-warframe-ability-icons.yml'
