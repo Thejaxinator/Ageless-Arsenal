@@ -37,7 +37,7 @@ MEDIAWIKI_APIS = {
     "fandom_ru": "https://warframe.fandom.com/ru/api.php",
 }
 
-# Exact 22 Warframe Binder IDs from WarframeBinderCatalog.java & WarframeAbilityId.java.
+# Exact 40 Void-Bound Binder IDs from WarframeBinderCatalog.java & WarframeAbilityId.java.
 # Each entry lists:
 #   - wiki_files: ordered list of (wiki_key, File: title) candidates
 #   - direct_urls: verified direct fallback URLs
@@ -284,6 +284,172 @@ ICON_SPECS: dict[str, dict] = {
         "direct_urls": [
             "https://static.wikia.nocookie.net/warframe/images/4/43/%D0%A4%D0%BE%D0%BB%D0%BB%D0%B8_%D0%B2%D0%B8%D0%BA%D0%B8.png/revision/latest/thumbnail/width/360/height/450?cb=20260325224349&path-prefix=ru",
         ],
+    },
+
+    # --- 12 New Prime Active Abilities (Citrine, Styanax, Gyre, Caliban, Yareli, Lavos) ---
+    "citrine_prismatic_gem": {
+        "label": "Citrine — Prismatic Gem",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:PrismaticGem130xWhite.png"),
+            ("fandom_en", "File:PrismaticGem130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "citrine_crystallize": {
+        "label": "Citrine — Crystallize",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:Crystallize130xWhite.png"),
+            ("fandom_en", "File:Crystallize130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "styanax_tharros_strike": {
+        "label": "Styanax — Tharros Strike",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:TharrosStrike130xWhite.png"),
+            ("fandom_en", "File:TharrosStrike130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "styanax_final_stand": {
+        "label": "Styanax — Final Stand",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:FinalStand130xWhite.png"),
+            ("fandom_en", "File:FinalStand130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "gyre_coil_horizon": {
+        "label": "Gyre — Coil Horizon",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:CoilHorizon130xWhite.png"),
+            ("fandom_en", "File:CoilHorizon130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "gyre_rotorswell": {
+        "label": "Gyre — Rotorswell",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:Rotorswell130xWhite.png"),
+            ("fandom_en", "File:Rotorswell130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "caliban_sentient_wrath": {
+        "label": "Caliban — Sentient Wrath",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:SentientWrath130xWhite.png"),
+            ("fandom_en", "File:SentientWrath130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "caliban_razor_gyre": {
+        "label": "Caliban — Razor Gyre",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:RazorGyre130xWhite.png"),
+            ("fandom_en", "File:RazorGyre130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "yareli_aquablades": {
+        "label": "Yareli — Aquablades",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:Aquablades130xWhite.png"),
+            ("fandom_en", "File:Aquablades130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "yareli_riptide": {
+        "label": "Yareli — Riptide",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:Riptide130xWhite.png"),
+            ("fandom_en", "File:Riptide130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "lavos_vial_rush": {
+        "label": "Lavos — Vial Rush",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:VialRush130xWhite.png"),
+            ("fandom_en", "File:VialRush130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+    "lavos_catalyze": {
+        "label": "Lavos — Catalyze",
+        "kind": "white_icon",
+        "wiki_files": [
+            ("official", "File:Catalyze130xWhite.png"),
+            ("fandom_en", "File:Catalyze130xWhite.png"),
+        ],
+        "direct_urls": [],
+    },
+
+    # --- 6 New Prime Passives ---
+    "wf_passive_citrine": {
+        "label": "Citrine Passive (Geoluminescence)",
+        "kind": "portrait",
+        "wiki_files": [
+            ("official", "File:CitrineIcon272.png"),
+            ("fandom_en", "File:CitrineIcon272.png"),
+        ],
+        "direct_urls": [],
+    },
+    "wf_passive_styanax": {
+        "label": "Styanax Passive (Hoplite)",
+        "kind": "portrait",
+        "wiki_files": [
+            ("official", "File:StyanaxIcon272.png"),
+            ("fandom_en", "File:StyanaxIcon272.png"),
+        ],
+        "direct_urls": [],
+    },
+    "wf_passive_gyre": {
+        "label": "Gyre Passive (Cathode Surge)",
+        "kind": "portrait",
+        "wiki_files": [
+            ("official", "File:GyreIcon272.png"),
+            ("fandom_en", "File:GyreIcon272.png"),
+        ],
+        "direct_urls": [],
+    },
+    "wf_passive_caliban": {
+        "label": "Caliban Passive (Adaptive Armor)",
+        "kind": "portrait",
+        "wiki_files": [
+            ("official", "File:CalibanIcon272.png"),
+            ("fandom_en", "File:CalibanFull.png"),
+        ],
+        "direct_urls": [],
+    },
+    "wf_passive_yareli": {
+        "label": "Yareli Passive (Critical Flow)",
+        "kind": "portrait",
+        "wiki_files": [
+            ("official", "File:YareliIcon272.png"),
+            ("fandom_en", "File:YareliIcon272.png"),
+        ],
+        "direct_urls": [],
+    },
+    "wf_passive_lavos": {
+        "label": "Lavos Passive (Valence Alchemist)",
+        "kind": "portrait",
+        "wiki_files": [
+            ("official", "File:LavosIcon272.png"),
+            ("fandom_en", "File:LavosIcon272.png"),
+        ],
+        "direct_urls": [],
     },
 }
 
