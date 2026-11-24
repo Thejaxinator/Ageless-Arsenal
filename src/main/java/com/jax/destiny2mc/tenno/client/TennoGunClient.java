@@ -1,14 +1,12 @@
 package com.jax.destiny2mc.tenno.client;
 
 import com.jax.destiny2mc.client.ClientWeaponState;
+import com.jax.destiny2mc.client.gunfeel.WeaponSwayController;
 import com.jax.destiny2mc.tenno.*;
-import com.jax.destiny2mc.weapon.GunDataHelper;
 import net.minecraft.client.KeyMapping;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.phys.*;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -56,7 +54,9 @@ public final class TennoGunClient {
         long now=p.level().getGameTime();
         boolean loading=TennoGunItem.reloadUntil(stack)>now;
         boolean ads=mc.options.keyUse.isDown()&&!loading;
-        previousAim=aim;aim=Mth.clamp(aim+(ads?.22f:-.27f),0,1);
+        previousAim=aim;
+        float rate=spec.family==TennoGunSpec.Family.PERIGALE?.18f:.24f;
+        aim=Mth.clamp(aim+(ads?rate:-rate*1.15f),0,1);
         previousKick=kick;kick*=.62f;
         boolean r=ClientWeaponState.RELOAD_KEY!=null&&ClientWeaponState.RELOAD_KEY.isDown();
         boolean alt=alternate!=null&&alternate.isDown();
@@ -64,25 +64,24 @@ public final class TennoGunClient {
         boolean pressed=attackEdge||(held&&!attackHeld);
         if(r&&!reloadHeld)send(1,false);
         else if(alt&&!altHeld&&spec.alternate()&&!loading&&now>=nextShot){
-            send(2,ads);kick=1;nextShot=TennoGunStats.of(p,stack).nextShot(now,nextShot,spec.family==TennoGunSpec.Family.CEDO?5:15);
+            send(2,ads);kick=1;WeaponSwayController.onShotFired();
+            nextShot=TennoGunStats.of(p,stack).nextShot(now,nextShot,spec.family==TennoGunSpec.Family.CEDO?5:15);
         }else if(!loading&&now>=nextShot&&(pressed||(held&&spec.automatic()))){
             var stats=TennoGunStats.of(p,stack);
             int mag=TennoGunItem.loaded(stack,stats);
             if(mag>0){
-                send(0,ads);kick=1;localShots++;muzzleSide=localShots%2==0?-1:1;
+                send(0,ads);kick=1;WeaponSwayController.onShotFired();localShots++;muzzleSide=localShots%2==0?-1:1;
             }else if(spec.family!=TennoGunSpec.Family.BUBONICO)send(1,false);
             nextShot=stats.nextShot(now,nextShot,spec.delay());
         }
         attackEdge=false;attackHeld=held;reloadHeld=r;altHeld=alt;
     }
     static float aim(float partial){float a=Mth.lerp(partial,previousAim,aim);return a*a*(3-2*a);}
+    public static float getAimProgress(){return aim(ClientWeaponState.lastPartialTick);}
     @SubscribeEvent public static void fov(ComputeFovModifierEvent e){
-        if(!(e.getPlayer().getMainHandItem().getItem() instanceof TennoGunItem gun))return;
-        float zoom=gun.profile().family==TennoGunSpec.Family.PERIGALE?.48f:.76f;
-        e.setNewFovModifier(e.getNewFovModifier()*Mth.lerp(aim(1),1,zoom));
+        // Decoupled World/Hand optical FOV is handled in ClientForgeEvents.onViewportFov.
     }
 
-    /** Project the exposed eye point of visible nearby targets onto the Vesper optic. */
     @SubscribeEvent public static void reticle(RenderGuiLayerEvent.Post event) {
         if(!event.getName().equals(VanillaGuiLayers.CROSSHAIR)||aim<.8||!Minecraft.getInstance().options.getCameraType().isFirstPerson())return;
         var mc=Minecraft.getInstance();var p=mc.player;

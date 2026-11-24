@@ -1,23 +1,8 @@
-/*
- * Decompiled with CFR 0.152.
- * 
- * Could not load the following classes:
- *  net.minecraft.client.KeyMapping
- *  net.minecraft.client.Minecraft
- *  net.minecraft.client.Options
- *  net.minecraft.client.gui.screens.Screen
- *  net.minecraft.client.player.LocalPlayer
- *  net.minecraft.network.protocol.common.custom.CustomPacketPayload
- *  net.minecraft.resources.ResourceLocation
- *  net.minecraft.sounds.SoundEvent
- *  net.minecraft.world.InteractionHand
- *  net.minecraft.world.item.ItemStack
- *  net.neoforged.neoforge.network.PacketDistributor
- */
 package com.jax.destiny2mc.client;
 
-import com.jax.destiny2mc.client.HudConfig;
-import com.jax.destiny2mc.client.HudSettingsScreen;
+import com.jax.destiny2mc.client.gunfeel.SniperScopeOverlay;
+import com.jax.destiny2mc.client.gunfeel.WeaponSwayController;
+import com.jax.destiny2mc.client.sound.GunSoundEngine;
 import com.jax.destiny2mc.item.DestinyGunItem;
 import com.jax.destiny2mc.network.GunActionPayload;
 import com.jax.destiny2mc.weapon.GunDataHelper;
@@ -29,8 +14,6 @@ import net.minecraft.client.Options;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.network.PacketDistributor;
@@ -41,6 +24,7 @@ public class ClientWeaponState {
     public static boolean settingsHeldLast;
     public static float prevAds;
     public static float ads;
+    public static boolean wasAiming;
     public static float prevRecoil;
     public static float recoil;
     public static float prevRecoilRoll;
@@ -114,11 +98,7 @@ public class ClientWeaponState {
         popWriteIdx = n2 + 1 & 7;
         LocalPlayer localPlayer = Minecraft.getInstance().player;
         if (localPlayer != null) {
-            if ((n & 1) != 0) {
-                localPlayer.playSound(SoundEvent.createVariableRangeEvent((ResourceLocation)ResourceLocation.fromNamespaceAndPath((String)"minecraft", (String)"entity.arrow.hit_player")), 0.45f, 1.85f);
-            } else {
-                localPlayer.playSound(SoundEvent.createVariableRangeEvent((ResourceLocation)ResourceLocation.fromNamespaceAndPath((String)"minecraft", (String)"block.note_block.hat")), 0.35f, 1.95f);
-            }
+            GunSoundEngine.playHitFeedback(localPlayer, (n & 1) != 0, (n & 2) != 0);
         }
     }
 
@@ -129,12 +109,14 @@ public class ClientWeaponState {
     public static void fireSingleShotAndKick(LocalPlayer localPlayer, ItemStack itemStack, WeaponSpec weaponSpec, float f) {
         boolean bl = f >= 0.55f;
         ClientWeaponState.sendAction(0, localPlayer, bl);
-        kickOnly(localPlayer,itemStack,weaponSpec,f);
+        kickOnly(localPlayer, itemStack, weaponSpec, f);
     }
 
-    public static void kickOnly(LocalPlayer localPlayer,ItemStack itemStack,WeaponSpec weaponSpec,float f){
+    public static void kickOnly(LocalPlayer localPlayer, ItemStack itemStack, WeaponSpec weaponSpec, float f) {
         recoil = 1.0f;
         muzzleFlashTicks = 2;
+        WeaponSwayController.onShotFired();
+        GunSoundEngine.playFire(localPlayer, weaponSpec, f);
         float f2 = bloom + 0.45f;
         if (f2 > 1.0f) {
             f2 = 1.0f;
@@ -147,7 +129,9 @@ public class ClientWeaponState {
         } else if (weaponSpec.perkId == 5 && GunDataHelper.getInt(itemStack, "d2_honed", 0) > 1) {
             f3 *= 1.45f;
         }
-        float f4 = weaponSpec.recoilPitch * (f3 *= WeaponSpec.getStabilityDamping(weaponSpec)) * WeaponPerkRegistry.getRecoilPitchMult(itemStack, weaponSpec) * (0.92f + (float)Math.random() * 0.16f);
+        float zoom = SniperScopeOverlay.getOpticalMagnification(itemStack);
+        float zoomDamp = 1.0f - f + f / (float) Math.min(Math.sqrt(Math.max(1.0f, zoom)), 1.5);
+        float f4 = weaponSpec.recoilPitch * (f3 *= WeaponSpec.getStabilityDamping(weaponSpec) * zoomDamp) * WeaponPerkRegistry.getRecoilPitchMult(itemStack, weaponSpec) * (0.92f + (float)Math.random() * 0.16f);
         float f5 = f4 * 0.62f;
         float f6 = localPlayer.getXRot() - f5;
         if (f6 < -89.5f) {
@@ -162,10 +146,15 @@ public class ClientWeaponState {
         recoilRoll = f7 * 1.15f;
     }
 
-    /*
-     * Enabled force condition propagation
-     * Lifted jumps to return sites
-     */
+    private static float adsInRate(WeaponSpec spec) {
+        return switch (spec.archetype) {
+            case 1 -> spec.rpm >= 200 ? 0.32f : 0.27f;
+            case 2 -> spec.fovZoom <= 0.44f ? 0.17f : 0.22f;
+            case 7, 8 -> 0.16f;
+            default -> spec.magSize >= 55 ? 0.18f : (spec.range <= 48.0f ? 0.30f : 0.24f);
+        };
+    }
+
     public static void tickClient() {
         HudConfig.ensureLoaded();
         prevAds = ads;
@@ -231,13 +220,18 @@ public class ClientWeaponState {
                     long l = localPlayer.level().getGameTime();
                     boolean bl = GunDataHelper.getLong(itemStack, "d2_rel_end") > l;
                     Options options = minecraft.options;
-                    if (!bl && options.keyUse.isDown()) {
-                        f5 = ads + 0.23f;
+                    boolean wantAds = !bl && options.keyUse.isDown();
+                    if (wantAds != wasAiming) {
+                        GunSoundEngine.playAdsToggle(localPlayer, wantAds, SniperScopeOverlay.isDestinySniper(weaponSpec));
+                        wasAiming = wantAds;
+                    }
+                    if (wantAds) {
+                        f5 = ads + adsInRate(weaponSpec);
                         if (f5 > 1.0f) {
                             f5 = 1.0f;
                         }
                     } else {
-                        f5 = ads - 0.25f;
+                        f5 = ads - (adsInRate(weaponSpec) * 1.15f);
                         if (f5 < 0.0f) {
                             f5 = 0.0f;
                         }
@@ -346,6 +340,7 @@ public class ClientWeaponState {
             }
         }
         ads = 0.0f;
+        wasAiming = false;
         spinUp = 0.0f;
         burstRemaining = 0;
         semiTriggerQueued = false;
@@ -353,4 +348,3 @@ public class ClientWeaponState {
         reloadHoldTicks = 0;
     }
 }
-
