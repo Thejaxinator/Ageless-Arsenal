@@ -3,6 +3,7 @@ package com.jax.destiny2mc.tenno.abilities;
 import com.jax.destiny2mc.ageless.fx.EffectProfile;
 import com.jax.destiny2mc.ageless.fx.VoxelCue;
 import com.jax.destiny2mc.ageless.fx.VoxelEffects;
+import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -290,7 +291,7 @@ public final class WarframeActiveAbilities {
                 target.hurt(level.damageSources().playerAttack(owner), pulseDmg);
                 level.sendParticles(ParticleTypes.LAVA, target.getX(), target.getY() + 0.5, target.getZ(), 4, 0.3, 0.4, 0.3, 0.06);
             }
-            level.playSound(null, center.x, center.y, center.z, SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 0.6f, 0.7f);
+            level.playSound(null, BlockPos.containing(center), SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 0.6f, 0.7f);
         }
     }
 
@@ -355,7 +356,7 @@ public final class WarframeActiveAbilities {
             Vec3 delta = vortex.subtract(target.position());
             target.setDeltaMovement(delta.x * 0.42, Math.min(0.55, Math.max(0.28, delta.y * 0.25 + 0.22)), delta.z * 0.42);
             target.hurtMarked = true;
-            float dmg = (target.getArmorValue() > 0 || target.isGlowing()) ? 24.0f : 14.0f;
+            float dmg = (target.getArmorValue() > 0 || target.hasEffect(MobEffects.GLOWING)) ? 24.0f : 14.0f;
             target.hurt(level.damageSources().magic(), dmg);
             target.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 2, false, true));
             VoxelEffects.emit(level, VoxelCue.Kind.TRACE, EffectProfile.ARC, centerOf(target), vortex, 0.9f);
@@ -506,7 +507,6 @@ public final class WarframeActiveAbilities {
     }
 
     private static void castFrostSnowGlobe(ServerPlayer player, ServerLevel level, WarframeAbilityState state) {
-        // Shatter previous globe if recasting while one exists
         if (state.snowGlobeTicks() > 0 && state.snowGlobeCenter() != null) {
             shatterSnowGlobe(player, level, state.snowGlobeCenter());
         }
@@ -573,7 +573,7 @@ public final class WarframeActiveAbilities {
             target.hurt(level.damageSources().freeze(), 14.0f);
             target.setTicksFrozen(200);
         }
-        level.playSound(null, center.x, center.y, center.z, SoundEvents.GLASS_BREAK, SoundSource.PLAYERS, 1.0f, 0.9f);
+        level.playSound(null, BlockPos.containing(center), SoundEvents.GLASS_BREAK, SoundSource.PLAYERS, 1.0f, 0.9f);
     }
 
     private static void castFollieInkwellMirage(ServerPlayer player, ServerLevel level, WarframeAbilityState state) {
@@ -620,7 +620,7 @@ public final class WarframeActiveAbilities {
                 target.hurt(level.damageSources().magic(), 16.0f);
                 target.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 80, 0, false, true));
             }
-            level.playSound(null, center.x, center.y, center.z, SoundEvents.SQUID_SQUIRT, SoundSource.PLAYERS, 1.1f, 0.65f);
+            level.playSound(null, BlockPos.containing(center), SoundEvents.SQUID_SQUIRT, SoundSource.PLAYERS, 1.1f, 0.65f);
         }
     }
 
@@ -788,7 +788,7 @@ public final class WarframeActiveAbilities {
                 target.addEffect(new MobEffectInstance(MobEffects.GLOWING, 120, 0, false, true));
                 VoxelEffects.emit(level, VoxelCue.Kind.TRACE, EffectProfile.ARC, center, centerOf(target), 0.8f);
             }
-            level.playSound(null, center.x, center.y, center.z, SoundEvents.TRIDENT_THUNDER.value(), SoundSource.PLAYERS, 1.0f, 1.4f);
+            level.playSound(null, BlockPos.containing(center), SoundEvents.TRIDENT_THUNDER.value(), SoundSource.PLAYERS, 1.0f, 1.4f);
         }
     }
 
@@ -876,7 +876,7 @@ public final class WarframeActiveAbilities {
         Vec3 targetPos = raycastPoint(player, level, 18.0).add(0, 1.0, 0);
         state.setRiptide(targetPos, 50);
         VoxelEffects.emit(level, VoxelCue.Kind.RING, EffectProfile.STASIS, targetPos, targetPos, 11.0f);
-        level.playSound(null, targetPos.x, targetPos.y, targetPos.z, SoundEvents.PLAYER_SPLASH, SoundSource.PLAYERS, 1.2f, 0.8f);
+        level.playSound(null, BlockPos.containing(targetPos), SoundEvents.PLAYER_SPLASH, SoundSource.PLAYERS, 1.2f, 0.8f);
     }
 
     private static void tickRiptide(ServerPlayer owner, ServerLevel level, Vec3 center, int remainingTicks) {
@@ -906,7 +906,7 @@ public final class WarframeActiveAbilities {
                 target.push(blast.x, 0.45, blast.z);
                 target.hurtMarked = true;
             }
-            level.playSound(null, center.x, center.y, center.z, SoundEvents.GENERIC_EXPLODE.value(), SoundSource.PLAYERS, 1.1f, 1.25f);
+            level.playSound(null, BlockPos.containing(center), SoundEvents.GENERIC_EXPLODE.value(), SoundSource.PLAYERS, 1.1f, 1.25f);
         }
     }
 

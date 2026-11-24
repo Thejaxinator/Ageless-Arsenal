@@ -255,7 +255,7 @@ public final class WarframePassiveAbilities {
 
         // Gyre: Cathode Surge (+25% vs shocked/slowed/glowing)
         if (BinderState.hasPassive(attacker, WarframeBinderCatalog.PASSIVE_GYRE)
-                && (target.isGlowing() || target.hasEffect(MobEffects.MOVEMENT_SLOWDOWN))) {
+                && (target.hasEffect(MobEffects.GLOWING) || target.hasEffect(MobEffects.MOVEMENT_SLOWDOWN))) {
             damage *= 1.25f;
         }
 
