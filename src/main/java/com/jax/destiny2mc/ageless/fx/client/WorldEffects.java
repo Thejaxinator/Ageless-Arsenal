@@ -1,8 +1,11 @@
 package com.jax.destiny2mc.ageless.fx.client;
 
 import com.jax.destiny2mc.ageless.fx.*;
+import com.jax.destiny2mc.client.ClientWeaponState;
+import com.jax.destiny2mc.client.gunfeel.WeaponSwayController;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.util.Mth;
 import net.minecraft.world.entity.HumanoidArm;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.api.distmarker.Dist;
@@ -47,22 +50,28 @@ public final class WorldEffects {
         Vec3 eye=e.getCamera().getPosition();
         var buffers=mc.renderBuffers().bufferSource();
         VoxelMesh mesh=new VoxelMesh(buffers.getBuffer(VoxelMesh.TYPE),e.getPoseStack().last().pose(),MAX_PRISMS);
-        double now=mc.level.getGameTime()+e.getPartialTick().getGameTimeDeltaPartialTick(false);
-        // New telegraphs remain legible in a crowded encounter even if older fragments exhaust the budget.
+        float partial=e.getPartialTick().getGameTimeDeltaPartialTick(false);
+        double now=mc.level.getGameTime()+partial;
         var it=active.descendingIterator();
         while(it.hasNext()&&!mesh.full()){
             Live live=it.next();VoxelCue cue=live.cue;double ticks=Math.max(0,now-live.birth);
-            // The client can catch up several simulation ticks before presenting a single frame.
-            // Keep a late short cue bright for its first presentation, then resume the world clock.
             if(!live.presented&&live.life<=17)ticks=Math.min(ticks,live.life*.24);
             live.presented=true;double t=ticks/live.life;if(t>=1)continue;
             Vec3 a=cue.start().subtract(eye),b=cue.end().subtract(eye);EffectProfile p=cue.profile();
             switch(cue.kind()){
                 case TRACE ->{
-                    // Move only the near visual origin to the firing hand. The real endpoint remains authoritative.
-                    if(a.lengthSqr()<.65*.65 && mc.options.getCameraType().isFirstPerson() && mc.player!=null){
-                        Vec3 dir=b.subtract(a).normalize();int hand=mc.player.getMainArm()==HumanoidArm.RIGHT?1:-1;
-                        a=a.add(dir.scale(.56)).add(VoxelMesh.side(dir).scale(-.19*hand)).add(0,-.16,0);
+                    // Align eye-origin traces to the actual first-person barrel tip in camera space,
+                    // interpolating cleanly to center during ADS and skipping already-offset Tenno muzzles.
+                    if(a.lengthSqr()<.18*.18 && mc.options.getCameraType().isFirstPerson() && mc.player!=null){
+                        Vec3 dir=b.subtract(a).normalize();
+                        Vec3 left=VoxelMesh.side(dir);
+                        Vec3 up=dir.cross(left).normalize();
+                        int hand=mc.player.getMainArm()==HumanoidArm.RIGHT?1:-1;
+                        float aim=ClientWeaponState.getSmoothAds(partial);
+                        double forward=Mth.lerp(aim,0.62,0.56);
+                        double rightOff=Mth.lerp(WeaponSwayController.adsX(aim),0.105,0.0)*hand;
+                        double upOff=Mth.lerp(WeaponSwayController.adsY(aim),-0.115,-0.045);
+                        a=a.add(dir.scale(forward)).add(left.scale(-rightOff)).add(up.scale(upOff));
                     }
                     EffectShapes.trace(mesh,p,a,b,t,cue.seed());
                 }

@@ -74,7 +74,10 @@ final class TennoHits {
         TennoGunSpec spec=stats.spec();
         Vec3 eye=owner.getEyePosition(),dir=owner.getLookAngle().normalize();
         Vec3 right=new Vec3(-Math.cos(Math.toRadians(owner.getYRot())),0,-Math.sin(Math.toRadians(owner.getYRot())));
-        Vec3 muzzle=eye.add(right.scale(hand==0?.16:hand*.21)).add(0,-.15,0).add(dir.scale(.32));
+        Vec3 up=right.cross(dir).normalize();
+        double sideOff=hand==0?(aim?0.0:0.105):hand*(aim?0.10:0.16);
+        double upOff=aim?-0.05:-0.11;
+        Vec3 muzzle=eye.add(right.scale(sideOff)).add(up.scale(upOff)).add(dir.scale(.45));
         if(!clear(owner,eye,muzzle))muzzle=eye;
         if(spec.family==Family.FLAME){
             Vec3 stop=owner.level().clip(new ClipContext(eye,eye.add(dir.scale(spec.range())),ClipContext.Block.COLLIDER,ClipContext.Fluid.NONE,owner)).getLocation();
